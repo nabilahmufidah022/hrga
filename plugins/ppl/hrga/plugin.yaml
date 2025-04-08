@@ -1,0 +1,210 @@
+permissions:
+# MIW Roles   
+    ppl.hrga.peminjaman.beranda:
+        tab: 'ppl.locale::lang.permissions.beranda.title'
+        label: 'ppl.locale::lang.permissions.beranda.title' 
+    ppl.hrga.peminjaman.home:
+        tab: 'ppl.locale::lang.permissions.home.title'
+        label: 'ppl.locale::lang.permissions.home.title'
+    ppl.hrga.peminjaman.halamanpeminjaman:
+        tab: 'ppl.locale::lang.permissions.halamanpeminjaman.title'
+        label: 'ppl.locale::lang.permissions.halamanpeminjaman.title'
+    ppl.hrga.peminjaman.listruangrapat:
+        tab: 'ppl.locale::lang.permissions.listruangrapat.title'
+        label: 'ppl.locale::lang.permissions.listruangrapat.title'
+    ppl.hrga.peminjaman.divisi:
+        tab: 'ppl.locale::lang.permissions.divisi.title'
+        label: 'ppl.locale::lang.permissions.divisi.title'
+    ppl.hrga.peminjaman.laporan:
+        tab: 'ppl.locale::lang.permissions.laporan.title'
+        label: 'ppl.locale::lang.permissions.laporan.title'
+    ppl.hrga.peminjaman.peminjamanruangan:
+        tab: 'ppl.locale::lang.permissions.peminjamanruangan.title'
+        label: 'ppl.locale::lang.permissions.peminjamanruangan.title'
+    ppl.hrga.peminjaman.ruangrapat:
+        tab: 'ppl.locale::lang.permissions.ruangrapat.title'
+        label: 'ppl.locale::lang.permissions.ruangrapat.title'
+    
+
+plugin:
+    name: "ppl.locale::lang.plugin.hrga.name"
+    description: "ppl.locale::lang.plugin.hrga.description"
+    author: Ppl
+    icon: oc-icon-adn
+    homepage: ""
+navigation:
+    homes:
+        label: "ppl.locale::lang.models.home.label"
+        url: ppl/hrga/homes
+        iconSvg: /plugins/ppl/hrga/assets/images/menu-hrga.svg
+        # icon: icon-palette
+        permissions:
+            - ppl.hrga.peminjaman.home
+        order: 50
+        sideMenu:
+            dashboards:
+                label: "ppl.locale::lang.models.dashboard.dashboards.label"
+                url: ppl/hrga/dashboards
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-dashboard.svg
+                permissions:
+                    - ppl.hrga.peminjaman.beranda
+                attributes:
+                    group: "ppl.locale::lang.models.dashboard.group"
+                    description: "ppl.locale::lang.models.dashboard.dashboards.desc"
+            adminroomorders:
+                label: "ppl.locale::lang.models.dashboard.halamanpeminjaman.label"
+                url: ppl/hrga/adminroomorders
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-halaman-peminjaman.svg
+                permissions:
+                    - ppl.hrga.peminjaman.halamanpeminjaman
+                attributes:
+                    group: "ppl.locale::lang.models.dashboard.group"
+                    description: "ppl.locale::lang.models.dashboard.halamanpeminjaman.desc"
+            meetingroomlists:
+                label: "ppl.locale::lang.models.dashboard.listruangrapat.label"
+                url: ppl/hrga/meetingroomlists
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-list-ruang-rapat.svg
+                permissions:
+                    - ppl.hrga.peminjaman.listruangrapat
+                attributes:
+                    group: "ppl.locale::lang.models.dashboard.group"
+                    description: "ppl.locale::lang.models.dashboard.listruangrapat.desc"
+            divisions:
+                label: "ppl.locale::lang.models.dashboard.divisi.label"
+                url: ppl/hrga/divisions
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-divisi.svg
+                permissions:
+                    - ppl.hrga.peminjaman.divisi
+                attributes:
+                    group: "ppl.locale::lang.models.dashboard.group"
+                    description: "ppl.locale::lang.models.dashboard.divisi.desc"
+            reports:
+                label: "ppl.locale::lang.models.dashboard.laporan.label"
+                url: ppl/hrga/reports
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+                permissions:
+                    - ppl.hrga.peminjaman.laporan
+                attributes:
+                    group: "ppl.locale::lang.models.dashboard.group"
+                    description: "ppl.locale::lang.models.dashboard.laporan.desc"
+                    
+            homes:
+                label: "ppl.locale::lang.models.home.homes.label"
+                url: ppl/hrga/homes
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-home.svg
+                permissions:
+                    - ppl.hrga.peminjaman.home
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.homes.desc"
+            userroomorders:
+                label: "ppl.locale::lang.models.home.peminjamanruang.label"
+                url: ppl/hrga/userroomorders
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
+                permissions:
+                    - ppl.hrga.peminjaman.peminjamanruangan
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.peminjamanruang.desc"
+            meetingrooms:
+                label: "ppl.locale::lang.models.home.meetingroom.label"
+                url: ppl/hrga/meetingrooms
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-ruang-rapat.svg
+                permissions:
+                    - ppl.hrga.peminjaman.ruangrapat
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.meetingroom.desc"
+    
+
+
+
+    
+    
+    # adminroomorders:
+    #     label: "ppl.locale::lang.models.halamanpeminjaman.label"
+    #     url: ppl/hrga/adminroomorders
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-halaman-peminjaman.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.halamanpeminjaman
+    #     sideMenu:
+    #         adminroomorders:
+    #             label: "ppl.locale::lang.models.halamanpeminjaman.label"
+    #             url: ppl/hrga/adminroomorders
+    #             iconSvg: /plugins/ppl/hrga/assets/images/icon-halaman-peminjaman.svg
+    # meetingroomlists:
+    #     label: "ppl.locale::lang.models.listruangrapat.label"
+    #     url: ppl/hrga/meetingroomlists
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-list-ruang-rapat.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.listruangrapat
+    #     sideMenu:
+    #         meetingroomlists:
+    #             label: "ppl.locale::lang.models.listruangrapat.label"
+    #             url: ppl/hrga/meetingroomlists
+    #             iconSvg: /plugins/ppl/hrga/assets/images/icon-list-ruang-rapat.svg
+    # divisions:
+    #     label: "ppl.locale::lang.models.divisi.label"
+    #     url: ppl/hrga/divisions
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-divisi.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.divisi
+    #     sideMenu:
+    #         divisions:
+    #             label: "ppl.locale::lang.models.divisi.label_plural"
+    #             url: ppl/hrga/divisions
+    #             icon: icon-user-tag
+    # reports:
+    #     label: "ppl.locale::lang.models.laporan.label"
+    #     url: ppl/hrga/reports
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.laporan
+    #     sideMenu:
+    #         reports:
+    #             label: "ppl.locale::lang.models.laporan.label"
+    #             url: ppl/hrga/reports
+    #             iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+    # userroomorders:
+    #     label: "ppl.locale::lang.models.peminjamanruang.label"
+    #     url: ppl/hrga/userroomorders
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.peminjamanruangan
+    #     sideMenu:
+    #         reports:
+    #             label: "ppl.locale::lang.models.peminjamanruang.label"
+    #             url: ppl/hrga/userroomorders
+    #             iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
+    #              # iconSvg: /plugins/ppl/hrga/assets/images/usulan-penempatan.svg
+    #             # permissions:
+    #             #     - ppl.hrga.banks
+    #             # attributes:
+    #             #     group: "ppl.locale::lang.nav.deposito.group"
+    #             #     description: "ppl.locale::lang.nav.deposito.usulanpenempatan.desc"
+    # meetingrooms:
+    #     label: "ppl.locale::lang.models.meetingroom.label"
+    #     url: ppl/hrga/meetingrooms
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-ruang-rapat.svg
+    #     # icon: icon-palette
+    #     order: 50
+    #     permissions:
+    #         - ppl.hrga.peminjaman.ruangrapat
+    # users:
+    #     label: "ppl.locale::lang.models.meetingroom.label"
+    #     url: backend/users
+    #     iconSvg: /plugins/ppl/hrga/assets/images/icon-ruang-rapat.svg
+    #     # icon: icon-palette
+       
+               
+            

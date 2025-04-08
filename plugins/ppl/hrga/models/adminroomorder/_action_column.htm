@@ -1,0 +1,34 @@
+<?php
+$flagstatus = $record->flaq_status;
+
+$tanggalberakhir = $tgl_now->diffInMinutes($record->tanggal_akhir,false);
+
+$tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false);
+
+
+?>
+<?php if( $tanggalmulai <= 0 && $tanggalberakhir > 0 && $flagstatus == 1 ):?>
+<a data-toggle="modal" href="#content-confirmation" class="btn btn-sm wn-icon-circle-check" style="margin-top: 10px; background-color:green; color: white;">Selesai</a>
+
+<div class="control-popup modal fade" id="content-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="text-align: center;">Apakah anda yakin akan mengakhiri rapat?</h4>
+            </div>
+            <div class="modal-footer" style="margin-top:10px; text-align: center;">
+                <button type="button" class="btn btn-primary" 
+                 data-dismiss="modal"
+                 data-request="onSelesai" 
+                 data-request-data="merapat_id:<?= $record->id ?>"
+                 data-attach-loading>Iya</button>
+                <button type="button" class="btn btn-default" aria-hidden="true" style="background-color:red; color:white;" data-dismiss="modal">Tidak</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<!-- <?= $tanggalberakhir;?>|
+<?= $tgl_now;?>|
+<?= $tanggalmulai;?> -->

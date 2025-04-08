@@ -1,0 +1,31 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama'
+    rapat:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama_ruangan'
+        relation: rapat
+        select: room_name
+    agenda_rapat:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.agenda_rapat'
+    tanggal_awal:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_awal'
+        type: date 
+        format: d-mm-yy H:i A
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_akhir'
+        type: date 
+        format: d-mm-yy H:i A
+        ignoreTimezone: true
+    created_at:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.created_at'
+
+    
+
+
+
+

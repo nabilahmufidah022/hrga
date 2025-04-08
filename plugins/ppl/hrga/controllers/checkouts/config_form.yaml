@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.checkout.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/checkout/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Userroomorder
+
+# Default redirect location
+defaultRedirect: ppl/hrga/checkouts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/checkouts/update/:id
+    redirectClose: ppl/hrga/checkouts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/checkouts
+    redirectClose: ppl/hrga/Userroomorders
+    flashSave: Berhasil Dicheckout
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

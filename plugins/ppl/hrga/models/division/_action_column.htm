@@ -1,0 +1,6 @@
+<!-- <?php 
+$link = sprintf('%s/%s', $record->domain, $record->code); ?> -->
+
+<a href="<?= Backend::url('ppl/hrga/divisions/update/'. $record->id) ?>">
+    <button class="btn wn-icon-pencil btn-sm" style="background-color: #0F2678; color: #ffffff;"><?php echo trans('ppl.locale::lang.models.dashboard.divisi.btn.edit');?></button>
+</a>

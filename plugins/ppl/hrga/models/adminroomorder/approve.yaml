@@ -1,0 +1,48 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama:
+        label: 'Nama'
+        span: left
+    no_wa:
+        label: 'Nomor WhatsApp'
+        span: right
+    divisi_id:
+        label: 'Unit Kerja'
+        type: dropdown
+    meetingroomlist_id:
+        label: 'Nama Ruang Rapat'
+        type: dropdown
+    tanggal_awal:
+        label: 'Tanggal dan Waktu Peminjaman Awal'
+        span: left
+        type: datepicker
+        mode: datetime
+    tanggal_akhir:
+        label: 'Tanggal dan Waktu Peminjaman Akhir'
+        span: right
+        type: datepicker
+        mode: datetime
+    jumlah_peserta:
+        label: 'Jumlah Peserta Rapat'
+    jenis_rapat:
+        label: 'Jenis Rapat'
+        type: dropdown
+        options:
+            - Internal
+            - Eksternal
+    agenda_rapat:
+        label: 'Agenda Rapat'
+        type: textarea
+        size: large
+    upload_undangan:
+        label: Upload Dokumen Memo
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+
+
+    
+    

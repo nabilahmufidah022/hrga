@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.dashboard.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/dashboard/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Dashboard
+
+# Default redirect location
+defaultRedirect: ppl/hrga/dashboards
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/dashboards/update/:id
+    redirectClose: ppl/hrga/dashboards
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/dashboards
+    redirectClose: ppl/hrga/dashboards
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

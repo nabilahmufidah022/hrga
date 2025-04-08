@@ -1,0 +1,32 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.locale::lang.models.home.peminjamanruang.btn_kehadiran.form_kehadiran'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/attendance/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Userroomorder
+
+# Default redirect location
+defaultRedirect: ppl/hrga/attendances
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/attendances/update/:id
+    redirectClose: ppl/hrga/attendances
+
+# Update page
+update:
+    title: ppl.locale::lang.models.home.peminjamanruang.btn_kehadiran.form_kehadiran
+    redirect: ppl/hrga/attendances
+    redirectClose: ppl/hrga/userroomorders
+    flashSave: Daftar Hadir Berhasil Disimpan
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

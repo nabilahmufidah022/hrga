@@ -1,0 +1,51 @@
+<?php
+    $sideMenuItems = BackendMenu::listSideMenuItems();
+    if ($sideMenuItems):
+        $collapsedGroups = explode('|',
+    isset($_COOKIE['sidenav_treegroupStatus']) ? $_COOKIE['sidenav_treegroupStatus'] : null);
+    $categories = [];
+    foreach ($sideMenuItems as $sideItemCode => $item){
+        // Debugbar::info($item);
+        if(property_exists($item, 'attributes')){
+            $item->group = $item->attributes['group'];
+            $item->description = $item->attributes['description'];
+        } else {
+            $item->group = 'default';
+            $item->description = '';
+        }
+        if(!property_exists($item, 'keywords'))
+            $item->keywords = '';
+        $categories[$item->group][$sideItemCode] = $item;
+    }
+
+    // Debugbar::info($categories);
+?>        
+    <ul class="top-level">
+    <?php foreach ($categories as $category => $items):
+            $collapsed = in_array($category, $collapsedGroups);
+    ?>
+        <li data-group-code="<?= e($category) ?>" <?= $collapsed ? 'data-status="collapsed"' : null ?>>
+            <div class="group" style="background-color: #7C8DB5;">
+                <h3><?= e(trans($category)) ?></h3>
+            </div>
+            <ul>
+            <?php foreach ($items as $item): ?>
+                <li class="<?= BackendMenu::isSideMenuItemActive($item) ? 'active' : null ?>"
+                    data-keywords="<?= e(trans($item->keywords)) ?>">
+                    <a href="<?= $item->url ?>">
+                        <img src="<?= $item->iconSvg ?>" style="width: 30px; height: 30px;">
+                        <?php if($item->counter): ?>
+                        <span class="counter"><?= $item->counter ?></span>
+                        <?php endif;?>
+                        <span class="header" style="margin-left: 50px; margin-top: -30px;"><?= e(trans($item->label)) ?>
+                            
+                        </span>
+                        <span class="description" style="margin-left: 50px;"><?= e(trans($item->description)) ?></span>
+                    </a>
+                </li>            
+            <?php endforeach ?>
+            </ul>
+        </li>
+    <?php endforeach ?>
+    </ul>
+<?php endif; ?>

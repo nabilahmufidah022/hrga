@@ -1,0 +1,15 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    link_rekaman:
+        label: 'Tautan Rekaman Zoom'
+    saran:
+        label: 'Kritik Dan Saran'
+        type: textarea
+        format: rich text
+
+
+    
+    

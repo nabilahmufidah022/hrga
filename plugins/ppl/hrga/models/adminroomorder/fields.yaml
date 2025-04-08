@@ -1,0 +1,115 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    kehadiran:
+        label: ''
+        path: $/ppl/hrga/models/adminroomorder/_file_kehadiran.htm
+        type: partial
+        span: full
+    link_kehadiran:
+        label: ''
+        path: $/ppl/hrga/models/adminroomorder/_link_kehadiran.htm
+        type: partial
+        span: full
+    nama:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.nama'
+        span: left
+    no_wa:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.no_wa'
+        span: right
+    divisi_id:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.unit_kerja'
+        type: dropdown
+    meetingroomlist_id:
+        label: 'Nama Ruang Rapat'
+        type: dropdown
+    tanggal_awal@update:
+        label: 'Tanggal dan Waktu Peminjaman Awal'
+        span: left
+        type: datepicker
+        mode: datetime
+        ignoreTimezone: true
+    tanggal_akhir@update:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.tanggal_akhir'
+        span: right
+        type: datepicker
+        mode: datetime
+        ignoreTimezone: true
+    tanggal_awal@preview:
+        label: 'Tanggal dan Waktu Peminjaman Awal'
+        span: left
+        mode: datetime
+        ignoreTimezone: true
+    tanggal_akhir@preview:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.tanggal_akhir'
+        span: right
+        mode: datetime
+        ignoreTimezone: true
+    jumlah_peserta:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.jumlah_peserta'
+    jenis_rapat:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.jenis_rapat'
+        type: dropdown
+        span: left
+        options:
+            Eksternal : Eksternal
+            Internal : Internal
+        placeholder: 'Pilih Jenis Rapat'
+    agenda_rapat:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.agenda_rapat'
+        type: textarea
+        size: large
+    upload_undangan:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.upload_undangan'
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+    nama_peserta_rapat:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.nama_peserta'
+        type: repeater
+        prompt: Tambah Nama Peserta Rapat
+        required: true
+        span: right
+        form:
+            fields:
+                nama_peserta:
+                    label: 'ppl.locale::lang.models.home.peminjamanruang.form.nama_peserta'
+                    type: text
+    nama_mitra:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.nama_mitra'
+        # type: textarea
+        titleFrom: nama_mitra
+        type: repeater
+        span: left
+        required: true
+        # hidden: true
+        # dependsOn: jenis_rapat
+        trigger:
+            action: show
+            field: jenis_rapat
+            condition: value[Eksternal]
+        form:
+            fields:
+                nama_mitra:
+                    label: 'ppl.locale::lang.models.home.peminjamanruang.form.nama_peserta'
+                    type: text
+                nomor:
+                    label: 'ppl.locale::lang.models.home.peminjamanruang.form.no_wa'
+                    type: text
+
+    
+    
+
+
+
+    
+    
+
+    
+
+
+
+    
+    

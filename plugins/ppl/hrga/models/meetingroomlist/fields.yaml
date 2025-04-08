@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    room_name:
+        span: left
+        label: 'ppl.locale::lang.models.dashboard.listruangrapat.nama'
+    room_capacity:
+        span: right
+        label: 'ppl.locale::lang.models.dashboard.listruangrapat.kapasitas'
+        type: number
+    room_facility:
+        label: 'ppl.locale::lang.models.dashboard.listruangrapat.fasilitas'
+        type: Backend\FormWidgets\RichEditor
+        size: large
+    room_pics:
+        label: 'ppl.locale::lang.models.dashboard.listruangrapat.foto_ruang'
+        type: fileupload
+        mode: image
+        span: full
+        fileTypes: jpg, jpeg, png
+        imageHeight: 472
+        imageWidth: 709
+        
+            
+    
+    
+    
+
