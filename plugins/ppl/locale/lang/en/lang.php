@@ -180,7 +180,7 @@ return [
             
         ],
         'home' =>[
-            'label' => 'Peminjaman Ruangan',
+            'label' => 'Sumber Daya Manusia',
             'label_plural' => 'Home',
             'homes' => [
                 'label' => 'Jadwal Ruangan',

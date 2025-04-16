@@ -41,7 +41,7 @@ return [
         'mysql' => [
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
-            'database' => env('DB_DATABASE', 'tubes_hrga'),
+            'database' => env('DB_DATABASE', 'hrga_ppl'),
             'driver' => 'mysql',
             'engine' => 'InnoDB',
             'host' => env('DB_HOST', '127.0.0.1'),

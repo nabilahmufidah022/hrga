@@ -36,7 +36,7 @@ navigation:
     homes:
         label: "ppl.locale::lang.models.home.label"
         url: ppl/hrga/homes
-        iconSvg: /plugins/ppl/hrga/assets/images/menu-hrga.svg
+        iconSvg: /plugins/ppl/hrga/assets/images/menu-hrga.png
         # icon: icon-palette
         permissions:
             - ppl.hrga.peminjaman.home
