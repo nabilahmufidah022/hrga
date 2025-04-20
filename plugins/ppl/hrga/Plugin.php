@@ -79,8 +79,6 @@ class Plugin extends PluginBase
                 "userroomorders"
                 "meetingrooms" 
              */
-            // dd($listMenu["JAMSYAR.MODESAIN.HOME"]->sideMenu);
-            // $listMenu["JAMSYAR.MERAPAT.HOMES"]->sideMenu["userroomorders"]->counter = 4;
             $listMenu["PPL.HRGA.HOMES"]->sideMenu["adminroomorders"]->counter = \Ppl\Hrga\Models\Adminroomorder::CekCounter();
         });
 

@@ -42,6 +42,24 @@ navigation:
             - ppl.hrga.peminjaman.home
         order: 50
         sideMenu:
+            absences:
+                label: "ppl.locale::lang.models.absensi.label"
+                url: ppl/hrga/absences
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-absensi.svg
+                permissions:
+                    - ppl.hrga.peminjaman.beranda
+                attributes:
+                    group: "ppl.locale::lang.models.absensi.group"
+                    description: "ppl.locale::lang.models.dashboard.dashboards.desc"
+            personals:
+                label: "ppl.locale::lang.models.biodata-diri.label"
+                url: ppl/hrga/personals
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-biodata-diri.svg
+                permissions:
+                    - ppl.hrga.peminjaman.beranda
+                attributes:
+                    group: "ppl.locale::lang.models.biodata-diri.group"
+                    description: "ppl.locale::lang.models.dashboard.dashboards.desc"
             dashboards:
                 label: "ppl.locale::lang.models.dashboard.dashboards.label"
                 url: ppl/hrga/dashboards

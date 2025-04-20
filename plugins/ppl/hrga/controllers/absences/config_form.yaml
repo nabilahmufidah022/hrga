@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.absence.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/absence/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Absence
+
+# Default redirect location
+defaultRedirect: ppl/hrga/absences
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/absences/update/:id
+    redirectClose: ppl/hrga/absences
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/absences
+    redirectClose: ppl/hrga/absences
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
