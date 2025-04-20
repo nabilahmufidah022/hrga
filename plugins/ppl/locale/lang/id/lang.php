@@ -237,6 +237,17 @@ return [
 
             'group' => 'Peminjaman Ruangan Saya'
         ],
+        'absensi' =>[
+            'label' => 'Form Absensi',
+            'label_plural' => 'Absensi',
+            'desc'=>'',
+            ],
+        'biodata-diri' =>[
+            'label' => 'Form Biodata Diri',
+            'label_plural' => 'Biodata Diri',
+            'desc'=>'',
+            'group' => 'Biodaat Diri',
+        ],
         'dashboard'=>[
             'label' => 'Merapat',
             'label_plural' => 'Merapat',

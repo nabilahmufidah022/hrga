@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.personal.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/personal/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Personal
+
+# Default redirect location
+defaultRedirect: ppl/hrga/personals
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/personals/update/:id
+    redirectClose: ppl/hrga/personals
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/personals
+    redirectClose: ppl/hrga/personals
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
