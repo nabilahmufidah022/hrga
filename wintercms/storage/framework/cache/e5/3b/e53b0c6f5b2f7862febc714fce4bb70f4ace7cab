@@ -1,0 +1,12 @@
+1745240602a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:217:"<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; 2021 - {{ "now" | date("Y") }} <a href="https://wintercms.com" target="_blank">Winter CMS</a>.</p>
+    </div>
+</div>
+";s:5:"mtime";i:1733294720;s:6:"markup";s:216:"<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; 2021 - {{ "now" | date("Y") }} <a href="https://wintercms.com" target="_blank">Winter CMS</a>.</p>
+    </div>
+</div>";s:4:"code";N;}}
