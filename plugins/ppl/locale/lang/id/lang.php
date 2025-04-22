@@ -248,6 +248,27 @@ return [
             'desc'=>'',
             'group' => 'Biodaat Diri',
         ],
+        'form-pengajuan' =>[
+            'label' => 'Form Pengajuan',
+            'label_plural' => 'Form Pengajuan',
+            'form-izin' =>[
+                'label' => 'Form Pengajuan Izin',
+                'label_plural' => 'Form Pengajuan Izin',
+            ],
+            'form-cuti' =>[
+                'label' => 'Form Pengajuan Cuti',
+                'label_plural' => 'Form Pengajuan Cuti',
+            ],
+            'form-sakit' =>[
+                'label' => 'Form Pengajuan Sakit',
+                'label_plural' => 'Form Pengajuan Sakit',
+            ],
+            'form-perangkat' =>[
+                'label' => 'Form Pengajuan Perangkat',
+                'label_plural' => 'Form Pengajuan Perangkat',
+            ],
+            'group' => 'Form Pengajuan',
+        ],
         'dashboard'=>[
             'label' => 'Merapat',
             'label_plural' => 'Merapat',

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.permission.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/permission/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Permission
+
+# Default redirect location
+defaultRedirect: ppl/hrga/permissions
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/permissions/update/:id
+    redirectClose: ppl/hrga/permissions
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/permissions
+    redirectClose: ppl/hrga/permissions
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -238,6 +238,28 @@ return [
             'desc'=>'',
             'group' => 'Biodaat Diri',
         ],
+        'form-pengajuan' =>[
+            'label' => 'Form Pengajuan',
+            'label_plural' => 'Form Pengajuan',
+            'desc'=>'',
+            'form-izin' =>[
+                'label' => 'Form Pengajuan Izin',
+                'label_plural' => 'Form Pengajuan Izin',
+            ],
+            'form-cuti' =>[
+                'label' => 'Form Pengajuan Cuti',
+                'label_plural' => 'Form Pengajuan Cuti',
+            ],
+            'form-sakit' =>[
+                'label' => 'Form Pengajuan Sakit',
+                'label_plural' => 'Form Pengajuan Sakit',
+            ],
+            'form-perangkat' =>[
+                'label' => 'Form Pengajuan Perangkat',
+                'label_plural' => 'Form Pengajuan Perangkat',
+            ],
+            'group' => 'Pengajuan',
+        ],
         'dashboard'=>[
             'label' => 'Merapat',
             'label_plural' => 'Merapat',
@@ -285,6 +307,7 @@ return [
                 'aksi' => "Aksi",
                 'foto_ruang' => 'Foto Ruang Rapat',
                 'btn_tmbh' =>"Tambah Ruang Rapat",
+                'alert_delete' => 'ApakahAnda Yakin Akan Menghapus Data yang Terpilih?',
                 'desc'=>'',
             ],
             'divisi' =>[
