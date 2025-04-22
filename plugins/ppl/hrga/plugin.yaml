@@ -63,7 +63,16 @@ navigation:
             permissions:
                 label: "ppl.locale::lang.models.form-pengajuan.form-izin.label"
                 url: ppl/hrga/permissions
-                iconSvg: /plugins/ppl/hrga/assets/images/icon-biodata-diri.svg
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-izin.svg
+                permissions:
+                    - ppl.hrga.peminjaman.beranda
+                attributes:
+                    group: "ppl.locale::lang.models.form-pengajuan.group"
+                    description: "ppl.locale::lang.models.form-pengajuan.desc"
+            leaves:
+                label: "ppl.locale::lang.models.form-pengajuan.form-cuti.label"
+                url: ppl/hrga/leaves
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-cuti.svg
                 permissions:
                     - ppl.hrga.peminjaman.beranda
                 attributes:

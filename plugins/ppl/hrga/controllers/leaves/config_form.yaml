@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.leaf.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/leave/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Leave
+
+# Default redirect location
+defaultRedirect: ppl/hrga/leaves
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/leaves/update/:id
+    redirectClose: ppl/hrga/leaves
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/leaves
+    redirectClose: ppl/hrga/leaves
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
