@@ -1,0 +1,34 @@
+columns:
+    nama:
+        label: Nama
+        type: text
+    no_wa:
+        label: 'Nomor WhatsApp'
+        type: text
+    divisi_id:
+        label: 'Unit Kerja'
+        type: number
+    tanggal_awal:
+        label: 'Tanggal Awal'
+        type: date
+    tanggal_akhir:
+        label: 'Tanggal Akhir'
+        type: date
+    form_pengajuan_sakit_id:
+        label: form_pengajuan_sakit_id
+        type: number
+    user_id:
+        label: user_id
+        type: number
+    list_pengajuan_sakit_id:
+        label: list_pengajuan_sakit_id
+        type: number
+    surat_keterangan_dokter:
+        label: surat_keterangan_dokter
+        type: text
+    created_at:
+        label: created_at
+        type: datetime
+    jumlah_hari:
+        label: jumlah_hari
+        type: number

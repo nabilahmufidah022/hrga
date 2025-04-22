@@ -1,0 +1,46 @@
+fields:
+    nama:
+        label: Nama
+        span: left
+        required: 1
+        type: text
+    no_wa:
+        label: 'Nomor WhatsApp'
+        span: right
+        required: 1
+        type: text
+    divisi_id:
+        label: 'Unit Kerja'
+        options:
+            - HRD
+            - IT
+            - Marketing
+            - Finance
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    tanggal_awal:
+        label: 'Tanggal Awal Izin'
+        mode: date
+        format: YYYY/MM/DD
+        span: left
+        required: 1
+        type: datepicker
+    tanggal_akhir:
+        label: 'Tanggal Akhir Izin'
+        mode: date
+        format: YYYY/MM/DD
+        span: right
+        required: 1
+        type: datepicker
+    surat_keterangan_dokter:
+        label: 'Surat Keterangan Dokter'
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        required: 0
+        type: fileupload

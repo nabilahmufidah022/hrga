@@ -1,0 +1,11 @@
+name: PengajuanSakitForm
+modelClass: Ramzy\Pengajuansakit\Models\SakitForm
+form: $/ramzy/pengajuansakit/models/sakitform/fields.yaml
+defaultRedirect: ramzy/pengajuansakit/pengajuansakitform
+create:
+    redirect: 'ramzy/pengajuansakit/pengajuansakitform/update/:id'
+    redirectClose: ramzy/pengajuansakit/pengajuansakitform
+update:
+    redirect: ramzy/pengajuansakit/pengajuansakitform
+    redirectClose: ramzy/pengajuansakit/pengajuansakitform
+preview: {  }

@@ -1,0 +1,14 @@
+plugin:
+    name: 'ramzy.pengajuansakit::lang.plugin.name'
+    description: 'ramzy.pengajuansakit::lang.plugin.description'
+    author: Ramzy
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Pengajuan Sakit'
+        url: /sakitform
+        icon: icon-life-ring
+        permissions:
+            - '*'
+        order: '100'

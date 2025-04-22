@@ -1,0 +1,60 @@
+<div class="max-w-2xl mx-auto bg-white p-6 shadow rounded space-y-4">
+    <form data-request="onSubmitSakitForm" enctype="multipart/form-data">
+
+        <div class="flex gap-4">
+            <div class="flex-1">
+                <label>Nama</label>
+                <input type="text" name="nama" class="w-full border px-3 py-2 rounded" required>
+            </div>
+            <div class="flex-1">
+                <label>Nomor WhatsApp</label>
+                <input type="text" name="nomor_whatsapp" class="w-full border px-3 py-2 rounded" required>
+            </div>
+        </div>
+
+        <div>
+            <label>Unit Kerja</label>
+            <select name="unit_kerja" class="w-full border px-3 py-2 rounded" required>
+                <option value="">-- Pilih Unit Kerja --</option>
+                <option value="HRD">HRD</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+        </div>
+
+        <div class="flex gap-4">
+            <div class="flex-1">
+                <label>Tanggal Awal</label>
+                <input type="date" name="tanggal_awal" class="w-full border px-3 py-2 rounded" required>
+            </div>
+            <div class="flex-1">
+                <label>Tanggal Akhir</label>
+                <input type="date" name="tanggal_akhir" class="w-full border px-3 py-2 rounded" required>
+            </div>
+        </div>
+
+        <div>
+            <label>Berapa Hari Izin</label>
+            <input type="number" name="jumlah_hari" class="w-full border px-3 py-2 rounded" required>
+        </div>
+
+        <div>
+            <label>Keterangan Sakit</label>
+            <textarea name="keterangan_sakit" class="w-full border px-3 py-2 rounded" rows="4"></textarea>
+        </div>
+
+        <div>
+            <label>Unggah Surat Dokter (opsional)</label>
+            <input type="file" name="surat_dokter" accept="image/*" class="w-full">
+        </div>
+
+        <div id="form-sukses"></div>
+
+        <div>
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                Simpan
+            </button>
+        </div>
+    </form>
+</div>
