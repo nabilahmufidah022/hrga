@@ -102,7 +102,6 @@
                             font-size: 16px;
                         "
                         id="submit_button"
-                        disabled
                         {#
                         data-request-redirect="https://www.google.com/"
                         #}
@@ -110,35 +109,8 @@
                         {{ "ppl.locale::lang.text.btn_login" | trans }}
                     </button>
                 </div>
-                <div class="checkbox custom-checkbox">
-                    <input
-                        type="checkbox"
-                        id="terms_and_conditions"
-                        value="1"
-                        checked="checked"
-                        onclick="terms_changed(this)"
-                    />
-                    <label for="terms_and_conditions" class="label-check"
-                    style="font-size: 12px;">{{ "ppl.locale::lang.text.cb_tos_agreement" | trans
-                        }}
-                        <a
-                                href="{{ 'agreement' }}"
-                                style="text-decoration: true; font-size: 12px;"
-                                target="blank"
-                            >
-                                {{ "ppl.locale::lang.text.textlink" | trans}}
-                            </a>
-                    </label>
-                </div>
 
-                <p class="wn-icon-book pull-left forgot-password" style="font-size: 12px;">
-                    <!-- user guide link -->
-                     <a href="{{ 'storage/app/media/user-guide-merapat.pdf' }}" target="blank" class="text-muted" style="font-size: 12px;">
-                        {{ "ppl.locale::lang.text.url_user_manual" |
-                        trans }}
-                </p>
-
-                <p class="wn-icon-lock pull-right forgot-password" style="font-size: 12px;">
+                <p class="wn-icon-lock pull-left forgot-password" style="font-size: 12px;">
                     <!-- Forgot your password? -->
                     <a href="{{ urlResetPass }}" class="text-muted" style="font-size: 12px;">
                         {{ "ppl.locale::lang.text.url_forgot_password" |
