@@ -1,0 +1,7 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama_divisi:
+        label: 'ppl.locale::lang.models.dashboard.divisi.form.nama'

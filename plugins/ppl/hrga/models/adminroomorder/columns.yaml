@@ -1,0 +1,54 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    action:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.field.action'
+        type: partial
+        path: ~/plugins/ppl/hrga/models/adminroomorder/_action_column.htm
+        clickable: false
+        searchable: false
+        sortable: false
+    flag_status:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.field.status'
+        type: partial
+        path: ~/plugins/ppl/hrga/models/userroomorder/_flaq_status.htm
+        clickable: false
+        searchable: false
+        sortable: false
+    nama:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.nama'
+        searchable: true
+    unit_kerja:
+        label: 'Unit kerja'
+        valueFrom: kode_divisi
+        clickable: false
+        searchable: false
+        sortable: false
+    tanggal_awal:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.tanggal_awal'
+        type: date 
+        format: d-mm-yy ; H:i A
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.tanggal_akhir'
+        type: date 
+        format: d-mm-yy ; H:i A
+        ignoreTimezone: true
+    ruangan:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.nama_ruangan'
+        relation: ruangan
+        select: room_name
+        searchable: true
+    agenda_rapat:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.agenda_rapat'
+        searchable: true
+    alasan_tolak:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.form.alasan_batal'
+        searchable: true
+    created_at:
+        label: 'ppl.locale::lang.models.dashboard.halamanpeminjaman.field.created_at'
+
+
+

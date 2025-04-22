@@ -1,0 +1,33 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.locale::lang.models.dashboard.divisi.update'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/division/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Division
+
+# Default redirect location
+defaultRedirect: ppl/hrga/divisions
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/divisions/update/:id
+    redirectClose: ppl/hrga/divisions
+    flashSave: Data Divisi Baru Berhasil Ditambahkan
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/divisions
+    redirectClose: ppl/hrga/divisions
+    flashSave: Data Divisi Baru Berhasil Diperbarui
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

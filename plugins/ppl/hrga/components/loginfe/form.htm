@@ -1,0 +1,151 @@
+<div class="login-form">
+    <div class="col-6">
+        <!-- <h2 style="text-align: center; color: #F9D949; margin-bottom: 30px">
+                {{ "ppl.locale::lang.text.corporate_tagline" | trans }}
+            </h2> -->
+
+        <img
+            src="{{ 'assets/images/merapat-logo.svg'|theme }}"
+            alt=""
+            style="
+                width: 60%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -35px;
+                margin-bottom: -80px;
+            "
+        />
+
+        <!-- <br> -->
+
+        <form
+            class="form-elements"
+            role="form"
+            data-request="{{__SELF__}}::onLogin"
+            data-request-validate
+            data-request-flash
+        >
+            <div class="form-elements" role="form">
+                <div class="form-group text-field horizontal-form">
+                    <!-- Login -->
+                    <div class="input-style has-borders no-icon mb-4" style="margin-bottom: 12px;"">
+                        <label
+                            class="color-highlight"
+                            style="
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: #000 !important;
+                            "
+                            >{{ "ppl.locale::lang.text.username" | trans
+                            }}</label
+                        >
+                        <input
+                            type="text"
+                            name="login"
+                            value=""
+                            class="form-control"
+                            placeholder="Username"
+                            autocomplete="off"
+                            maxlength="255"
+                            style="
+                                background: #ececec;
+                                border-radius: 5px;
+                                height: 40px;
+                                margin-bottom: 10px;
+                                font-size: 14px;
+                            "
+                        />
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-style has-borders no-icon mb-4">
+                        <label
+                            class="color-highlight"
+                            style="
+                                font-weight: 600;
+                                font-size: 16px;
+                                color: #000 !important;
+                            "
+                            >{{ "ppl.locale::lang.text.password" | trans
+                            }}</label
+                        >
+                        <input
+                            type="password"
+                            name="password"
+                            value=""
+                            class="form-control"
+                            placeholder="Password"
+                            autocomplete="off"
+                            maxlength="255"
+                            style="
+                                background: #ececec;
+                                border-radius: 5px;
+                                height: 40px;
+                                font-size: 14px;
+                            "
+                        />
+                    </div>
+
+                    <!-- Submit Login -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary login-button"
+                        style="
+                            background: #2F318B;
+                            border-radius: 5px;
+                            color: #fff;
+                            height: 55px;
+                            width: 100%;
+                            margin-top: 30px;
+                            text-align: center;
+                            font-size: 16px;
+                        "
+                        id="submit_button"
+                        disabled
+                        {#
+                        data-request-redirect="https://www.google.com/"
+                        #}
+                    >
+                        {{ "ppl.locale::lang.text.btn_login" | trans }}
+                    </button>
+                </div>
+                <div class="checkbox custom-checkbox">
+                    <input
+                        type="checkbox"
+                        id="terms_and_conditions"
+                        value="1"
+                        checked="checked"
+                        onclick="terms_changed(this)"
+                    />
+                    <label for="terms_and_conditions" class="label-check"
+                    style="font-size: 12px;">{{ "ppl.locale::lang.text.cb_tos_agreement" | trans
+                        }}
+                        <a
+                                href="{{ 'agreement' }}"
+                                style="text-decoration: true; font-size: 12px;"
+                                target="blank"
+                            >
+                                {{ "ppl.locale::lang.text.textlink" | trans}}
+                            </a>
+                    </label>
+                </div>
+
+                <p class="wn-icon-book pull-left forgot-password" style="font-size: 12px;">
+                    <!-- user guide link -->
+                     <a href="{{ 'storage/app/media/user-guide-merapat.pdf' }}" target="blank" class="text-muted" style="font-size: 12px;">
+                        {{ "ppl.locale::lang.text.url_user_manual" |
+                        trans }}
+                </p>
+
+                <p class="wn-icon-lock pull-right forgot-password" style="font-size: 12px;">
+                    <!-- Forgot your password? -->
+                    <a href="{{ urlResetPass }}" class="text-muted" style="font-size: 12px;">
+                        {{ "ppl.locale::lang.text.url_forgot_password" |
+                        trans }}
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

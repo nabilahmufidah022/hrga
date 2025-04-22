@@ -1,0 +1,25 @@
+subject = "Peminjaman Ruang Rapat Berhasil Dipesan!!!"
+layout = "system"
+==
+
+Halo {{nama}},
+
+<strong>Selamat!!!</strong> Peminjaman ruang rapat Anda telah berhasil dibuat. Berikut adalah rincian peminjaman:
+
+<table class="styled-table" style="border-collapse: collapse;margin: 25px 0;font-size: 0.9em;font-family: sans-serif;min-width: 500px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); width: 70%; margin-left: auto; margin-right: auto;">
+    <thead>
+        <tr style="background-color: #A9CE49; color: #ffffff;text-align: center;">
+            <th style=" padding: 12px 15px;">Waktu Rapat</th>
+            <th style=" padding: 12px 15px;">Ruangan</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="active-row" style="color: #000;">
+            <td style=" padding: 12px 15px;">{{jadwal}}</td>
+            <td style=" padding: 12px 15px;">{{room}}</td>
+        </tr>
+    </tbody>
+</table>
+
+Pastikan untuk memberikan informasi ini kepada peserta rapat lain. Kami berharap rapat/pertemuan Anda sukses dan nyaman di ruang rapat yang telah Anda pilih. bila memerlukan konsumsi silahkan menghubungi divisi SDM Umum
+Terima kasih atas kerjasama Anda.

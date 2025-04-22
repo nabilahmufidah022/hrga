@@ -1,0 +1,12 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    kehadiran:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.upload_kehadiran'
+        type: fileupload
+        mode: file
+        fileTypes: pdf, jpg, png, jpeg
+    link_kehadiran:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.upload_link_kehadiran'

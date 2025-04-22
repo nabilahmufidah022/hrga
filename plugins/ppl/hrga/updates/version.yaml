@@ -1,0 +1,25 @@
+v1.0.0:
+    - 'First version of Merapat'
+v1.0.1:
+    - 'Create Meetingroomlists Table'
+    - v1.0.1/ddl001_meetingroomlists.php
+    - 'Create Divisi Table'
+    - v1.0.1/ddl002_divisi.php
+    - 'Create Kepala Bagian Table'
+    - v1.0.1/ddl003_kepala_bagian.php
+    - 'Create Form Room Order Table'
+    - v1.0.1/ddl004_merapat_roomorder_form.php
+    - 'Create Status Table'
+    - v1.0.1/ddl005_merapat_status.php
+    - 'Create Seeder Status'
+    - v1.0.1/dml001_seeder_status.php
+    - 'Create Seeder User Role'
+    - v1.0.1/dml002_seeder_backend_user_roles.php
+    - 'Create Seeder Meeting Room List'
+    - v1.0.1/dml003_seeder_room_meeting.php
+    - 'Create Seeder Division'
+    - v1.0.1/dml004_seeder_division.php
+    - 'Update backend_brand_settings fixes notif badge'
+    - v1.0.1/dml005_update_backend_brand_settings.php
+
+

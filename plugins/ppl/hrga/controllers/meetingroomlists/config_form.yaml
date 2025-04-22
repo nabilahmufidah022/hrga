@@ -1,0 +1,33 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.locale::lang.models.dashboard.listruangrapat.update'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/meetingroomlist/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Meetingroomlist
+
+# Default redirect location
+defaultRedirect: ppl/hrga/meetingroomlists
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/meetingroomlists/update/:id
+    redirectClose: ppl/hrga/meetingroomlists
+    flashSave: Ruang Rapat Baru Berhasil Ditambahkan
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/meetingroomlists
+    redirectClose: ppl/hrga/meetingroomlists
+    flashSave: Data Ruang Rapat Berhasil Diperbarui
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

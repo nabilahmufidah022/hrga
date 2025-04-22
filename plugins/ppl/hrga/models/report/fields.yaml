@@ -1,0 +1,104 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    kehadiran:
+        label: ''
+        path: $/ppl/hrga/models/adminroomorder/_file_kehadiran.htm
+        type: partial
+        span: full
+    link_kehadiran:
+        label: ''
+        path: $/ppl/hrga/models/adminroomorder/_link_kehadiran.htm
+        type: partial
+        span: full
+    nama:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama'
+        span: left
+    no_wa:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.no_wa'
+        span: right
+    divisi_id:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.unit_kerja'
+        type: dropdown
+    meetingroomlist_id:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama_ruangan'
+        type: dropdown
+    tanggal_awal:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_awal'
+        span: left
+        type: datepicker
+        mode: datetime
+        ignoreTimezone: true
+        context:
+            - create
+            - update
+    tanggal_akhir:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_akhir'
+        span: right
+        type: datepicker
+        mode: datetime
+        ignoreTimezone: true
+        context:
+            - create
+            - update
+    tanggal_awal@preview:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_awal'
+        span: left
+        mode: datetime
+        ignoreTimezone: true
+    tanggal_akhir@preview:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.tanggal_akhir'
+        span: right
+        mode: datetime
+        ignoreTimezone: true
+    jumlah_peserta:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.jumlah_peserta'
+    agenda_rapat:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.agenda_rapat'
+        type: textarea
+        size: large
+    upload_undangan:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.upload_undangan'
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+    jenis_rapat:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.jenis_rapat'
+        type: dropdown
+        span: left
+        options:
+            Eksternal : Eksternal
+            Internal : Internal
+        placeholder: 'pilih jenis rapat'
+    nama_peserta_rapat:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama_peserta'
+        type: repeater
+        prompt: Tambah Nama Peserta Rapat
+        span: right
+        form:
+            fields:
+                nama_peserta:
+                    label: Nama Peserta Rapat
+                    type: text
+    nama_mitra:
+        label: 'ppl.locale::lang.models.dashboard.laporan.form.nama_mitra'
+        # type: textarea
+        titleFrom: nama_mitra
+        type: repeater
+        span: left
+        # hidden: true
+        # dependsOn: jenis_rapat
+        trigger:
+            action: show
+            field: jenis_rapat
+            condition: value[Eksternal]
+        form:
+            fields:
+                nama_mitra:
+                    label: 'ppl.locale::lang.models.dashboard.laporan.form.nama_peserta'
+                    type: text
+                nomor:
+                    label: 'ppl.locale::lang.models.dashboard.laporan.form.no_wa'
+                    type: text

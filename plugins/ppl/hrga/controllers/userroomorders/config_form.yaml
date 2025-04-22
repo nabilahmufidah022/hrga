@@ -1,0 +1,34 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.userroomorder.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/userroomorder/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Userroomorder
+
+# Default redirect location
+defaultRedirect: ppl/hrga/userroomorders
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/userroomorders/update/:id
+    redirectClose: ppl/hrga/userroomorders
+    flashSave: Form Peminjaman Berhasil Dibuat
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/userroomorders
+    redirectClose: ppl/hrga/userroomorders
+    flashSave: Form Peminjaman Berhasil Diupdate
+
+# Preview page
+preview:
+    title: ppl.locale::lang.models.home.peminjamanruang.label
+

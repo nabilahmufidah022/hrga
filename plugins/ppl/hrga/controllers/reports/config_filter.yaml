@@ -1,0 +1,38 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+  tanggal_awal:
+    label: "tanggal awal peminjaman"
+    type: daterange
+    # type: checkbox
+    conditions: tanggal_awal >= ':after' AND tanggal_awal <= ':before'
+    ignoreTimezone: true
+
+  ruangan:
+    label: "Nama Ruangan"
+    type: group
+    modelClass: Ppl\Hrga\Models\Meetingroomlist
+    conditions: meetingroomlist_id in (:filtered)
+    nameFrom: room_name
+
+  # status:
+  #   label: "jamsyar.locale::lang.models.depolist.status"
+  #   type: group
+  #   modelClass: Jamsyar\Jarvis\Models\Status
+  #   conditions: jarvis_jamsyar_status_id in (:filtered)
+  #   nameFrom: status_name
+
+  # cabang_jamsyar:
+  #   label: "jamsyar.locale::lang.models.depolist.cabang_jamsyar"
+  #   type: group
+  #   modelClass: Jamsyar\Jarvis\Models\JamsyarBranch
+  #   conditions: jarvis_jamsyar_branch_id in (:filtered)
+  #   nameFrom: ketwil_kerja
+
+  # jenis_deposito:
+  #   label: "jamsyar.locale::lang.models.depolist.jenis_deposito"
+  #   modelClass: Jamsyar\Jarvis\Models\Jenisdeposit
+  #   conditions: jarvis_jenisdeposit_id in (:filtered)
+  #   nameFrom: jenis_deposito

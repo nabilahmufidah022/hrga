@@ -1,0 +1,30 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    room_name:
+        label: "ppl.locale::lang.models.dashboard.listruangrapat.nama"
+        searchable: true
+    room_capacity:
+        label: "ppl.locale::lang.models.dashboard.listruangrapat.kapasitas"
+        searchable: true
+    action:
+        label: "ppl.locale::lang.models.dashboard.listruangrapat.aksi"
+        span: right
+        type: partial
+        path: ~/plugins/ppl/hrga/models/meetingroomlist/_action_column.htm
+        clickable: false
+        searchable: false
+        sortable: false
+    # created_at:
+    #     label: 'ppl.merapat::lang.models.general.created_at'
+    #     type: datetime
+    #     searchable: true
+    #     sortable: true
+    #     invisible: true
+    # updated_at:
+    #     label: 'ppl.merapat::lang.models.general.updated_at'
+    #     type: datetime
+    #     searchable: true
+    #     sortable: true

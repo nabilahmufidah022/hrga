@@ -1,0 +1,30 @@
+subject = "Reminder: 30 menit menuju pemakaian {{room}}"
+layout = "system"
+==
+
+Halo {{nama}},
+
+Dengan ini, kami ingin mengingatkan bahwa pemakaian ruang rapat, yaitu {{room}}, sudah mendekati dalam 30 menit. Berikut adalah detailnya:
+
+<table class="styled-table" style="border-collapse: collapse;margin: 25px 0;font-size: 0.9em;font-family: sans-serif;min-width: 500px;box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); width: 100%; margin-left: auto; margin-right: auto;">
+    <thead>
+        <tr style="background-color: #A9CE49; color: #ffffff;text-align: center;">
+            <th style=" padding: 12px 15px;">Nama Peminjam</th>
+            <th style=" padding: 12px 15px;">Nomor HP</th>
+            <th style=" padding: 12px 15px;">Ruang Rapat</th>
+            <th style=" padding: 12px 15px;">Jadwal Ruang Rapat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="active-row" style="color: #000;">
+            <td style=" padding: 12px 15px; width: 150px;">{{nama_peminjam}}</td>
+            <td style=" padding: 12px 15px; width: 120px;">{{no_wa}}</td>
+            <td style=" padding: 12px 15px;">{{room}}</td>
+            <td style=" padding: 12px 15px;">{{jadwal}}</td>
+        </tr>
+    </tbody>
+</table>
+
+Mohon pastikan bahwa ruang rapat telah disiapkan dengan baik dan segala fasilitasnya berfungsi sebagaimana mestinya, termasuk penyediaan peralatan dan fasilitas yang diperlukan.
+<br>
+Terima Kasih.

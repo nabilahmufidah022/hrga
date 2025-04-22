@@ -1,0 +1,15 @@
+<?php $file = $formModel->kehadiran; ?>
+
+<?php if($file != null): ?>
+<?php if ($formModel->kehadiran):?>
+
+<h5>File kehadiran</h5>
+    <div class="scoreboard" style="margin-top: 10px;">
+        
+        <div>
+            <a href="<?=$formModel->kehadiran->getPath()?>" target="_blank" class="btn btn-sm wn-icon-circle-down" style="background-color:rgb(12, 31, 172); color:white;">File Kehadiran</a>
+        </div>
+        <!-- $row->room_pics[0]->getPath()?> -->
+    </div> 
+<?php endif;?>
+<?php endif;?>

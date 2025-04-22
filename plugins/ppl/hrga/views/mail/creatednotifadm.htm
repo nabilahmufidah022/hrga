@@ -1,0 +1,43 @@
+subject = "Peminjaman Baru {{room}}"
+layout = "system"
+==
+
+Halo {{nama}},
+
+Kami harap Anda dalam keadaan baik. Telah terdapat peminjaman ruang rapat baru, berikut adalah detailnya:
+
+{% partial 'panel' body %}
+<table class="styled-table">
+    <tbody>
+        <tr class="active-row" style="font-weight: bold; ">
+            <td style=" padding: 10px;">Nama Peminjam</td>
+            <td style="text-align: left;">:</td>
+            <td style="text-align: left;">{{nama_peminjam}}</td>
+        </tr>
+        <tr class="active-row" style="font-weight: bold;">
+            <td style=" padding: 10px;">Nomor Handphone</td>
+            <td style="text-align: left;">:</td>
+            <td style="text-align: left;">{{no_wa}}</td>
+        </tr>
+        <tr class="active-row" style="font-weight: bold;">
+            <td style=" padding: 10px;">Agenda Rapat</td>
+            <td style="text-align: left;">:</td>
+            <td style="text-align: left;">{{agenda}}</td>
+        </tr>
+        <tr class="active-row" style="font-weight: bold;">
+            <td style=" padding: 10px;">Jadwal Peminjaman</td>
+            <td style="text-align: left;">:</td>
+            <td style="text-align: left;">{{jadwal}}</td>
+        </tr>
+        <tr class="active-row" style="font-weight: bold;">
+            <td style=" padding: 10px;">Ruangan</td>
+            <td style="text-align: left;">:</td>
+            <td style="text-align: left;">{{room}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endpartial %}
+
+Mohon pastikan untuk melakukan koordinasi yang diperlukan dan pastikan untuk menyediakan semua kebutuhan yang diperlukan termasuk memastikan ruang rapat dalam keadaan yang baik sebelum rapat dimulai.
+<br>
+Terima Kasih.

@@ -1,0 +1,60 @@
+<?php
+$flaqstatus = $record->flaq_status;
+
+$flagkehadiran = $record->flag_attendance;
+
+$linkkehadiran = $record->link_kehadiran;
+
+$filekehadiran = $record->kehadiran;
+
+$tanggalberakhir = $tgl_now->diffInMinutes($record->tanggal_akhir,false);
+
+$tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false);
+
+?>
+<?php if($tanggalmulai > 0 && $flaqstatus == 1 ) : ?>
+    <span class="wn-icon-circle font-weight:bold" style="color: #FFC107
+    ">
+        <?php echo trans('ppl.locale::lang.lists.flaqstatus.1');?>
+    </span>
+
+<?php elseif ($flaqstatus == 6):?>     
+    <span class="wn-icon-circle" style="color: #DC3545
+    ">
+        <?php echo trans('ppl.locale::lang.lists.flaqstatus.6');?>
+    </span>
+
+<?php elseif (
+    $flaqstatus == 2 && $flagkehadiran == 1
+    || $flaqstatus == 4 && $tanggalberakhir <=0
+    || $flagkehadiran == 1 && $tanggalberakhir <=0
+    
+    ):?>     
+    <span class="wn-icon-circle" style="color: #A9CE49">
+        <?php echo trans('ppl.locale::lang.lists.flaqstatus.2');?>
+    </span>
+
+<?php elseif (
+    $flaqstatus == 2 && $flagkehadiran == null
+    || $tanggalberakhir <= 0 && $flagkehadiran == null 
+   ):?>
+    <span class="wn-icon-circle" style="color: #198754
+    ">
+        <?php echo trans('ppl.locale::lang.lists.flaqstatus.4');?>
+    </span>
+
+<?php elseif(
+    $tanggalmulai <= 0 && $tanggalberakhir >= 0 && $flaqstatus == 1
+    || $tanggalberakhir >= 0 && $flagkehadiran == 1 
+    
+    ) : ?>
+    <span class="wn-icon-circle" style="color: #0D6EFD
+    ">
+        <?php echo trans('ppl.locale::lang.lists.flaqstatus.3');?>
+    </span>
+
+<?php endif ;?>
+
+<!-- <?= $tanggalberakhir;?>|
+<?= $tgl_now;?>|
+<?= $tanggalmulai;?> -->

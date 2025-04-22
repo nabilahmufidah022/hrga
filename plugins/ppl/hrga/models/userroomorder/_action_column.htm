@@ -1,0 +1,90 @@
+<?php
+$flaqstatus = $record->flaq_status;
+
+$flagkehadiran = $record->flag_attendance;
+
+$tanggalberakhir = $tgl_now->diffInMinutes($record->tanggal_akhir,false);
+
+$tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false);
+
+$linkkehadiran = $record->link_kehadiran;
+
+$filekehadiran = $record->kehadiran;
+?>
+
+<!-- <?php if($flaqstatus == 1):?>
+<a href="<?= Backend::url('ppl/hrga/userroomorders/update/'. $record->id) ?>">
+    <button class="btn wn-icon-pencil btn-sm" style="background-color: #0F2678; color: #ffffff;"><?php echo trans('ppl.locale::lang.button.edit_button');?></button>
+</a>
+<br>
+<?php endif; ?>
+
+<?php if($tanggalberakhir <= 59 && $tanggalberakhir > 0 && $flaqstatus == 2):?>
+<div class="modal-footer" style="margin-top:10px;">
+    <button type="button" 
+     data-dismiss="modal"
+     data-request="onCek" 
+     data-request-data="merapat_id:<?= $record->id ?>"
+     data-attach-loading
+     class="btn wn-icon-check-to-slot btn-sm" style="background-color: #198754; color: #ffffff;">Check In</button>    
+</div>
+<div class="modal-footer" style="margin-top:10px;">
+    <button type="button" 
+     data-dismiss="modal"
+     data-request="onBatal" 
+     data-request-data="merapat_id:<?= $record->id ?>"
+     data-attach-loading
+     class="btn wn-icon-check-to-slot btn-sm" style="background-color: #DC3545; color: #ffffff;">Batal</button>     
+</div>
+<?php endif; ?>
+
+<?php if($flaqstatus == 3):?>
+<a href="<?= Backend::url('ppl/hrga/checkouts/update/'. $record->id) ?>">
+    <button class="btn wn-icon-angles-left btn-sm" style="background-color: #DC3545; color: #ffffff;"><?php echo trans('ppl.locale::lang.button.checkout_button');?></button>
+</a>
+
+<br>
+<a href="<?= Backend::url('ppl/hrga/checkouts/update/'. $record->id) ?>">
+    <button class="btn wn-icon-up-right-from-square" style="background-color: #FFC107; color: black;"><?php echo trans('ppl.locale::lang.button.perpanjang_button');?></button>
+</a>
+<?php endif; ?> -->
+
+<br>
+<?php if($tanggalmulai <= 0 && $flagkehadiran == null && $flaqstatus != 6):?>
+<a href="<?= Backend::url('ppl/hrga/attendances/update/'. $record->id) ?>">
+    <button class="btn wn-icon-clipboard-user btn-sm" style="background-color: #0D6EFD; color: #ffffff;"><?php echo trans('ppl.locale::lang.button.daftar_hadir');?></button>
+</a>
+<br>
+<?php endif; ?>
+<?php if( $tanggalmulai <= 0 && $tanggalberakhir > 0 && $flaqstatus == 1 ):?>
+<a data-toggle="modal" href="#batal-confirmation<?=$record->id?>" class="btn btn-sm wn-icon-circle-check" style="margin-top: 10px; background-color:green; color: white;">Selesai</a>
+
+<div class="control-popup modal fade" id="batal-confirmation<?=$record->id?>" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="text-align: center;">Apakah anda yakin akan mengakhiri rapat?</h4>
+            </div>
+            <div class="modal-footer" style="margin-top:10px; text-align: center;">
+                <button type="button" class="btn btn-primary" 
+                 data-dismiss="modal"
+                 data-request="onSelesai" 
+                 data-request-data="merapat_id:<?= $record->id ?>"
+                 data-attach-loading>Iya</button>
+                <button type="button" class="btn btn-default" aria-hidden="true" style="background-color:red; color:white;" data-dismiss="modal">Tidak</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<!-- <?= $tanggalberakhir;?>|
+<?= $tgl_now;?>|
+<?= $tanggalmulai;?> -->
+
+
+
+
+
+
