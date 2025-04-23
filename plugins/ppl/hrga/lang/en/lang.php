@@ -3,7 +3,6 @@
 return [
     'plugin' => [
         'name' => 'Merapat',
-        'description' => 'Jamsyar: Aplikasi Pelaporan Investasi',
     ],
     'permissions' => [
         'some_permission' => 'Some permission',
@@ -65,6 +64,30 @@ return [
         'dashboard' => [
             'label' => 'Dashboard',
             'label_plural' => 'Dashboards',
+        ],
+        'absence' => [
+            'label' => 'Absence',
+            'label_plural' => 'Absences',
+        ],
+        'personal' => [
+            'label' => 'Personal',
+            'label_plural' => 'Personals',
+        ],
+        'permission' => [
+            'label' => 'Permission',
+            'label_plural' => 'Permissions',
+        ],
+        'leaf' => [
+            'label' => 'Leaf',
+            'label_plural' => 'Leaves',
+        ],
+        'sick' => [
+            'label' => 'Sick',
+            'label_plural' => 'Sicks',
+        ],
+        'device' => [
+            'label' => 'Device',
+            'label_plural' => 'Devices',
         ],
     ],
 ];

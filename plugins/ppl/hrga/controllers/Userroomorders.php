@@ -154,41 +154,41 @@ class Userroomorders extends Controller
 
         $Roomorder->save();
 
-        $penerima_email=[
-            'nama' => $this->user->first_name.' '.$this->user->last_name,
-            'room' => $detail->room_name,
-            'jadwal' => $datetime.' s/d '.$data['Userroomorder']['tanggal_akhir'],
-        ];
+        // $penerima_email=[
+        //     'nama' => $this->user->first_name.' '.$this->user->last_name,
+        //     'room' => $detail->room_name,
+        //     'jadwal' => $datetime.' s/d '.$data['Userroomorder']['tanggal_akhir'],
+        // ];
 
-        $roleid= BackendUser::where('role_id', '=', 4)->first();
+        // $roleid= BackendUser::where('role_id', '=', 4)->first();
 
-        $penerima_admin=[
-            'nama' => $roleid->first_name.' '. $roleid->last_name,
-            'room' => $detail->room_name,
-            'jadwal' => $datetime.' s/d '.$data['Userroomorder']['tanggal_akhir'],
-            'nama_peminjam' => $data['Userroomorder']['nama'],
-            'no_wa' => $data['Userroomorder']['no_wa'],
-            'agenda' => $data['Userroomorder']['agenda_rapat'],
-        ];
+        // $penerima_admin=[
+        //     'nama' => $roleid->first_name.' '. $roleid->last_name,
+        //     'room' => $detail->room_name,
+        //     'jadwal' => $datetime.' s/d '.$data['Userroomorder']['tanggal_akhir'],
+        //     'nama_peminjam' => $data['Userroomorder']['nama'],
+        //     'no_wa' => $data['Userroomorder']['no_wa'],
+        //     'agenda' => $data['Userroomorder']['agenda_rapat'],
+        // ];
 
-        $sender = $this->user->email;
+        // $sender = $this->user->email;
         
         
-        $nama_ruangan = $detail->room_name;
+        // $nama_ruangan = $detail->room_name;
         
 
-        Mail::send('jamsyar.merapat::mail.creatednotif', $penerima_email, function($message) use ($sender){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Pemesanan berhasil dibuat!!');
-            $message->to($sender);
-        });
-        Mail::send('jamsyar.merapat::mail.creatednotifadm', $penerima_admin, function($message) use ($roleid,$nama_ruangan){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Pemesanan '.$nama_ruangan);
-            $message->to($roleid->email);
-        });
+        // Mail::send('jamsyar.merapat::mail.creatednotif', $penerima_email, function($message) use ($sender){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Pemesanan berhasil dibuat!!');
+        //     $message->to($sender);
+        // });
+        // Mail::send('jamsyar.merapat::mail.creatednotifadm', $penerima_admin, function($message) use ($roleid,$nama_ruangan){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Pemesanan '.$nama_ruangan);
+        //     $message->to($roleid->email);
+        // });
         Flash::success('Berhasil Meminjam Ruang Rapat!!');
-        return Redirect::to('/manage/ppl/hrga/Userroomorders');
+        return Redirect::to('/mybackend/ppl/hrga/Userroomorders');
         // dd($model);
     }
 
@@ -221,24 +221,24 @@ class Userroomorders extends Controller
 
         $roleid= BackendUser::where('role_id', '=', 4)->first();
 
-        $penerima_admin=[
-            'nama' => $roleid->first_name.' '. $roleid->last_name,
-            'nama_user' => $this->user->first_name.' '.$this->user->last_name,
-            'room' => $detail->ruangan->room_name,
-            'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
-        ];
-        $nama_ruangan = $detail->ruangan->room_name; 
+        // $penerima_admin=[
+        //     'nama' => $roleid->first_name.' '. $roleid->last_name,
+        //     'nama_user' => $this->user->first_name.' '.$this->user->last_name,
+        //     'room' => $detail->ruangan->room_name,
+        //     'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
+        // ];
+        // $nama_ruangan = $detail->ruangan->room_name; 
         
 
-        Mail::send('jamsyar.merapat::mail.notifselesaiadmin', $penerima_admin, function($message) use ($roleid, $nama_ruangan){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Pemesanan '.$nama_ruangan.' diselesaikan!!!');
-            $message->to($roleid->email);
-        });
+        // Mail::send('jamsyar.merapat::mail.notifselesaiadmin', $penerima_admin, function($message) use ($roleid, $nama_ruangan){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Pemesanan '.$nama_ruangan.' diselesaikan!!!');
+        //     $message->to($roleid->email);
+        // });
 
 
         Flash::success('Berhasil Menyelesaikan Rapat!!');
-        return Redirect::to('/manage/ppl/hrga/Userroomorders');
+        return Redirect::to('/mybackend/ppl/hrga/Userroomorders');
     }
 
     public function onBatal(){
@@ -252,24 +252,24 @@ class Userroomorders extends Controller
 
         $roleid= BackendUser::where('role_id', '=', 4)->first();
 
-        $penerima_admin=[
-            'nama' => $roleid->first_name.' '. $roleid->last_name,
-            'nama_user' => $this->user->first_name.' '.$this->user->last_name,
-            'room' => $detail->ruangan->room_name,
-            'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
-            'alasan_batal' => $data['alasan'],
-        ];
-        $nama_ruangan = $detail->ruangan->room_name; 
+        // $penerima_admin=[
+        //     'nama' => $roleid->first_name.' '. $roleid->last_name,
+        //     'nama_user' => $this->user->first_name.' '.$this->user->last_name,
+        //     'room' => $detail->ruangan->room_name,
+        //     'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
+        //     'alasan_batal' => $data['alasan'],
+        // ];
+        // $nama_ruangan = $detail->ruangan->room_name; 
         
 
-        Mail::send('jamsyar.merapat::mail.notifpembatalanuser', $penerima_admin, function($message) use ($roleid, $nama_ruangan){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Pemesanan '.$nama_ruangan.' dibatalkan!!!');
-            $message->to($roleid->email);
-        });
+        // Mail::send('jamsyar.merapat::mail.notifpembatalanuser', $penerima_admin, function($message) use ($roleid, $nama_ruangan){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Pemesanan '.$nama_ruangan.' dibatalkan!!!');
+        //     $message->to($roleid->email);
+        // });
 
         Flash::success('Peminjaman Ruangan Berhasil Dibatalkan!!');
-        return Redirect::to('/manage/ppl/hrga/Userroomorders');
+        return Redirect::to('/mybackend/ppl/hrga/Userroomorders');
     } 
 
     public function listExtendQuery($query) {
@@ -291,6 +291,7 @@ class Userroomorders extends Controller
         $tgl_now = Carbon::now();
         $this->vars["tgl_now"]=$tgl_now->addMinutes(419);
         $this->asExtension('ListController')->index();
+        // dd($tgl_now);
     }
 
     public function preview($id, $context='preview'){
@@ -307,30 +308,17 @@ class Userroomorders extends Controller
     }
 
     public function orderform($roomid, $dateStr,$context ='create'){
-        // dd($dateStr);
-        #date_default_timezone_set('Asia/Jakarta');
         date_default_timezone_set('Asia/Jakarta');
         $datetime = date('Y-m-d g:i:a', strtotime($dateStr));
    
-        // dd($datetime);
-
-        
-        
-        // $roomid = $id
         $this->vars["ruangan"] = Ruangrapat::find($roomid);
         $this->vars['datestring']=$datetime;
         $this->vars['dateStr']=strtotime($dateStr);
-        // $this->vars["ruangan"] = Ruangrapat::find($id);
-        // dd( $this->vars['form']=$datetime);
-        // $data = input();
-        // $peminjaman =  Roomorder::find($data['merapat_id']);
-        // $peminjaman->backend_user_id = $this->user->id;
-        // // $model->meetingroomlist_id = $detail->id;
-        // $peminjaman->flaq_status = +1;
-        // $peminjaman->save();
-        // return Redirect::to('/manage/ppl/hrga/Userroomorders');
-        $this->asExtension('FormController')->create($context);
+
+        return $this->asExtension('FormController')->create();
     }
+
+    
 
 
     
