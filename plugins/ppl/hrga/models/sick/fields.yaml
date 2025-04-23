@@ -3,6 +3,36 @@
 # ===================================
 
 fields:
-    id:
-        label: 'ppl.hrga::lang.models.general.id'
-        disabled: true
+    nama:
+        label: 'Nama'
+        disabled: false
+        span: left
+    no_wa:
+        label: 'Nomor_Whatsapp'
+        disabled: false
+        span: right
+    tanggal_awal:
+        label: 'Tanggal Awal'
+        disabled: false
+        type: datepicker
+        mode: date
+        span: left
+    tanggal_akhir:
+        label: 'Tanggal Akhir'
+        disabled: false
+        type: datepicker
+        mode: date
+        span: right
+    jumlah_hari:
+        label: 'Jumlah Hari'
+        disabled: false
+        type: number
+    keterangan_sakit:
+        label: 'Keterangan Sakit'
+        disabled: false
+        type: textarea
+    surat_dokter_path:
+        label: 'Surat Dokter'
+        disabled: false
+        type: fileupload
+        mode: file

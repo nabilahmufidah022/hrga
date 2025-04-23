@@ -89,5 +89,9 @@ return [
             'label' => 'Device',
             'label_plural' => 'Devices',
         ],
+        'sicklist' => [
+            'label' => 'Sick List',
+            'label_plural' => 'Sick Lists',
+        ],
     ],
 ];

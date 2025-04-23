@@ -21,5 +21,10 @@ v1.0.1:
     - v1.0.1/dml004_seeder_division.php
     - 'Update backend_brand_settings fixes notif badge'
     - v1.0.1/dml005_update_backend_brand_settings.php
-
-
+    - ddl006_form_pengajuan_sakit
+    - v1.0.1/ddl006_form_pengajuan_sakit.php
+    - ddl007_list_pengajuansakit
+    - v1.0.1/ddl007_list_pengajuansakit.php
+v1.0.2:
+    - 'Create SickLists Table'
+    - v1.0.2/create_sick_lists_table.php
