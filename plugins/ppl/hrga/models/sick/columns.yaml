@@ -17,9 +17,6 @@ columns:
         searchable: true
     Status:
         label: 'Status'
-        type: relation
-        relation: list
-        valueFrom: '{{ list.first().status }}'
     created_at:
         label: 'ppl.hrga::lang.models.general.created_at'
         type: datetime
