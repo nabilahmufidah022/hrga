@@ -3,9 +3,6 @@
 # ===================================
 
 columns:
-    form_pengajuan_sakit_id:
-        label: 'ID'
-        searchable: true
     nama:
         label: 'Nama'
         searchable: true
@@ -15,8 +12,9 @@ columns:
     tanggal_akhir:
         label: 'Tanggal Akhir'
         searchable: true
-    Status:
+    status:
         label: 'Status'
+        searchable: true
     created_at:
         label: 'ppl.hrga::lang.models.general.created_at'
         type: datetime

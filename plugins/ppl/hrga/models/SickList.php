@@ -3,20 +3,18 @@
 namespace Ppl\Hrga\Models;
 
 use Winter\Storm\Database\Model;
-use Ppl\Hrga\Models\SickList;
 
 /**
- * sick Model
+ * SickList Model
  */
-class Sick extends Model
+class SickList extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'ppl_hrga_sicks';
-    public $primaryKey = 'form_pengajuan_sakit_id';
+    public $table = 'ppl_hrga_list_sicks';
 
     /**
      * @var array Guarded fields
@@ -65,38 +63,16 @@ class Sick extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'list' => 'Ppl\Hrga\Models\SickList'
-    ];
+    public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'Form' => 'Ppl\Hrga\Models\Sick'
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [
-        'surat_dokter_path' => 'System\Models\File'
-    ];
+    public $attachOne = [];
     public $attachMany = [];
-
-    public function getSuratDokterPathUrlAttribute()
-    {
-        if ($this->surat_dokter_path) {
-            return $this->surat_dokter_path->getPath(); // Or use getUrl() for public URL
-        }
-        return null;
-    }
-    
-    public function afterSave()
-{
-    // Automatically create a log entry when a product is created
-    $list = new SickList;
-    $list->form_pengajuan_sakit_id = $this->form_pengajuan_sakit_id;
-    $list->tanggal_awal = $this->tanggal_awal;
-    $list->tanggal_akhir = $this->tanggal_akhir;
-    $list->jumlah_hari = $this->jumlah_hari;
-    $list->nama = $this->nama;
-    $list->save();
-}
 }

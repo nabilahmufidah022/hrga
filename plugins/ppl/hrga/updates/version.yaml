@@ -11,6 +11,10 @@ v1.0.1:
     - v1.0.1/ddl004_merapat_roomorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
+    - 'Create Form Pengajuan Sakit Table'
+    - v1.0.1/ddl006_form_pengajuan_sakit.php
+    - 'Create List Pengajuan Sakit Table'
+    - v1.0.1/ddl007_list_pengajuansakit.php
     - 'Create List Perangkat Table'
     - v1.0.1/ddl009_list_perangkat.php
     - 'Create All Status Table'
@@ -31,3 +35,4 @@ v1.0.1:
     - v1.0.1/dml009_seeder_list_perangkat.php
     - 'Create Seeder All Status'
     - v1.0.1/dml010_seeder_all_status.php
+    
