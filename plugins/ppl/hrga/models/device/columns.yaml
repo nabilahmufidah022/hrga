@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama_perangkat:
+        label: 'Nama Perangkat'
+        searchable: true
+    action:
+        label: "Aksi"
+        span: right
+        type: partial
+        path: ~/plugins/ppl/hrga/models/device/_action_column.htm
+        clickable: false
+        searchable: false
+        sortable: false

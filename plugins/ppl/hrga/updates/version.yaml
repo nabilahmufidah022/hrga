@@ -11,6 +11,12 @@ v1.0.1:
     - v1.0.1/ddl004_merapat_roomorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
+    - 'Create List Perangkat Table'
+    - v1.0.1/ddl009_list_perangkat.php
+    - 'Create All Status Table'
+    - v1.0.1/ddl010_all_status.php
+    - 'Create Device Form Table'
+    - v1.0.1/ddl011_device_form.php
     - 'Create Seeder Status'
     - v1.0.1/dml001_seeder_status.php
     - 'Create Seeder User Role'
@@ -21,5 +27,7 @@ v1.0.1:
     - v1.0.1/dml004_seeder_division.php
     - 'Update backend_brand_settings fixes notif badge'
     - v1.0.1/dml005_update_backend_brand_settings.php
-
-
+    - 'Create Seeder List Perangkat'
+    - v1.0.1/dml009_seeder_list_perangkat.php
+    - 'Create Seeder All Status'
+    - v1.0.1/dml010_seeder_all_status.php

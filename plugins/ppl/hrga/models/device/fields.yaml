@@ -1,0 +1,7 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama_perangkat:
+        label: 'nama perangkat'

@@ -1,5 +1,8 @@
 permissions:
-# MIW Roles   
+# MIW Roles 
+    ppl.hrga.pengajuan.perangkat:
+        tab: 'ppl.locale::lang.permissions.formperangkat.title'
+        label: 'ppl.locale::lang.permissions.formperangkat.title'   
     ppl.hrga.peminjaman.beranda:
         tab: 'ppl.locale::lang.permissions.beranda.title'
         label: 'ppl.locale::lang.permissions.beranda.title' 
@@ -87,6 +90,15 @@ navigation:
                 attributes:
                     group: "ppl.locale::lang.models.form-pengajuan.group"
                     description: "ppl.locale::lang.models.form-pengajuan.desc"
+            deviceorders:
+                label: "ppl.locale::lang.models.form-pengajuan.form-perangkat.label"
+                url: ppl/hrga/deviceorders
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-perangkat.svg
+                permissions:
+                    - ppl.hrga.pengajuan.perangkat
+                attributes:
+                    group: "ppl.locale::lang.models.form-pengajuan.group"
+                    description: "ppl.locale::lang.models.form-pengajuan.desc"
             dashboards:
                 label: "ppl.locale::lang.models.dashboard.dashboards.label"
                 url: ppl/hrga/dashboards
@@ -140,8 +152,7 @@ navigation:
                     - ppl.hrga.peminjaman.laporan
                 attributes:
                     group: "ppl.locale::lang.models.dashboard.group"
-                    description: "ppl.locale::lang.models.dashboard.laporan.desc"
-                    
+                    description: "ppl.locale::lang.models.dashboard.laporan.desc"               
             homes:
                 label: "ppl.locale::lang.models.home.homes.label"
                 url: ppl/hrga/homes
@@ -156,7 +167,7 @@ navigation:
                 url: ppl/hrga/userroomorders
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
                 permissions:
-                    - ppl.hrga.peminjaman.peminjamanruangan
+                    - ppl.hrga.peminjaman.  
                 attributes:
                     group: "ppl.locale::lang.models.home.group"
                     description: "ppl.locale::lang.models.home.peminjamanruang.desc"
