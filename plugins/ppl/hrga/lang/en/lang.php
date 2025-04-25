@@ -92,6 +92,7 @@ return [
         'deviceorder' => [
             'label' => 'Deviceorder',
             'label_plural' => 'Deviceorders',
+        ],
         'sicklist' => [
             'label' => 'Sick List',
             'label_plural' => 'Sick Lists',
