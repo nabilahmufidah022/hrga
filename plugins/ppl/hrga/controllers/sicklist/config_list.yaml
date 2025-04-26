@@ -3,10 +3,10 @@
 # ===================================
 
 # Model List Column configuration
-list: $/ppl/hrga/models/sicklist/columns.yaml
+# list: $/ppl/hrga/models/sicklist/columns.yaml
 
 # Model Class name
-modelClass: Ppl\Hrga\Models\SickList
+# modelClass: Ppl\Hrga\Models\SickList
 
 # List Title
 title: 'ppl.hrga::lang.models.sicklist.label_plural'

@@ -15,6 +15,7 @@ class SickList extends Model
      * @var string The database table used by the model.
      */
     public $table = 'ppl_hrga_list_sicks';
+    public $primaryKey = 'list_pengajuan_sakit_id';
 
     /**
      * @var array Guarded fields
@@ -67,7 +68,11 @@ class SickList extends Model
     public $hasOneThrough = [];
     public $hasManyThrough = [];
     public $belongsTo = [
-        'Form' => 'Ppl\Hrga\Models\Sick'
+        'Form' => [
+            'Ppl\Hrga\Models\Sick',
+            'key' => 'form_pengajuan_sakit_id',        // foreign key di SickList
+            'otherKey' => 'form_pengajuan_sakit_id'    // primary key di Sick
+        ]
     ];
     public $belongsToMany = [];
     public $morphTo = [];

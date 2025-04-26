@@ -66,7 +66,11 @@ class Sick extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'list' => 'Ppl\Hrga\Models\SickList'
+        'list' => [
+            'Ppl\Hrga\Models\SickList',
+            'key'      => 'form_pengajuan_sakit_id',   // foreign key in SickList
+            'localKey' => 'form_pengajuan_sakit_id'
+        ]
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -99,4 +103,24 @@ class Sick extends Model
     $list->nama = $this->nama;
     $list->save();
 }
+public function getJumlahHariListAttribute()
+{
+    // kalau relasinya belum di-load, load dulu biar aman
+    $this->load('list');
+
+    // ambil semua jumlah_hari di relasi SickList lalu gabungkan dengan koma
+    return $this->list->pluck('jumlah_hari')->implode(', ');
+}
+
+public function getStatusListAttribute()
+{
+    $this->load('list');
+    // If list exists, pluck the status_id from SickList relation
+    if ($this->list && $this->list->isNotEmpty()) {
+        return $this->list->pluck('status_id')->implode(', '); // Concatenate all status_id if there's more than one
+    }
+    return 'No Status'; // Default message if no status is found
+}
+
+
 }
