@@ -30,24 +30,5 @@ class Sicks extends Controller
         BackendMenu::setContext('Ppl.Hrga', 'hrga', 'sick');
     }
 
-    public $model = 'Ppl\Hrga\Models\Sick';
-
-    public function listExtendQuery($query)
-    {
-        $query->with('list'); // eager load SickList relation
-    }
-    public function listExtendColumns($list)
-{
-    // Add the 'status_list' column to the list view
-    $list->addColumns([
-        'status_list' => [
-            'label' => 'Status',
-            'sortable' => false,  // We don't need it to be sortable
-            'type' => 'text',     // This will render the text values
-            'valueFrom' => function($record) {
-                return $record->status_list;  // This accesses the accessor
-            }
-        ]
-    ]);
-}
+    
 }

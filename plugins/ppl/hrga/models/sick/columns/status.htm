@@ -1,0 +1,18 @@
+{% set status = value|default('0') %}
+
+{% set colorMap = {
+    '0': 'warning',
+    '1': 'success',
+    '2': 'danger'
+} %}
+
+{% set labelMap = {
+    '0': 'Pending',
+    '1': 'Diterima',
+    '2': 'Ditolak'
+} %}
+
+{% set color = colorMap[status] ?? 'secondary' %}
+{% set label = labelMap[status] ?? 'Tidak diketahui' %}
+
+<span class="badge badge-{{ color }}">{{ label }}</span>
