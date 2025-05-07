@@ -66,11 +66,7 @@ class Sick extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-<<<<<<< HEAD
-        'list' => [
-=======
        'list' => [
->>>>>>> pengajuansakit
             'Ppl\Hrga\Models\SickList',
             'key'      => 'form_pengajuan_sakit_id',   // foreign key in SickList
             'localKey' => 'form_pengajuan_sakit_id'
