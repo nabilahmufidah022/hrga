@@ -4,10 +4,11 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Checkouts Backend Controller
+ * Devices Backend Controller
  */
-class Checkouts extends Controller
+class Devices extends Controller
 {
+    protected $partialsDir = 'ppl/hrga/partials/';
     /**
      * @var array Behaviors that are implemented by this controller.
      */
@@ -16,15 +17,17 @@ class Checkouts extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    /**
+     * @var array Permissions required to view this page.
+     */
+    protected $requiredPermissions = [
+        'ppl.hrga.devices.manage_all',
+    ];
+
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Ppl.Hrga', 'userroomorders', 'checkouts');
-    }
-
-    public function formAfterSave($model) {
-        $model->flaq_status = 4;
-        $model->save();
+        BackendMenu::setContext('Ppl.Hrga', 'homes', 'devices');
     }
 }

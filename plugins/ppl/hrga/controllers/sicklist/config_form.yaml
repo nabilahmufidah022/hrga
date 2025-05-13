@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.sicklist.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/sicklist/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\SickList
+
+# Default redirect location
+defaultRedirect: ppl/hrga/sicklist
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/sicklist/update/:id
+    redirectClose: ppl/hrga/sicklist
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/sicklist
+    redirectClose: ppl/hrga/sicklist
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

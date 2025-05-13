@@ -1,0 +1,50 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama_peminjam:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
+    divisi_id:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.unit_kerja'
+        span: left
+        type: dropdown
+        placeholder: 'Pilih Unit Kerja'
+        required: true
+    no_wa:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.no_wa'
+        span: right
+        required: true
+    tanggal_awal:
+        label: 'Tanggal Peminjaman Awal'
+        span: left
+        type: datepicker
+        mode: date
+        minDate: today
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'Tanggal Peminjaman Akhir'
+        span: right
+        type: datepicker
+        mode: date
+        minDate: today
+        ignoreTimezone: true
+        required: true
+    device_id:
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.unit_kerja'
+        span: left
+        type: dropdown
+        placeholder: 'Pilih Perangkat'
+        required: true
+    jumlah_perangkat:
+        label: 'Jumlah Perangkat'
+        required: true
+        span: right
+    keperluan:
+        label: 'Alasan Peminjaman'
+        type: textarea
+        size: large
+        required: true

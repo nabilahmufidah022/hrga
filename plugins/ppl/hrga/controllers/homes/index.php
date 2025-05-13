@@ -46,7 +46,7 @@
           let dateStr = info.dateStr;
           // alert('Clicked on: ' + info.dateStr);
           
-          window.location.href = "/manage/ppl/hrga/userroomorders/orderform/" + roomid +"/" + dateStr; //assuming that testing.html is in same folder as your current html file.
+          window.location.href = "/mybackend/ppl/hrga/userroomorders/orderform/" + roomid + "/" + dateStr; //assuming that testing.html is in same folder as your current html file.
         
 },
 editable: true,

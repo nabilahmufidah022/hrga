@@ -4,9 +4,9 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Checkouts Backend Controller
+ * Sicks Backend Controller
  */
-class Checkouts extends Controller
+class Sicks extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -16,15 +16,19 @@ class Checkouts extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    /**
+     * @var array Permissions required to view this page.
+     */
+    protected $requiredPermissions = [
+        'ppl.hrga.sicks.manage_all',
+    ];
+
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Ppl.Hrga', 'userroomorders', 'checkouts');
+        BackendMenu::setContext('Ppl.Hrga', 'hrga', 'sick');
     }
 
-    public function formAfterSave($model) {
-        $model->flaq_status = 4;
-        $model->save();
-    }
+    
 }
