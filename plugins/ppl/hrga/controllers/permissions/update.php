@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('ppl/hrga/permissions') ?>"><?= e(trans('ppl.hrga::lang.models.permission.label_plural')); ?></a></li>
-        <li><?= e($this->pageTitle) ?></li>
+        <li><a href="<?= Backend::url('ppl/hrga/permissions') ?>"><?= e(trans('List Izin')); ?></a></li>
+        <li><?= e(trans('backend::lang.form.create_title', ['name' => trans('Edit Ajukan Izin')])); ?></</li>
     </ul>
 <?php Block::endPut() ?>
 
