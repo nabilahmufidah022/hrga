@@ -9,6 +9,8 @@ v1.0.1:
     - v1.0.1/ddl003_kepala_bagian.php
     - 'Create Form Room Order Table'
     - v1.0.1/ddl004_merapat_roomorder_form.php
+    - 'Create Form Izin Order Table'
+    - v1.0.1/ddl006_merapat_izinorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
     - 'Create Seeder Status'
