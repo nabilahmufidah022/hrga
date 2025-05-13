@@ -16,6 +16,8 @@ v1.0.1:
     - 'Create List Pengajuan Sakit Table'
     - v1.0.1/ddl007_list_pengajuansakit.php
     - 'Create List Perangkat Table'
+    - v1.0.1/ddl008_form_pengajuan_cuti.php
+    - 'Create Form Pengajuan Cuti Table'
     - v1.0.1/ddl009_list_perangkat.php
     - 'Create All Status Table'
     - v1.0.1/ddl010_all_status.php
