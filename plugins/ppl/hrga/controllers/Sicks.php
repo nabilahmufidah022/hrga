@@ -29,4 +29,6 @@ class Sicks extends Controller
 
         BackendMenu::setContext('Ppl.Hrga', 'hrga', 'sick');
     }
+
+    
 }

@@ -6,6 +6,30 @@ columns:
     id:
         label: 'ppl.hrga::lang.models.general.id'
         searchable: true
+    nama:
+        label: Nama
+        searchable: true
+    jumlah_rencana_izin:
+        label: Jumlah Rencana Izin
+        searchable: true
+    tanggal_awal:
+        label: Tanggal Awal Izin
+        type: date 
+        format: d-mm-yy
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: Tanggal Akhir Izin
+        type: date 
+        format: d-mm-yy
+        ignoreTimezone: true
+    action:
+        label: "Aksi"
+        span: right
+        type: partial
+        path: ~/plugins/ppl/hrga/models/permission/_action_column.htm
+        clickable: false
+        searchable: false
+        sortable: false
     created_at:
         label: 'ppl.hrga::lang.models.general.created_at'
         type: datetime

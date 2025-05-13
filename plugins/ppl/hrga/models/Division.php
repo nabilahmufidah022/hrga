@@ -2,6 +2,7 @@
 
 use Model;
 use Ppl\Hrga\Models\Userroomorder as Moroomorder;
+use Ppl\Hrga\Models\Permission;
 
 /**
  * division Model

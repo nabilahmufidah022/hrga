@@ -15,6 +15,9 @@ permissions:
     ppl.hrga.peminjaman.listruangrapat:
         tab: 'ppl.locale::lang.permissions.listruangrapat.title'
         label: 'ppl.locale::lang.permissions.listruangrapat.title'
+    ppl.hrga.peminjaman.listizin:
+        tab: 'ppl.locale::lang.permissions.listizin.title'
+        label: 'ppl.locale::lang.permissions.listizin.title'
     ppl.hrga.peminjaman.divisi:
         tab: 'ppl.locale::lang.permissions.divisi.title'
         label: 'ppl.locale::lang.permissions.divisi.title'

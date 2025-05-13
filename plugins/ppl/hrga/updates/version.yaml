@@ -9,6 +9,8 @@ v1.0.1:
     - v1.0.1/ddl003_kepala_bagian.php
     - 'Create Form Room Order Table'
     - v1.0.1/ddl004_merapat_roomorder_form.php
+    - 'Create Form Izin Order Table'
+    - v1.0.1/ddl006_merapat_izinorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
     - 'Create Form Pengajuan Sakit Table'
@@ -16,6 +18,8 @@ v1.0.1:
     - 'Create List Pengajuan Sakit Table'
     - v1.0.1/ddl007_list_pengajuansakit.php
     - 'Create List Perangkat Table'
+    - v1.0.1/ddl008_form_pengajuan_cuti.php
+    - 'Create Form Pengajuan Cuti Table'
     - v1.0.1/ddl009_list_perangkat.php
     - 'Create All Status Table'
     - v1.0.1/ddl010_all_status.php

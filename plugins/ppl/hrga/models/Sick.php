@@ -66,7 +66,11 @@ class Sick extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'list' => 'Ppl\Hrga\Models\SickList'
+       'list' => [
+            'Ppl\Hrga\Models\SickList',
+            'key'      => 'form_pengajuan_sakit_id',   // foreign key in SickList
+            'localKey' => 'form_pengajuan_sakit_id'
+        ]
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -99,4 +103,21 @@ class Sick extends Model
     $list->nama = $this->nama;
     $list->save();
 }
+    public function getStatusIdAttribute()
+    {
+        $latestList = $this->list()->latest()->first();
+
+        if (!$latestList) {
+            return '-';
+        }
+    
+        $statusLabels = [
+            '0' => 'Pending',
+            '1' => 'Diterima',
+            '2' => 'Ditolak',
+        ];
+    
+        return $statusLabels[$latestList->status_id] ?? 'Tidak Diketahui';
+    }
+
 }
