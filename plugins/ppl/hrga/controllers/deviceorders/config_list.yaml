@@ -12,7 +12,7 @@ modelClass: Ppl\Hrga\Models\Deviceorder
 title: 'ppl.hrga::lang.models.deviceorder.label_plural'
 
 # Link URL for each record
-recordUrl: ppl/hrga/deviceorders/update/:id
+recordUrl: ppl/hrga/deviceorders/preview/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
