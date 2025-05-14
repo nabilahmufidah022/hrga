@@ -11,6 +11,12 @@ fields:
         label: 'Nomor_Whatsapp'
         disabled: false
         span: right
+    divisi_id:
+        label: 'Unit Kerja'
+        span: left
+        type: dropdown
+        placeholder: 'Pilih Unit Kerja'
+        required: true
     tanggal_awal:
         label: 'Tanggal Awal'
         disabled: false
