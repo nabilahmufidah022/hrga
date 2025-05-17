@@ -77,7 +77,48 @@ class Personal extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-        'room_pics' => \System\Models\File::class,
+        'staff_pics' => \System\Models\File::class,
     ];
     public $attachMany = [];
+    public function getDivisiIdOptions($value, $formData)
+    {
+        // $DivisiData = MoDivisi::get(['id','nama_divisi', 'kode_divisi'])->toArray();
+        // $Divisi = [];
+        // foreach($DivisiData as $value) {
+        //     $Divisi[$value['id']] = $value['kode_divisi']; 
+        // }
+        // return $Divisi;
+
+        $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->lists('divisi', 'id');
+        return $Divisi_id;
+    }
+
+    public function getKodeDivisiAttribute($value)
+    {
+        // $divisi = DB::table('merapat_divisi')->join()->where('divisi_id', $id);
+        $DivisiData = MoDivisi::where('id','=', $this->divisi_id)->first();
+        // dd($DivisiData);
+        $nama_divisi = $DivisiData->nama_divisi;
+        $kode_divisi = $DivisiData->kode_divisi;
+
+        $dataDivisi = $kode_divisi.' - '.$nama_divisi;
+
+        return $dataDivisi;
+        // $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->where($this->divisi_id, '=', 'id');
+        // // dd($Divisi_id);
+        // return $Divisi_id;
+    }
+
+      public function getJabatanIdOptions($value, $formData)
+    {
+        // $DivisiData = MoDivisi::get(['id','nama_divisi', 'kode_divisi'])->toArray();
+        // $Divisi = [];
+        // foreach($DivisiData as $value) {
+        //     $Divisi[$value['id']] = $value['kode_divisi']; 
+        // }
+        // return $Divisi;
+
+        $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->lists('divisi', 'id');
+        return $Divisi_id;
+    }
 }

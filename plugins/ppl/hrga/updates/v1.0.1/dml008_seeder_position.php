@@ -1,7 +1,8 @@
 <?php namespace Ppl\Hrga\Updates;
 
-//use Ppl\Hrga\Models\Position;
+use Ppl\Hrga\Models\Position;
 use Winter\Storm\Database\Updates\Seeder;
+
 
 class Dml008SeederPosition extends Seeder
 {   
@@ -17,16 +18,16 @@ class Dml008SeederPosition extends Seeder
         $division = Position::insert([
             [
                 'id'               => 1,
-                'nama_divisi'      => 'Manager',
+                'nama_jabatan'      => 'Manager',
             ],
             [
                 'id'               => 2,
-                'nama_divisi'      => 'Staff',
+                'nama_jabatan'      => 'Staff',
                 
             ],
             [
                 'id'               => 3,
-                'nama_divisi'      => 'Magang',
+                'nama_jabatan'      => 'Magang',
             ],    
         ]);
     }
