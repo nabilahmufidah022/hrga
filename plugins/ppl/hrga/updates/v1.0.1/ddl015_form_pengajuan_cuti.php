@@ -3,7 +3,7 @@
 use Winter\Storm\Database\Updates\Migration;
 use Winter\Storm\Support\Facades\Schema;
 
-class Ddl008FormPengajuanCuti extends Migration
+class Ddl015FormPengajuanCuti extends Migration
 {
     public function up()
     {
