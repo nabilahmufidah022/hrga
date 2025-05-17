@@ -41,25 +41,25 @@ class Adminroomorders extends Controller
         $detail->save();
         
 
-        $penerima_email=[
-            'nama' => $detail->pengirim->first_name.' '. $detail->pengirim->last_name,
-            'room' => $detail->ruangan->room_name,
-            'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
-            'alasan_batal' => $data['alasan'],
-        ];
+        // $penerima_email=[
+        //     'nama' => $detail->pengirim->first_name.' '. $detail->pengirim->last_name,
+        //     'room' => $detail->ruangan->room_name,
+        //     'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
+        //     'alasan_batal' => $data['alasan'],
+        // ];
 
-        $sender = $detail->pengirim->email; 
-        // $nama_ruangan = $detail->ruangan->room_name; 
+        // $sender = $detail->pengirim->email; 
+        // // $nama_ruangan = $detail->ruangan->room_name; 
         
 
-        Mail::send('ppl.hrga::mail.notifpembatalanadmin', $penerima_email, function($message) use ($sender){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Peminjaman dibatalkan!!');
-            $message->to($sender);
-        });
+        // Mail::send('ppl.hrga::mail.notifpembatalanadmin', $penerima_email, function($message) use ($sender){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Peminjaman dibatalkan!!');
+        //     $message->to($sender);
+        // });
 
         Flash::success('Pengajuan Permohonan Desain Berhasil Dibatalkan!');
-        return Redirect::to('/manage/ppl/hrga/adminroomorders');
+        return Redirect::to('/mybackend/ppl/hrga/adminroomorders');
     }
 
     public function onSelesai(){
@@ -68,23 +68,23 @@ class Adminroomorders extends Controller
         $detail->flaq_status = 2;
         $detail->save();
 
-        $penerima_email=[
-            'nama' => $detail->pengirim->first_name.' '. $detail->pengirim->last_name,
-            'room' => $detail->ruangan->room_name,
-            'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
-        ];
+        // $penerima_email=[
+        //     'nama' => $detail->pengirim->first_name.' '. $detail->pengirim->last_name,
+        //     'room' => $detail->ruangan->room_name,
+        //     'jadwal' => $detail->tanggal_awal. ' s/d '. $detail->tanggal_akhir,
+        // ];
 
-        $sender = $detail->pengirim->email; 
-        // $nama_ruangan = $detail->ruangan->room_name; 
+        // $sender = $detail->pengirim->email; 
+        // // $nama_ruangan = $detail->ruangan->room_name; 
 
-        Mail::send('ppl.hrga::mail.notifselesaiuser', $penerima_email, function($message) use ($sender){
-            $message->from('devops@ext.jamsyar.id','Admin Meeting');
-            $message->subject('Peminjaman diselesaikan!!');
-            $message->to($sender);
-        });
+        // Mail::send('ppl.hrga::mail.notifselesaiuser', $penerima_email, function($message) use ($sender){
+        //     $message->from('devops@ext.jamsyar.id','Admin Meeting');
+        //     $message->subject('Peminjaman diselesaikan!!');
+        //     $message->to($sender);
+        // });
 
         Flash::success('Berhasil Menyelesaikan Rapat!!');
-        return Redirect::to('/manage/ppl/hrga/adminroomorders');
+        return Redirect::to('/mybackend/ppl/hrga/adminroomorders');
     }
 
     // public function formAfterSave($model) {

@@ -6,3 +6,74 @@ fields:
     id:
         label: 'ppl.hrga::lang.models.general.id'
         disabled: true
+    nama:
+        span: left
+        label: Nama
+    no_wa:
+        span: right
+        label: No Whatsapp
+        type: number
+    divisi_id:
+        span: left
+        label: Divisi
+        type: dropdown
+        options:
+            SEVP Bisnis	:	SEVP Bisnis
+            Pemasaran	:	Pemasaran
+            Klaim & Subrogasi	:	Klaim & Subrogasi
+            Satuan Pengawas Internal	:	Satuan Pengawas Internal
+            Sekretaris Perusahaan	:	Sekretaris Perusahaan
+            Coorporate Transformation, Renstra & Kepatuhan	:	Coorporate Transformation, Renstra & Kepatuhan
+            Teknik Penjaminan	:	Teknik Penjaminan
+            Penunjang Bisnis	:	Penunjang Bisnis
+            Koordinator TI	:	Koordinator TI
+            Keuangan & Akuntansi	:	Keuangan & Akuntansi
+            Divisi SDM & Umum	:	Divisi SDM & Umum
+            Manajemen Risiko	:	Manajemen Risiko
+
+    tanggal_awal:
+        span: left
+        label: Tanggal Awal Izin
+        type: datepicker
+        mode: date
+        format: d-m-Y
+    tanggal_akhir:
+        span: right
+        label: Tanggal Akhir Izin
+        type: datepicker
+        mode: date
+        format: d-m-Y
+    jumlah_rencana_izin:
+        span: left
+        label: Jumlah Rencana Izin
+        type: number
+        disabled: true
+        trigger:
+            action: reload
+            field: tanggal_awal
+            condition: value[*]
+        dependsOn: [tanggal_awal, tanggal_akhir]
+    keterangan_izin:
+        label: Keterangan Izin
+        type: Backend\FormWidgets\RichEditor
+        size: large
+    jenis_izin:
+        span: left
+        label: Jenis Izin
+        type: dropdown
+        options:
+            Dinas_Luar : Dinas Luar
+            Wisuda : Wisuda
+            Pernikahan : Pernikahan
+            Ibadah : Ibadah
+            Bencana : Bencana
+        placeholder: 'pilih jenis izin'
+    file_pendukung:
+        label: File Pendukung
+        type: fileupload
+        mode: image
+        span: full
+        fileTypes: jpg, jpeg, png
+        imageHeight: 472
+        imageWidth: 709
+

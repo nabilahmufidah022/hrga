@@ -1,0 +1,39 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    action:
+        label: "ppl.locale::lang.models.home.peminjamanruang.field.action"
+        type: partial
+        clickable: false
+        searchable: false
+        sortable: false
+        path: ~/plugins/ppl/hrga/models/deviceorder/_action_column.htm
+    flag_status:
+        label: "ppl.locale::lang.models.home.peminjamanruang.field.status"
+        type: partial
+        path: ~/plugins/ppl/hrga/models/deviceorder/_flag_status.htm
+        searchable: false
+        sortable: false
+    nama_peminjam:
+        label: 'Nama Peminjam'
+        relation: nama_peminjam
+        select: concat(first_name, ' ', last_name)
+        searchable: true
+    unit kerja:
+        label: 'Unit Kerja'
+        valueFrom: kode_divisi
+        clickable: false
+        searchable: false
+        sortable: false
+    tanggal_awal:
+        label: 'Tanggal Peminjaman Awal'
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'Tanggal Peminjaman Akhir'
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true

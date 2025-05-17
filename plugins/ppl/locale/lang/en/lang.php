@@ -13,6 +13,9 @@ return [
     ],
     'permissions' => [
         'some_permission' => 'Some permission',
+        'formperangkat' => [
+            'title' => 'Form Pengajuan Perangkat',
+        ],
         'home' => [
             'title' => 'Home',
         ],
@@ -33,13 +36,15 @@ return [
         ],
         'ruangrapat' => [
             'title' => 'Ruang Rapat',
+        ],
+        'beranda'=>[
+            'title' => 'Beranda'
         ]
     ],
     'text' => [
-        'company_name' => 'PT Penjaminan Jamkrindo Syariah',
+        'textlink' => 'Aplikasi SDM',
+        'company_name' => 'Telok University',
         'company_alias' => 'Ppl',
-        'corporate_tagline' => 'Menjadi Perusahaan Penjaminan Syariah Terpercaya dan Terdepan dalam Pertumbuhan Bisnis di Indonesia',
-        'cb_tos_agreement' => 'Saya setuju dengan Ketentuan Penggunaan',
         'url_forgot_password' => 'Lupa Sandi?',
         'url_user_manual' => 'User Manual',
         'btn_login' => 'Masuk',
@@ -48,55 +53,9 @@ return [
         'username' => 'Username',
         'password' => 'kata sandi',
 
-        'agreement_title1' => 'PT PENJAMINAN JAMKRINDO SYARIAH',
+        'agreement_title1' => 'Telok University',
         'agreement_title2' => 'DIVISI TEKNOLOGI INFORMASI',
         'agreement_title3' => 'DISCLAIMER',
-
-        'agreement1' => '1. Web Aplikasi Merapat adalah aplikasi internal perusahaan
-        yang semata-mata diadakan untuk kepentingan perusahaan, dan
-        karenanya harus dipergunakan sebaik-baiknya sesuai petunjuk dan
-        aturan yang berlaku.',
-
-        'agreement2' => '2. Pemakai/penanggungjawab tidak dibenarkan memberikan username
-        password akun kepada orang lain untuk kepentingan pribadi.',
-
-        'agreement3' => '3. Untuk informasi lebih lanjut, bantuan (support), keluhan yang
-        berkaitan dengan kurang optimalnya aplikasi, harap menghubungi
-        Fungsi TI dengan PIC : Nabiilah Mufiidah, email : it@Ppl.id. ',
-
-        'agreement4' => '4. Dengan telah membaca ketentuan ini, pengguna memahami isi
-        petunjuk/ketentuan dan menerima resiko yang dibebankan sebagai
-        akibat dari kesalahan yang diakibatkannya.',
-    ],
-    'agreement' => [
-        'btn_agree' => 'Nanti',
-        'btn_disagree' => 'Setuju & lanjutkan',
-        'agreement_title1' => 'PT PENJAMINAN JAMKRINDO SYARIAH',
-        'agreement_title2' => 'DIVISI TEKNOLOGI INFORMASI',
-        'agreement_title3' => 'DISCLAIMER',
-
-        'agreement1' => '1. Web Aplikasi Potongan Link adalah aplikasi internal perusahaan
-        yang semata-mata diadakan untuk kepentingan perusahaan, dan
-        karenanya harus dipergunakan sebaik-baiknya sesuai petunjuk dan
-        aturan yang berlaku.',
-
-        'agreement2' => '2. Pemakai/penanggungjawab tidak dibenarkan memberikan username
-        password akun kepada orang lain untuk kepentingan pribadi, serta
-        tidak diperkenankan menggunakan link untuk kepentingan pribadi
-        diluar perusahaan (termasuk kegiatan ilegal).',
-
-        'agreement3' => '3. Pemakai harus melindungi dan menjaga penditribusian link ke pihak
-        pihak yang memang dianggap sebagai pihak yang membutuhkan link yang
-        dimaksud. Segala potensi yang timbul akibat salahnya pendistribusian
-        link akan dipertanggung jawabkan penuh oleh si pemilik akun. ',
-
-        'agreement4' => '4. Untuk informasi lebih lanjut, bantuan (support), keluhan yang
-        berkaitan dengan kurang optimalnya aplikasi, harap menghubungi
-        Fungsi TI dengan PIC : Putri Amelia, email : it@Ppl.id. ',
-
-        'agreement5' => '5. Dengan telah membaca ketentuan ini, pengguna memahami isi
-        petunjuk/ketentuan dan menerima resiko yang dibebankan sebagai
-        akibat dari kesalahan yang diakibatkannya.',
     ],
     'nav' => [
         'manage-users' => [
@@ -123,6 +82,19 @@ return [
         'doctype' => [
             'memo' => 'Memo',
             'usulan' => 'Usulan'
+        ],
+        'flagstatus_all' => [
+            '1' => 'Menunggu Persetujuan',
+            '2' => 'Ditolak',
+            '3' => 'Disetujui',
+            '4' => 'Selesai Dipinjam',
+            '5' => 'Menunggu Persetujuan Kadiv',
+            '6' => 'Menunggu Persetujuan Revisi',
+            '7' => 'Selesai',
+            '8' => 'Sudah Disetujui',
+            '9' => 'Proses Revisi',
+            '10' => 'Permohonan Revisi Ditolak',
+            '11' => 'Menunggu Persetujuan',
         ],
         'flaqstatus' => [
             '1' => 'Dipesan',
@@ -198,6 +170,9 @@ return [
                     'action' => 'Aksi',
                     'created_at'=> 'Created At'
                 ],
+                'btn_kehadiran'=>[
+                    'form_kehadiran' => 'Form Daftar Hadir'
+                ],
                 'form'=>[
                     'nama'=>'Nama',
                     'no_wa'=>'Nomor WhatsApp',
@@ -233,8 +208,8 @@ return [
             'group' => 'Absensi',
         ],
         'biodata-diri' =>[
-            'label' => 'Data Diri',
-            'label_plural' => 'Absensi',
+            'label' => 'Form Biodata Diri',
+            'label_plural' => 'Biodata Diri',
             'desc'=>'',
             'group' => 'Biodata Diri',
         ],
@@ -257,6 +232,9 @@ return [
             'form-perangkat' =>[
                 'label' => 'Form Pengajuan Perangkat',
                 'label_plural' => 'Form Pengajuan Perangkat',
+                'form' =>[
+                    'btn_setuju' => 'Setujui',
+                ],
             ],
             'group' => 'Pengajuan',
         ],
@@ -308,6 +286,11 @@ return [
                 'foto_ruang' => 'Foto Ruang Rapat',
                 'btn_tmbh' =>"Tambah Ruang Rapat",
                 'alert_delete' => 'ApakahAnda Yakin Akan Menghapus Data yang Terpilih?',
+                'desc'=>'',
+            ],
+            'list-perangkat' =>[
+                'label' => 'List Perangkat',
+                'label_plural' => 'List Perangkat',
                 'desc'=>'',
             ],
             'divisi' =>[

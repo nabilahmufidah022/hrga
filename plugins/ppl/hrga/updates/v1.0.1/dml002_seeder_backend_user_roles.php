@@ -20,15 +20,15 @@ class DMl002SeederBackendUserRoles extends Seeder
             'name'                 =>'User',
             'code'                 =>'user',
             'description'          =>'Kewewenangan sebagai User.',
-            'permissions'          =>'{"jamsyar.merapat.peminjaman.home":"1","jamsyar.merapat.peminjaman.peminjamanruangan":"1","jamsyar.merapat.peminjaman.ruangrapat":"1"}'
+            'permissions'          =>'{"ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
             ],
 
             [
             'id'                   => 4,
-            'name'                 =>'Admin',
-            'code'                 =>'admin',
+            'name'                 =>'Admin HRGA',
+            'code'                 =>'admin-hrga',
             'description'          =>'Kewewenangan sebagai Admin.',
-            'permissions'          =>'{"jamsyar.merapat.peminjaman.beranda":"1","jamsyar.merapat.peminjaman.halamanpeminjaman":"1","jamsyar.merapat.peminjaman.listruangrapat":"1","jamsyar.merapat.peminjaman.divisi":"1","jamsyar.merapat.peminjaman.laporan":"1"}'
+            'permissions'          =>'{"ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.beranda":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.halamanpeminjaman":"1","ppl.hrga.peminjaman.listruangrapat":"1","ppl.hrga.peminjaman.divisi":"1","ppl.hrga.peminjaman.laporan":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
             ],
             
         ]);

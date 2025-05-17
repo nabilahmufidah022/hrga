@@ -3,6 +3,7 @@
 namespace Ppl\Hrga\Models;
 
 use Winter\Storm\Database\Model;
+use Ppl\Hrga\Models\Division as MoDivisi;
 
 /**
  * leave Model
@@ -14,7 +15,7 @@ class Leave extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'merapat_roomorder_form';
+    public $table = 'form_pengajuan_cuti';
 
     /**
      * @var array Guarded fields
@@ -73,4 +74,44 @@ class Leave extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function getDivisiIdOptions($value, $formData)
+    {
+        // $DivisiData = MoDivisi::get(['id','nama_divisi', 'kode_divisi'])->toArray();
+        // $Divisi = [];
+        // foreach($DivisiData as $value) {
+        //     $Divisi[$value['id']] = $value['kode_divisi']; 
+        // }
+        // return $Divisi;
+
+        $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->lists('divisi', 'id');
+        return $Divisi_id;
+    }
+
+    public function getKodeDivisiAttribute($value)
+    {
+        // $divisi = DB::table('merapat_divisi')->join()->where('divisi_id', $id);
+        $DivisiData = MoDivisi::where('id','=', $this->divisi_id)->first();
+        // dd($DivisiData);
+        $nama_divisi = $DivisiData->nama_divisi;
+        $kode_divisi = $DivisiData->kode_divisi;
+
+        $dataDivisi = $kode_divisi.' - '.$nama_divisi;
+
+        return $dataDivisi;
+        // $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->where($this->divisi_id, '=', 'id');
+        // // dd($Divisi_id);
+        // return $Divisi_id;
+    }
+
+    public function getDeviceidOptions($value, $formData)
+    {
+        $RoomMeetingData = MoDevice::get(['id','nama_perangkat'])->toArray();
+        $RoomMeeting = [];
+        foreach($RoomMeetingData as $value) {
+            $RoomMeeting[$value['id']] = $value['nama_perangkat'];
+        }
+
+        return $RoomMeeting;
+    }
 }

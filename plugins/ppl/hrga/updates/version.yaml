@@ -9,12 +9,26 @@ v1.0.1:
     - v1.0.1/ddl003_kepala_bagian.php
     - 'Create Form Room Order Table'
     - v1.0.1/ddl004_merapat_roomorder_form.php
+    - 'Create Form Izin Order Table'
+    - v1.0.1/ddl006_merapat_izinorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
     - 'Create Datadiri Table'
     - v1.0.1/ddl007_datadiri.php
     - 'Create Position Table'
     - v1.0.1/ddl008_position.php
+    - 'Create Form Pengajuan Sakit Table'
+    - v1.0.1/ddl006_form_pengajuan_sakit.php
+    - 'Create List Pengajuan Sakit Table'
+    - v1.0.1/ddl007_list_pengajuansakit.php
+    - 'Create List Perangkat Table'
+    - v1.0.1/ddl008_form_pengajuan_cuti.php
+    - 'Create Form Pengajuan Cuti Table'
+    - v1.0.1/ddl009_list_perangkat.php
+    - 'Create All Status Table'
+    - v1.0.1/ddl010_all_status.php
+    - 'Create Device Form Table'
+    - v1.0.1/ddl011_device_form.php
     - 'Create Seeder Status'
     - v1.0.1/dml001_seeder_status.php
     - 'Create Seeder User Role'
@@ -31,3 +45,8 @@ v1.0.1:
     - v1.0.1/dml008_seeder_Position.php 
 
 
+    - 'Create Seeder List Perangkat'
+    - v1.0.1/dml009_seeder_list_perangkat.php
+    - 'Create Seeder All Status'
+    - v1.0.1/dml010_seeder_all_status.php
+    

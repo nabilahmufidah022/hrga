@@ -1,0 +1,37 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    list_pengajuan_sakit_id:
+        label: 'List Pengajuan ID'
+        searchable: true
+        type: number
+    nama:
+        label: 'Nama Panjang'
+        searchable: true
+    tanggal_awal:
+        label: 'Tanggal Awal'
+        searchable: true
+    tanggal_akhir:
+        label: 'Tanggal Akhir'
+        searchable: true
+    jumlah_hari:
+        label: 'Jumlah Hari'
+        searchable: true
+        type: number
+    status_id:
+        label: 'Status'
+        searchable: true
+        type: text
+    created_at:
+        label: 'ppl.hrga::lang.models.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true
+    # updated_at:
+    #     label: 'ppl.hrga::lang.models.general.updated_at'
+    #     type: datetime
+    #     searchable: true
+    #     sortable: true
