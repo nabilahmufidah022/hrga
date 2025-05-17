@@ -4,7 +4,7 @@ use Winter\Storm\Database\Schema\Blueprint;
 use Winter\Storm\Database\Updates\Migration;
 use Winter\Storm\Support\Facades\Schema;
 
-class Ddl006FormPengajuanSakit extends Migration
+class Ddl013FormPengajuanSakit extends Migration
 {
     /**
      * Run the migrations.
