@@ -16,17 +16,12 @@ columns:
         clickable: false
         searchable: false
         sortable: false
-    status_karyawan:
-        label: 'status'
-        required: true
     nomor_idcard:
         label: 'nomor idcard'
         required: true
     tanggal_bergabung:
         label: 'tanggal bergabung'
-        type: datepicker
-        mode: datetime
-        ignoreTimezone: true
+        mode: date
         required: true
     no_wa:
         label: 'no whatsapp'

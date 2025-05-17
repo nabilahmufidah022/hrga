@@ -4,37 +4,33 @@
 
 fields:
     nama:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_nama'
+        label: 'Nama'
         required: true
     divisi_id:
         span: left
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_divisi'
+        label: 'Divisi'
         type: dropdown
         placeholder: 'Pilih Unit Kerja'
         required: true
     jabatan_id:
         span: right
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_jabatan'
+        label: 'Jabatan'
         type: dropdown
         placeholder: 'Pilih Jabatan'
         required: true
-    status_karyawan:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_status_karyawan'
-        required: true
     nomor_idcard:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_nomor_idcard'
+        label: 'Nomor Id Card'
         required: true
     tanggal_bergabung:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_tanggal_bergabung'
+        label: 'Tanggal Bergabung'
         type: datepicker
-        mode: datetime
-        ignoreTimezone: true
+        mode: date
         required: true
     no_wa:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_no_wa'
+        label: 'Nomor Whatsapps'
         required: true
     staff_pics:
-        label: 'ppl.locale::lang.models.dashboard.datadiri.form_foto_staff'
+        label: 'Staff Gambar'
         type: fileupload
         mode: image
         span: full
