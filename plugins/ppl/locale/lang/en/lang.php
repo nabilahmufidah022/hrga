@@ -233,10 +233,10 @@ return [
             'group' => 'Absensi',
         ],
         'biodata-diri' =>[
-            'label' => 'Form Absensi',
+            'label' => 'Data Diri',
             'label_plural' => 'Absensi',
             'desc'=>'',
-            'group' => 'Biodaat Diri',
+            'group' => 'Biodata Diri',
         ],
         'form-pengajuan' =>[
             'label' => 'Form Pengajuan',

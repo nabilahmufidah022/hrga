@@ -1,8 +1,43 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
+    # ===================================
+    #  Form Field Definitions
+    # ===================================
 
 fields:
-    id:
-        label: 'ppl.hrga::lang.models.general.id'
-        disabled: true
+    nama:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_nama'
+        required: true
+    divisi_id:
+        span: left
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_divisi'
+        type: dropdown
+        placeholder: 'Pilih Unit Kerja'
+        required: true
+    jabatan_id:
+        span: right
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_jabatan'
+        type: dropdown
+        placeholder: 'Pilih Jabatan'
+        required: true
+    status_karyawan:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_status_karyawan'
+        required: true
+    nomor_idcard:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_nomor_idcard'
+        required: true
+    tanggal_bergabung:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_tanggal_bergabung'
+        type: datepicker
+        mode: datetime
+        ignoreTimezone: true
+        required: true
+    no_wa:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_no_wa'
+        required: true
+    staff_pics:
+        label: 'ppl.locale::lang.models.dashboard.datadiri.form_foto_staff'
+        type: fileupload
+        mode: image
+        span: full
+        fileTypes: jpg, jpeg, png
+        imageHeight: 472
+        imageWidth: 709   

@@ -1,8 +1,8 @@
-<?php
+<?php namespace Ppl\Hrga\Models;
 
-namespace Ppl\Hrga\Models;
-
-use Winter\Storm\Database\Model;
+#use Winter\Storm\Database\Model;
+use Model;
+use Ppl\Hrga\Models\Division as MoDivisi;
 
 /**
  * personal Model
@@ -14,7 +14,7 @@ class Personal extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'merapat_roomorder_form';
+    public $table = 'datadiri';
 
     /**
      * @var array Guarded fields
@@ -66,11 +66,18 @@ class Personal extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'divisi' =>[
+            MoDivisi::class,
+            'key'=>'id'
+        ],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'room_pics' => \System\Models\File::class,
+    ];
     public $attachMany = [];
 }
