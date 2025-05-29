@@ -4,16 +4,48 @@
 
 columns:
     id:
-        label: 'ppl.hrga::lang.models.general.id'
+        label: 'ID'
         searchable: true
+
+    user_id:
+        label: 'Nama'
+        # Removing the direct select of first_name and last_name
+        searchable: true
+        sortable: true
+
+    unit_kerja:
+        label: 'Unit Kerja'
+        # Removing the direct select of name
+        searchable: true
+        sortable: true
+
+    waktu_absen:
+        label: 'Tanggal Absensi'
+        type: datetime
+        format: 'Y-m-d'
+        searchable: true
+        sortable: true
+
+    status_kehadiran:
+        label: 'Status Kehadiran'
+        searchable: true
+        sortable: true
+        
+    lokasi_absen:
+        label: 'Lokasi Absen'
+        searchable: true
+        sortable: true
+
     created_at:
-        label: 'ppl.hrga::lang.models.general.created_at'
+        label: 'Dibuat Pada'
         type: datetime
         searchable: true
         sortable: true
         invisible: true
+
     updated_at:
-        label: 'ppl.hrga::lang.models.general.updated_at'
+        label: 'Diperbarui Pada'
         type: datetime
         searchable: true
         sortable: true
+        invisible: true
