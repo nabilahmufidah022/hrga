@@ -29,6 +29,8 @@ v1.0.1:
     - v1.0.1/ddl014_list_pengajuansakit.php
     - 'Create List Perangkat Table'
     - v1.0.1/ddl015_form_pengajuan_cuti.php
+    - 'Create Form Absensi'
+    - v1.0.1/ddl016_form_absensi.php
     - 'Create Seeder Status'
     - v1.0.1/dml001_seeder_status.php
     - 'Create Seeder User Role'
@@ -40,11 +42,11 @@ v1.0.1:
     - 'Update backend_brand_settings fixes notif badge'
     - v1.0.1/dml005_update_backend_brand_settings.php
     - 'Create Seeder Datadiri'
-    - v1.0.1/dml007_seeder_datadiri.php 
+    - v1.0.1/dml007_seeder_datadiri.php
     - 'Create Seeder Position'
-    - v1.0.1/dml008_seeder_Position.php     
+    - v1.0.1/dml008_seeder_Position.php
     - 'Create Seeder List Perangkat'
     - v1.0.1/dml009_seeder_list_perangkat.php
     - 'Create Seeder All Status'
     - v1.0.1/dml010_seeder_all_status.php
-    
+
