@@ -18,4 +18,22 @@
         data-stripe-load-indicator>
         <?= e(trans('backend::lang.list.delete_selected')); ?>
     </button>
+    <div class="btn-group">
+        <button
+            type="button"
+            class="btn btn-default oc-icon-download"
+            data-control="popup"
+            data-handler="onLoadExportForm"
+            data-keyboard="false">
+            Export
+        </button>
+        <button
+            type="button"
+            class="btn btn-default oc-icon-upload"
+            data-control="popup"
+            data-handler="onLoadImportForm"
+            data-keyboard="false">
+            Import
+        </button>
+    </div>
 </div>

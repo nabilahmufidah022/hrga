@@ -1,50 +1,98 @@
 <?php
-$flagstatus = $record->flag_status;
+    $flagstatus = $record->flag_status; $user_role = $this->user->role_id;
+$tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
 
-?>   
+<?php if( $flagstatus == '4' && $user_role == '4'):?>
+<a href="<?= Backend::url('ppl/hrga/deviceorders/update/'. $record->id) ?>">
+    <button
+        class="btn wn-icon-circle-check btn-sm"
+        style="background-color: #0d6efd; color: #ffffff"
+    >
+        Setujui
+    </button>
+</a>
 
-<?php if($flagstatus == '4') : ?>
-                    <span class="wn-icon-circle" style="color: #fc9632;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.1');?>
-                    </span>
-<?php elseif($flagstatus == '6') : ?>      
-                    <span class="wn-icon-circle" style="color: #C43200;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.2');?>
-                    </span>
-<!-- <?php elseif($flagstatus == '3') : ?>      
-                    <span class="wn-icon-circle" style="color: #FFB3A7;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.3');?>
-                    </span>
-<?php elseif($flagstatus == '4') : ?>      
-                    <span class="wn-icon-circle" style="color: #FC7C7F;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.4');?>
-                    </span>
-<?php elseif($flagstatus == '5') : ?>      
-                    <span class="wn-icon-circle" style="color: #FC4B80;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.5');?>
-                    </span>
-<?php elseif($flagstatus == '6') :?>
-                    <span class="wn-icon-circle" style="color: #512CF3;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.6');?>
-                    </span> -->
-<?php elseif($flagstatus == '2') :?>
-                    <span class="wn-icon-circle" style="color: #41E6A0;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.4');?>
-                    </span>
-<?php elseif($flagstatus == '1') :?>
-                    <span class="wn-icon-circle" style="color: #6AE9F2;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.3');?>
-                    </span>
-<?php elseif($flagstatus == '9') :?>
-                    <span class="wn-icon-circle text-warning">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.9');?>
-                    </span>
-<?php elseif($flagstatus == '10') :?>
-                    <span class="wn-icon-circle" style="color: #372469;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.10');?>
-                    </span>
-<?php elseif($flagstatus == '11') :?>
-                    <span class="wn-icon-circle" style="color: #FED73A;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.11');?>
-                    </span>
-<?php endif ;?>
+<?php elseif($flagstatus == '1' && $user_role == '4') :?>
+<a
+    data-toggle="modal"
+    href="#content-confirmation"
+    class="btn btn-sm wn-icon-circle-check"
+    style="margin-top: 10px; background-color: #9cca3e; color: white"
+    >Selesai</a
+>
+
+<div
+    class="control-popup modal fade"
+    id="content-confirmation"
+    tabindex="-1"
+    role="dialog"
+>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                >
+                    &times;
+                </button>
+                <h4 class="modal-title" style="text-align: center">
+                    Apakah anda yakin Perangkat Sudah Dikembalikan?
+                </h4>
+            </div>
+            <div
+                class="modal-footer"
+                style="margin-top: 10px; text-align: center"
+            >
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-dismiss="modal"
+                    data-request="onSelesai"
+                    data-request-data="deviceorder_id:<?= $record->id ?>"
+                    data-attach-loading
+                >
+                    Iya
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-default"
+                    aria-hidden="true"
+                    style="background-color: red; color: white"
+                    data-dismiss="modal"
+                >
+                    Tidak
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php endif; ?>
+
+<!-- <div class="control-popup modal fade" id="content-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Masukkan Alasan Penolakan Permohonan Desain!</h4>
+            </div>
+            <div class="modal-body">
+                <label for="">Alasan Penolakan Permohonan</label><br>
+                <textarea name="alasan" style="width:-webkit-fill-available; height:150px;"></textarea> 
+            </div>
+            <div class="modal-footer" style="margin-top:10px;">
+                <button type="button" class="btn btn-default" aria-hidden="true" style="background-color:red; color:white;" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary" 
+                 data-dismiss="modal"
+                 data-request="onSimpanTolak" 
+                 data-request-data="deviceorder_id:<?= $record->id ?>"
+                 data-attach-loading>Simpan</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div> -->

@@ -1,40 +1,34 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
     user_id:
-        label: "Nama"
+        label: Nama
         type: dropdown
-        required: true
-        
-    unit_kerja:
-        label: "Unit Kerja"
-        type: dropdown
-        placeholder: "Pilih Unit Kerja"
+        options: getUserIdOptions
         span: left
         required: true
-        
-    status_kehadiran:
-        label: "Status Kehadiran"
+
+    unit_kerja:
+        label: Unit Kerja
         type: dropdown
-        options:
-            hadir: Hadir
-            izin: Izin
-            sakit: Sakit
-            alpha: Alpha
+        options: getUnitKerjaOptions
         span: right
         required: true
-        
+
     waktu_absen:
-        label: "Tanggal Absensi"
+        label: Tanggal Absensi
         type: datepicker
-        mode: datetime
+        format: Y-m-d
         span: left
         required: true
-        
+
+    status_kehadiran:
+        label: Status Kehadiran
+        type: dropdown
+        options: getStatusKehadiranOptions
+        span: right
+        required: true
+
     bukti_timestamp:
-        label: "Unggah Bukti Timestamp"
+        label: Bukti Timestamp
         type: fileupload
         mode: image
         imageWidth: 200
