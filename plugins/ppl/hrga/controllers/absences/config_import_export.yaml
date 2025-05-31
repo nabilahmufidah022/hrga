@@ -1,0 +1,32 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+export:
+    title: Export Absences
+    modelClass: Ppl\Hrga\Models\Absence
+    list: $/ppl/hrga/models/absence/columns.yaml
+    fileName: absences-export
+    extension: csv
+
+    # Fields to include in export
+    columns:
+        id:
+            label: ID
+        user_id:
+            label: User ID
+        unit_kerja:
+            label: Unit Kerja
+        waktu_absen:
+            label: Waktu Absen
+            type: datetime
+        status_kehadiran:
+            label: Status Kehadiran
+        bukti_timestamp:
+            label: Bukti Timestamp
+        created_at:
+            label: Created At
+            type: datetime
+        updated_at:
+            label: Updated At
+            type: datetime

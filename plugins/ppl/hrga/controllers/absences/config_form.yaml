@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: 'ppl.hrga::lang.models.absence.label'
+name: "ppl.hrga::lang.models.absence.label"
 
 # Model Form Field configuration
 form: $/ppl/hrga/models/absence/fields.yaml
