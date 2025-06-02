@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('ppl/hrga/leaves') ?>"><?= e(trans('ppl.hrga::lang.models.leaf.label_plural')); ?></a></li>
+        <li><a href="<?= Backend::url('ppl/hrga/leaves') ?>"><?= e(trans('ppl.hrga::lang.models.leave.label_plural')); ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>

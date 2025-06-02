@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: 'ppl.hrga::lang.models.leaf.label'
+name: 'ppl.hrga::lang.models.leave.label'
 
 # Model Form Field configuration
 form: $/ppl/hrga/models/leave/fields.yaml

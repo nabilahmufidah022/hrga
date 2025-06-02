@@ -4,6 +4,7 @@ namespace Ppl\Hrga\Models;
 
 use Winter\Storm\Database\Model;
 use Ppl\Hrga\Models\Division as MoDivisi;
+use carbon\Carbon;
 
 /**
  * leave Model
@@ -25,7 +26,7 @@ class Leave extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['jumlah_recana_cuti'];
 
     /**
      * @var array Validation rules for attributes
@@ -45,7 +46,7 @@ class Leave extends Model
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())
      */
-    protected $appends = [];
+    protected $appends = ['jumlah_rencana_cuti'];
 
     /**
      * @var array Attributes to be removed from the API representation of the model (ex. toArray())
@@ -58,6 +59,8 @@ class Leave extends Model
     protected $dates = [
         'created_at',
         'updated_at',
+        'tanggal_awal',
+        'tanggal_akhir',
     ];
 
     /**
@@ -72,7 +75,7 @@ class Leave extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = ['lampiran_dokumen'=>\System\Models\File::class];
     public $attachMany = [];
 
     public function getDivisiIdOptions($value, $formData)
@@ -104,14 +107,11 @@ class Leave extends Model
         // return $Divisi_id;
     }
 
-    public function getDeviceidOptions($value, $formData)
+    public function getJumlahRencanaCutiAttribute()
     {
-        $RoomMeetingData = MoDevice::get(['id','nama_perangkat'])->toArray();
-        $RoomMeeting = [];
-        foreach($RoomMeetingData as $value) {
-            $RoomMeeting[$value['id']] = $value['nama_perangkat'];
-        }
-
-        return $RoomMeeting;
+      if ($this->tanggal_awal && $this->tanggal_akhir) {
+        return $this->tanggal_awal->diffInDays($this-> tanggal_akhir) +1;
+      }
+      return 0;
     }
 }

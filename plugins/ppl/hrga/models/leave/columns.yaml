@@ -22,11 +22,17 @@ columns:
         type: date 
         format: d-mm-yy
         ignoreTimezone: true
+    status:
+        label: "Status"
+        type: text
+    reason:
+        label: "Alasan Pembatalan"
+        type: text
     action:
         label: "Aksi"
         span: right
         type: partial
-        path: ~/plugins/ppl/hrga/models/permission/_action_column.htm
+        path: ~/plugins/ppl/hrga/models/leave/_action_column.htm
         clickable: false
         searchable: false
         sortable: false
