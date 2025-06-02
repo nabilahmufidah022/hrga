@@ -10,7 +10,7 @@
     display: none;
     visibility: hidden;
   }
-
+  
   .fc-scrollgrid-sync-table{
     display: none;
     visibility: hidden;

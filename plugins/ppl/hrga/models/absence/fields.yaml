@@ -1,8 +1,37 @@
-# ===================================
-#  Form Field Definitions
-# ===================================
-
 fields:
-    id:
-        label: 'ppl.hrga::lang.models.general.id'
-        disabled: true
+    user_id:
+        label: Nama
+        type: dropdown
+        options: getUserIdOptions
+        span: left
+        required: true
+
+    unit_kerja:
+        label: Unit Kerja
+        type: dropdown
+        options: getUnitKerjaOptions
+        span: right
+        required: true
+
+    waktu_absen:
+        label: Tanggal Absensi
+        type: datepicker
+        format: Y-m-d
+        span: left
+        required: true
+
+    status_kehadiran:
+        label: Status Kehadiran
+        type: dropdown
+        options: getStatusKehadiranOptions
+        span: right
+        required: true
+
+    bukti_timestamp:
+        label: Bukti Timestamp
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+        span: full
+        required: true

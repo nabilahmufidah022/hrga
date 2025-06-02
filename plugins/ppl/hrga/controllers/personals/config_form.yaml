@@ -9,7 +9,7 @@ name: 'ppl.hrga::lang.models.personal.label'
 form: $/ppl/hrga/models/personal/fields.yaml
 
 # Model Class name
-modelClass: Ppl\Hrga\Models\Personal
+modelClass: Ppl\Hrga\Models\personal
 
 # Default redirect location
 defaultRedirect: ppl/hrga/personals

@@ -9,7 +9,7 @@ list: $/ppl/hrga/models/personal/columns.yaml
 modelClass: Ppl\Hrga\Models\Personal
 
 # List Title
-title: 'ppl.hrga::lang.models.personal.label_plural'
+title: 'ppl.locale::lang.models.dashboard.datadiri.label'
 
 # Link URL for each record
 recordUrl: ppl/hrga/personals/update/:id

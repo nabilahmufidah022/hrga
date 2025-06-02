@@ -3,17 +3,27 @@
 # ===================================
 
 columns:
-    id:
-        label: 'ppl.hrga::lang.models.general.id'
+    nama:
+        label: 'nama'
         searchable: true
-    created_at:
-        label: 'ppl.hrga::lang.models.general.created_at'
-        type: datetime
-        searchable: true
-        sortable: true
-        invisible: true
-    updated_at:
-        label: 'ppl.hrga::lang.models.general.updated_at'
-        type: datetime
-        searchable: true
-        sortable: true
+    divisi_id:
+        label: 'Unit Kerja'
+        clickable: false
+        searchable: false
+        sortable: false
+    jabatan_id:
+        label: 'Posisi Jabatan'
+        clickable: false
+        searchable: false
+        sortable: false
+    nomor_idcard:
+        label: 'nomor idcard'
+        required: true
+    tanggal_bergabung:
+        label: 'tanggal bergabung'
+        mode: date
+        required: true
+    no_wa:
+        label: 'no whatsapp'
+        required: true
+

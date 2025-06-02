@@ -9,7 +9,7 @@ list: $/ppl/hrga/models/absence/columns.yaml
 modelClass: Ppl\Hrga\Models\Absence
 
 # List Title
-title: 'ppl.hrga::lang.models.absence.label_plural'
+title: "ppl.hrga::lang.models.absence.label_plural"
 
 # Link URL for each record
 recordUrl: ppl/hrga/absences/update/:id

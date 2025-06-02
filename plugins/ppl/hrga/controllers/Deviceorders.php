@@ -46,8 +46,8 @@ class Deviceorders extends Controller
     }
 
     public function onOrder() {
-        $data = input();
-        if($data['tanggal_akhir'] <= $data['tanggal_awal']){
+        $data = input('Deviceorder');
+        if($data['tanggal_akhir'] < $data['tanggal_awal']){
             $rules=[
                 'tanggal_akhir' => 'before:date',
             ];
@@ -67,7 +67,6 @@ class Deviceorders extends Controller
         }
 
         $rules = [
-            'nama_peminjam'     => 'Required',
             'divisi_id'         => 'Required',
             'no_wa'             => 'Required|numeric',
             'tanggal_awal'      => 'Required',
@@ -84,7 +83,7 @@ class Deviceorders extends Controller
         ];
 
         $validation = Validator::make(
-            $data, $rules, $customMessages
+            $data,$rules, $customMessages
         );
 
         if($validation->fails()) { 
@@ -92,16 +91,18 @@ class Deviceorders extends Controller
             throw new ValidationException($validation);
         }
         
+        $data1 = input();
+
         $Deviceorder = new Deviceorder;
         // dd($Roomorder);
         $Deviceorder->backend_user_id = $this->user->id;
-        $Deviceorder->divisi_id = $data['Deviceorder']['divisi_id'];
-        $Deviceorder->no_wa = $data['Deviceorder']['no_wa'];
-        $Deviceorder->tanggal_awal = $data['Deviceorder']['tanggal_awal'];
-        $Deviceorder->tanggal_akhir = $data['Deviceorder']['tanggal_akhir'];
-        $Deviceorder->jumlah_perangkat = $data['Deviceorder']['jumlah_perangkat'];
-        $Deviceorder->device_id = $data['Deviceorder']['device_id'];
-        $Deviceorder->keperluan = $data['Deviceorder']['keperluan'];
+        $Deviceorder->divisi_id = $data['divisi_id'];
+        $Deviceorder->no_wa = $data['no_wa'];
+        $Deviceorder->tanggal_awal = $data['tanggal_awal'];
+        $Deviceorder->tanggal_akhir = $data['tanggal_akhir'];
+        $Deviceorder->jumlah_perangkat = $data['jumlah_perangkat'];
+        $Deviceorder->device_id = $data['device_id'];
+        $Deviceorder->keperluan = $data['keperluan'];
         $Deviceorder->flag_status = 4;
         $Deviceorder->save(); 
 

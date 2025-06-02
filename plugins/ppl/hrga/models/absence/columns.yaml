@@ -1,19 +1,48 @@
 # ===================================
 #  List Column Definitions
 # ===================================
+import:
+    title: Import Absences
+    modelClass: Ppl\Hrga\Models\Absence
+    list: $/ppl/hrga/models/absence/columns.yaml
+    redirect: ppl/hrga/absences
+    form: $/ppl/hrga/models/absence/fields.yaml
 
+export:
+    title: Export Absences
+    modelClass: Ppl\Hrga\Models\Absence
+    list: $/ppl/hrga/models/absence/columns.yaml
+    filename: absences-export
+    extension: csv
 columns:
     id:
-        label: 'ppl.hrga::lang.models.general.id'
-        searchable: true
+        label: "ID"
+
+    nama:
+        label: "Nama"
+
+    unit_kerja:
+        label: "Unit Kerja"
+
+    waktu_absen:
+        label: "Tanggal Absensi"
+        type: datetime
+        format: "Y-m-d"
+
+    status_kehadiran:
+        label: "Status Kehadiran"
+
+    bukti_kehadiran:
+        label: "Bukti Kehadiran"
+
     created_at:
-        label: 'ppl.hrga::lang.models.general.created_at'
+        label: "Created at"
         type: datetime
-        searchable: true
-        sortable: true
+
         invisible: true
+
     updated_at:
-        label: 'ppl.hrga::lang.models.general.updated_at'
+        label: "Update at"
         type: datetime
-        searchable: true
-        sortable: true
+
+        invisible: true

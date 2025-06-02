@@ -211,7 +211,7 @@ return [
             'label' => 'Form Biodata Diri',
             'label_plural' => 'Biodata Diri',
             'desc'=>'',
-            'group' => 'Biodaat Diri',
+            'group' => 'Biodata Diri',
         ],
         'form-pengajuan' =>[
             'label' => 'Form Pengajuan',

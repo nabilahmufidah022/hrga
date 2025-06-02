@@ -1,0 +1,206 @@
+/* Subtle styling untuk October CMS backend list - tidak mengubah warna dasar */
+
+/* Hanya tambahan warna pada toolbar buttons */
+.list-toolbar .btn-primary {
+    background: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.list-toolbar .btn-primary:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.25);
+}
+
+.list-toolbar .btn-danger {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+.list-toolbar .btn-danger:hover {
+    background: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.25);
+}
+
+.list-toolbar .btn-secondary {
+    background: #6c757d;
+    border-color: #6c757d;
+}
+
+.list-toolbar .btn-secondary:hover {
+    background: #545b62;
+    border-color: #4e555b;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.25);
+}
+
+/* Status badges dengan warna yang lebih soft */
+.label-success,
+.list-widget td .label-success {
+    background: #28a745 !important;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.label-warning,
+.list-widget td .label-warning {
+    background: #ffc107 !important;
+    color: #212529;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.label-info,
+.list-widget td .label-info {
+    background: #17a2b8 !important;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.label-danger,
+.list-widget td .label-danger {
+    background: #dc3545 !important;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Hover effect pada table rows - sangat subtle */
+.table-data tbody tr:hover {
+    background-color: #f8f9fa !important;
+    transition: background-color 0.2s ease;
+}
+
+/* Checkbox styling yang lebih modern */
+.control-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff;
+}
+
+/* Search box focus effect */
+.list-toolbar .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Pagination dengan warna accent */
+.pagination .page-link {
+    color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-link:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* Header sorting links */
+.table-data thead th a {
+    color: #495057;
+    text-decoration: none;
+}
+
+.table-data thead th a:hover {
+    color: #007bff;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.2);
+    color: #007bff;
+}
+
+/* Subtle animation untuk buttons */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Table border yang lebih soft */
+.table-data {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table-data thead th {
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Form controls styling */
+.form-control {
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* Status-specific colors untuk list items */
+tr[data-status="hadir"] td:nth-child(5) {
+    color: #28a745;
+    font-weight: 500;
+}
+
+tr[data-status="sakit"] td:nth-child(5) {
+    color: #ffc107;
+    font-weight: 500;
+}
+
+tr[data-status="izin"] td:nth-child(5) {
+    color: #17a2b8;
+    font-weight: 500;
+}
+
+tr[data-status="alpa"] td:nth-child(5) {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .list-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .list-toolbar .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Ppl\Hrga\Models\Personal as datadiri;
 
 /**
  * Personals Backend Controller
