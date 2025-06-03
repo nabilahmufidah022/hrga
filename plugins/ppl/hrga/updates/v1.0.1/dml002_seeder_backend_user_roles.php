@@ -20,7 +20,7 @@ class DMl002SeederBackendUserRoles extends Seeder
             'name'                 =>'User',
             'code'                 =>'user',
             'description'          =>'Kewewenangan sebagai User.',
-            'permissions'          =>'{"ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
+            'permissions'          =>'{"ppl.hrga.pengajuan.sakit":"1","ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
             ],
 
             [
@@ -28,7 +28,7 @@ class DMl002SeederBackendUserRoles extends Seeder
             'name'                 =>'Admin HRGA',
             'code'                 =>'admin-hrga',
             'description'          =>'Kewewenangan sebagai Admin.',
-            'permissions'          =>'{"ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.beranda":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.halamanpeminjaman":"1","ppl.hrga.peminjaman.listruangrapat":"1","ppl.hrga.peminjaman.divisi":"1","ppl.hrga.peminjaman.laporan":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
+            'permissions'          =>'{"ppl.hrga.pengajuan.sakit":"1","ppl.hrga.pengajuan.perangkat":"1","ppl.hrga.peminjaman.beranda":"1","ppl.hrga.peminjaman.home":"1","ppl.hrga.peminjaman.halamanpeminjaman":"1","ppl.hrga.peminjaman.listruangrapat":"1","ppl.hrga.peminjaman.divisi":"1","ppl.hrga.peminjaman.laporan":"1","ppl.hrga.peminjaman.peminjamanruangan":"1","ppl.hrga.peminjaman.ruangrapat":"1"}'
             ],
             
         ]);
