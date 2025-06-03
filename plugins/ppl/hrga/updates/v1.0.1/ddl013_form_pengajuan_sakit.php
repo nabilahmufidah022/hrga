@@ -28,6 +28,7 @@ class Ddl013FormPengajuanSakit extends Migration
             $table->integer('jumlah_hari');
             $table->text('keterangan_sakit');
             $table->string('surat_dokter_path',255)->nullable();
+            table->string('alasan_tolak')->index()->nullable();
             $table->integer('flag_status')->index()->nullable();
             $table->timestamps();
         });

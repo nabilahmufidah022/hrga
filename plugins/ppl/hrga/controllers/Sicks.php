@@ -136,5 +136,10 @@ class Sicks extends Controller
         
     }
 
+    public function formAfterSave($model) {
+        $model->flag_status = 1;
+        $model->save();
+    }
+
     
 }

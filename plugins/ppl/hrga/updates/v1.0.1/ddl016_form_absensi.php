@@ -1,4 +1,3 @@
-<?php
 <?php namespace Ppl\Hrga\Updates;
 
 use Winter\Storm\Database\Updates\Migration;
