@@ -77,9 +77,12 @@ return [
             'label' => 'Permission',
             'label_plural' => 'Permissions',
         ],
-        'leaf' => [
-            'label' => 'Leaf',
+        'leave' => [
+            'label' => 'Leave',
             'label_plural' => 'Leaves',
+        ],
+        'status' => [
+            'label' => 'Status',
         ],
         'sick' => [
             'label' => 'Sick',

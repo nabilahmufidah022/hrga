@@ -23,6 +23,10 @@ class Ddl015FormPengajuanCuti extends Migration
             $table->dateTime('tanggal_akhir')->index()->nullable();
             $table->integer('jumlah_rencana_cuti')->index()->nullable();
             $table->string('jenis_cuti')->index()->nullable();
+            $table->string('keterangan_cuti')->index()->nullable();
+            $table->string('lampiran_dokumen')->index()->nullable();
+            $table->string('status')->index()->nullable();
+            $table->string('reason')->index()->nullable();
             $table->timestamps();
         });
 

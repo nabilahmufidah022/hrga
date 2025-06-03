@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('ppl/hrga/leaves/create') ?>"
         class="btn btn-primary wn-icon-plus">
-        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.leaf.label')])); ?>
+        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.leave.label')])); ?>
     </a>
 
     <button

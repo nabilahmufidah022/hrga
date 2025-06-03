@@ -54,11 +54,13 @@ fields:
             Pernikahan : Pernikahan
             Melahirkan : Melahirkan
         placeholder: 'pilih jenis cuti'
-    file_pendukung:
-        label: File Pendukung
+    lampiran_dokumen:
+        label: Lampiran Dokumen
         type: fileupload
         mode: image
         span: full
-        fileTypes: jpg, jpeg, png
+        fileTypes: jpg, jpeg, png, pdf
         imageHeight: 472
         imageWidth: 709
+  
+    
