@@ -1,5 +1,8 @@
 permissions:
 # MIW Roles 
+    ppl.hrga.absensi.formabsensi:
+        tab: 'Form Absensi'
+        label: 'Form Absensi' 
     ppl.hrga.pengajuan.sakit:
         tab: 'Form Pengajuan Sakit'
         label: 'Form Pengajuan Sakit'   
@@ -56,7 +59,7 @@ navigation:
                 url: ppl/hrga/absences
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-absensi.svg
                 permissions:
-                    - ppl.hrga.peminjaman.beranda
+                    - ppl.hrga.absensi.formabsensi
                 attributes:
                     group: "ppl.locale::lang.models.absensi.group"
                     description: "ppl.locale::lang.models.dashboard.dashboards.desc"
