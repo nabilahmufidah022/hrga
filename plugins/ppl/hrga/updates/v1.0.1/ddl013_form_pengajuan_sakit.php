@@ -19,17 +19,16 @@ class Ddl013FormPengajuanSakit extends Migration
             return false;
         }
         $log = Schema::create('ppl_hrga_sicks', function ($table) {
-            $table->increments('form_pengajuan_sakit_id');
+            $table->increments('id');
             $table->integer('user_id')->nullable();
             $table->integer('divisi_id')->nullable();
-            $table->integer('list_pengajuan_sakit_id')->nullable();
-            $table->string('nama');
             $table->string('no_wa');
             $table->date('tanggal_awal');
             $table->date('tanggal_akhir');
             $table->integer('jumlah_hari');
             $table->text('keterangan_sakit');
             $table->string('surat_dokter_path',255)->nullable();
+            $table->integer('flag_status')->index()->nullable();
             $table->timestamps();
         });
         \Log::info('do migration:' . __FILE__);

@@ -7,7 +7,7 @@ class DMl002SeederBackendUserRoles extends Seeder
 {
     public function run()
     {
-        $cek = UserRole::find(2);
+        $cek = UserRole::find(1);
         if($cek){
             \Log::info('do migration:' . __FILE__);
             \Log::info('migration log:' . __FILE__, ["Record UserRole 2 exists"]);

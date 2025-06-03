@@ -1,5 +1,8 @@
 permissions:
 # MIW Roles 
+    ppl.hrga.pengajuan.sakit:
+        tab: 'Form Pengajuan Sakit'
+        label: 'Form Pengajuan Sakit'   
     ppl.hrga.pengajuan.perangkat:
         tab: 'ppl.locale::lang.permissions.formperangkat.title'
         label: 'ppl.locale::lang.permissions.formperangkat.title'   
@@ -89,7 +92,7 @@ navigation:
                 url: ppl/hrga/sicks
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-sakit.svg
                 permissions:
-                    - ppl.hrga.peminjaman.beranda
+                    - ppl.hrga.pengajuan.sakit
                 attributes:
                     group: "ppl.locale::lang.models.form-pengajuan.group"
                     description: "ppl.locale::lang.models.form-pengajuan.desc"

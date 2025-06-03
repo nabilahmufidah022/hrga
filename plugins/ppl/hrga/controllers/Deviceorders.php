@@ -90,8 +90,6 @@ class Deviceorders extends Controller
             $messages = $validation->messages();
             throw new ValidationException($validation);
         }
-        
-        $data1 = input();
 
         $Deviceorder = new Deviceorder;
         // dd($Roomorder);
