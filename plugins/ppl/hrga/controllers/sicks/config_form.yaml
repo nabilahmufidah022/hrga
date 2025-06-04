@@ -17,7 +17,7 @@ defaultRedirect: ppl/hrga/sicks
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: ppl/hrga/sicks/update/:form_pengajuan_sakit_id
+    redirect: ppl/hrga/sicks/update/:id
     redirectClose: ppl/hrga/sicks
 
 # Update page

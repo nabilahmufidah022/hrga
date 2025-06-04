@@ -17,7 +17,7 @@ v1.0.1:
     - v1.0.1/ddl007_datadiri.php
     - "Create Position Table"
     - v1.0.1/ddl008_position.php
-    - "Create Form Pengajuan Cuti Table"
+    - "Create List Perangkat Table"
     - v1.0.1/ddl009_list_perangkat.php
     - "Create All Status Table"
     - v1.0.1/ddl010_all_status.php
@@ -27,7 +27,7 @@ v1.0.1:
     - v1.0.1/ddl013_form_pengajuan_sakit.php
     - "Create List Pengajuan Sakit Table"
     - v1.0.1/ddl014_list_pengajuansakit.php
-    - "Create List Perangkat Table"
+    - "Create Form Pengajuan Cuti Table"
     - v1.0.1/ddl015_form_pengajuan_cuti.php
     - "Create Form Absensi"
     - v1.0.1/ddl016_form_absensi.php

@@ -3,14 +3,26 @@
 # ===================================
 
 fields:
-    nama:
-        label: 'Nama'
-        disabled: false
-        span: left
+    nama_peminjam@create:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
+    nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/sick/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    nama_peminjam@update:
+        label: ''
+        path: $/ppl/hrga/models/sick/_preview_nama_pengaju.htm
+        type: partial
+        span: full
     no_wa:
         label: 'Nomor_Whatsapp'
         disabled: false
         span: right
+        required: true
     divisi_id:
         label: 'Unit Kerja'
         span: left
@@ -23,22 +35,33 @@ fields:
         type: datepicker
         mode: date
         span: left
+        required: true
     tanggal_akhir:
         label: 'Tanggal Akhir'
         disabled: false
         type: datepicker
         mode: date
         span: right
+        required: true
     jumlah_hari:
-        label: 'Jumlah Hari'
-        disabled: false
+        label: 'Jumlah Sakit'
+        span: left
         type: number
+        disabled: true
+        trigger:
+            action: reload
+            field: tanggal_awal
+            condition: value[*]
+        dependsOn: [tanggal_awal, tanggal_akhir]
+    surat_dokter_path:
+        label: 'Surat Dokter'
+        span: right
+        disabled: false
+        type: fileupload
+        mode: file
+        required: true
     keterangan_sakit:
         label: 'Keterangan Sakit'
         disabled: false
         type: textarea
-    surat_dokter_path:
-        label: 'Surat Dokter'
-        disabled: false
-        type: fileupload
-        mode: file
+        required: true

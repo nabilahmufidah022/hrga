@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('ppl/hrga/sicks/create') ?>"
         class="btn btn-primary wn-icon-plus">
-        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.sick.label')])); ?>
+        <?= e(trans('backend::lang.form.create_title', ['name' => trans('Form Pengajuan Sakit')])); ?>
     </a>
 
     <button

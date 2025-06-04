@@ -3,9 +3,19 @@
 # ===================================
 
 fields:
-    nama_peminjam:
+    nama_peminjam@create:
         label: ''
         path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
+    nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_preview_nama_peminjam.htm
+        type: partial
+        span: full
+    nama_peminjam@update:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_preview_nama_peminjam.htm
         type: partial
         span: full
     divisi_id:

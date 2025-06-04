@@ -167,6 +167,7 @@ return [
                 // 'form_peminjaman' => 'Form Peminjaman Ruang Rapat',
                 'desc' => '',
                 'detail'=> 'Detail Peminjaman Ruang Rapat',
+                'btn_create' => 'Tambah Pengajuan Perangkat Baru',
                 'field'=>[
                     'status' => 'Status',
                     'action' => 'Aksi',

@@ -3,8 +3,9 @@
 namespace Ppl\Hrga\Models;
 
 use Winter\Storm\Database\Model;
-use Ppl\Hrga\Models\SickList;
+// use Ppl\Hrga\Models\SickList;
 use Ppl\Hrga\Models\Division as MoDivisi;
+use Backend\Models\User as BackendUser;
 
 /**
  * sick Model
@@ -17,7 +18,6 @@ class Sick extends Model
      * @var string The database table used by the model.
      */
     public $table = 'ppl_hrga_sicks';
-    public $primaryKey = 'form_pengajuan_sakit_id';
 
     /**
      * @var array Guarded fields
@@ -60,6 +60,8 @@ class Sick extends Model
     protected $dates = [
         'created_at',
         'updated_at',
+        'tanggal_awal',
+        'tanggal_akhir',
     ];
 
     /**
@@ -67,15 +69,20 @@ class Sick extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-       'list' => [
-            'Ppl\Hrga\Models\SickList',
-            'key'      => 'form_pengajuan_sakit_id',   // foreign key in SickList
-            'localKey' => 'form_pengajuan_sakit_id'
-        ]
+    //    'list' => [
+    //         'Ppl\Hrga\Models\SickList',
+    //         'key'      => 'form_pengajuan_sakit_id',   // foreign key in SickList
+    //         'localKey' => 'form_pengajuan_sakit_id'
+    //     ]
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'nama' => [
+            BackendUser::class,
+            'key' => 'user_id'
+        ],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
@@ -85,41 +92,50 @@ class Sick extends Model
     ];
     public $attachMany = [];
 
-    public function getSuratDokterPathUrlAttribute()
+     public function getJumlahHariAttribute()
     {
-        if ($this->surat_dokter_path) {
-            return $this->surat_dokter_path->getPath(); // Or use getUrl() for public URL
+        if ($this->tanggal_awal && $this->tanggal_akhir) {
+            return $this->tanggal_awal->diffInDays($this->tanggal_akhir) + 1;
         }
-        return null;
-    }
-    
-    public function afterSave()
-{
-    // Automatically create a log entry when a product is created
-    $list = new SickList;
-    $list->form_pengajuan_sakit_id = $this->form_pengajuan_sakit_id;
-    $list->tanggal_awal = $this->tanggal_awal;
-    $list->tanggal_akhir = $this->tanggal_akhir;
-    $list->jumlah_hari = $this->jumlah_hari;
-    $list->nama = $this->nama;
-    $list->save();
-}
-    public function getStatusIdAttribute()
-    {
-        $latestList = $this->list()->latest()->first();
 
-        if (!$latestList) {
-            return '-';
-        }
-    
-        $statusLabels = [
-            '0' => 'Pending',
-            '1' => 'Diterima',
-            '2' => 'Ditolak',
-        ];
-    
-        return $statusLabels[$latestList->status_id] ?? 'Tidak Diketahui';
+        return 0;
     }
+
+//     public function getSuratDokterPathUrlAttribute()
+//     {
+//         if ($this->surat_dokter_path) {
+//             return $this->surat_dokter_path->getPath(); // Or use getUrl() for public URL
+//         }
+//         return null;
+//     }
+    
+//     public function afterSave()
+// {
+//     // Automatically create a log entry when a product is created
+//     $list = new SickList;
+//     $list->form_pengajuan_sakit_id = $this->form_pengajuan_sakit_id;
+//     $list->tanggal_awal = $this->tanggal_awal;
+//     $list->tanggal_akhir = $this->tanggal_akhir;
+//     $list->jumlah_hari = $this->jumlah_hari;
+//     $list->nama = $this->nama;
+//     $list->save();
+// }
+//     public function getStatusIdAttribute()
+//     {
+//         $latestList = $this->list()->latest()->first();
+
+//         if (!$latestList) {
+//             return '-';
+//         }
+    
+//         $statusLabels = [
+//             '0' => 'Pending',
+//             '1' => 'Diterima',
+//             '2' => 'Ditolak',
+//         ];
+    
+//         return $statusLabels[$latestList->status_id] ?? 'Tidak Diketahui';
+//     }
 
     public function getDivisiIdOptions($value, $formData)
     {

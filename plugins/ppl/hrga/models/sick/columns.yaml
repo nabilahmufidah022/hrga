@@ -3,32 +3,35 @@
 # ===================================
 
 columns:
-    form_pengajuan_sakit_id:
-        label: 'ID'
-        searchable: true
-    nama:
+    action:
+        label: "ppl.locale::lang.models.home.peminjamanruang.field.action"
+        type: partial
+        clickable: false
+        searchable: false
+        sortable: false
+        path: ~/plugins/ppl/hrga/models/sick/_action_column.htm
+    flag_status:
+        label: "ppl.locale::lang.models.home.peminjamanruang.field.status"
+        type: partial
+        path: ~/plugins/ppl/hrga/models/deviceorder/_flag_status.htm
+        searchable: false
+        sortable: false
+    nama_peminjam:
         label: 'Nama'
+        relation: nama
+        select: concat(first_name, ' ', last_name)
         searchable: true
     tanggal_awal:
         label: 'Tanggal Awal'
         searchable: true
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
     tanggal_akhir:
         label: 'Tanggal Akhir'
         searchable: true
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
     jumlah_hari:
         label: 'Jumlah Hari'
-    status_id:
-        label: 'Status'
-        searchable: false
-        sortable: false
-    created_at:
-        label: 'Created At'
-        type: datetime
-        searchable: true
-        sortable: true
-        invisible: true
-    updated_at:
-        label: 'ppl.hrga::lang.models.general.updated_at'
-        type: datetime
-        searchable: true
-        sortable: true

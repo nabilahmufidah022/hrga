@@ -5,7 +5,7 @@
         <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.absence.label')])); ?>
     </a>
 
-    <button
+    <!-- <button
         class="btn btn-danger wn-icon-trash-o"
         disabled="disabled"
         onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
@@ -17,8 +17,8 @@
         data-request-success="$(this).prop('disabled', 'disabled')"
         data-stripe-load-indicator>
         <?= e(trans('backend::lang.list.delete_selected')); ?>
-    </button>
-    <div class="btn-group">
+    </button> -->
+    <!-- <div class="btn-group">
         <button
             type="button"
             class="btn btn-default oc-icon-download"
@@ -35,5 +35,5 @@
             data-keyboard="false">
             Import
         </button>
-    </div>
+    </div> -->
 </div>

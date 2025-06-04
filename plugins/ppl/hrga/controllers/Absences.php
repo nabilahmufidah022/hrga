@@ -40,8 +40,7 @@ class Absences extends Controller
      * @var array Permissions required to view this page.
      */
     public $requiredPermissions = [
-        'ppl.hrga.absensi',
-        'ppl.hrga.absences.manage_all'
+        'ppl.hrga.absensi.formabsensi'
     ];
     
     /**

@@ -10,6 +10,7 @@ use Flash;
 use Carbon\Carbon;
 
 use Ppl\Hrga\Models\Deviceorder as Deviceorder;
+use Backend\Models\User as BackendUser;
 /**
  * Deviceorders Backend Controller
  */
@@ -43,6 +44,18 @@ class Deviceorders extends Controller
         $tgl_now = Carbon::now();
         $this->vars["tgl_now"]=$tgl_now->addMinutes(419);
         $this->asExtension('ListController')->index();     
+    }
+
+    public function preview($id, $context='preview'){
+        $id_perangkat = Deviceorder::find($id);
+        $this->vars["nama_pengaju"] = BackendUser::find($id_perangkat->backend_user_id);
+        $this->asExtension('FormController')->preview($id, $context);
+    }
+
+    public function update($id, $context='update'){
+        $id_perangkat = Deviceorder::find($id);
+        $this->vars["nama_pengaju"] = BackendUser::find($id_perangkat->backend_user_id);
+        $this->asExtension('FormController')->preview($id, $context);
     }
 
     public function onOrder() {
@@ -90,8 +103,6 @@ class Deviceorders extends Controller
             $messages = $validation->messages();
             throw new ValidationException($validation);
         }
-        
-        $data1 = input();
 
         $Deviceorder = new Deviceorder;
         // dd($Roomorder);
@@ -143,7 +154,7 @@ class Deviceorders extends Controller
         // dd($MoHistory);
         $MoHistory->save();
 
-        Flash::success('Pengajuan Permohonan Desain Berhasil Ditolak!');
+        Flash::success('Pengajuan Peminjaman Perangkat Ditolak!');
         return Redirect::to('/manage/jamsyar/modesain/Deviceorders');
     }
 

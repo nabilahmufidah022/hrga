@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('ppl/hrga/deviceorders/create') ?>"
         class="btn btn-primary wn-icon-plus">
-        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.deviceorder.label')])); ?>
+        <?= e(trans('backend::lang.form.create_title', ['name' => trans('Form Peminjaman Perangkat')])); ?>
     </a>
 
     <button
