@@ -20,7 +20,7 @@ class Dml007SeederDatadiri extends Seeder
                 'nama'              => 'Nabiilah Mufiidah',
                 'divisi_id'         => '9',
                 'jabatan_id'        => '1',
-                'Status'            => 'Karyawan Tetap',
+                'status_karyawan'   => 'Karyawan Tetap',
                 'nomor_idcard'      =>  'H001',
                 'tanggal_bergabung' => '2025-04-12',
                 'no_wa'             => '089670018933'
