@@ -9,7 +9,7 @@ list: $/ppl/hrga/models/leave/columns.yaml
 modelClass: Ppl\Hrga\Models\Leave
 
 # List Title
-title: 'ppl.hrga::lang.models.leaf.label_plural'
+title: 'ppl.hrga::lang.models.leave.label_plural'
 
 # Link URL for each record
 recordUrl: ppl/hrga/leaves/update/:id
