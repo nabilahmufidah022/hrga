@@ -8,11 +8,13 @@ columns:
         searchable: true
     divisi_id:
         label: 'Unit Kerja'
+        valueFrom: kode_divisi
         clickable: false
         searchable: false
         sortable: false
     jabatan_id:
         label: 'Posisi Jabatan'
+        valueFrom: kode_jabatan
         clickable: false
         searchable: false
         sortable: false
@@ -21,7 +23,8 @@ columns:
         required: true
     tanggal_bergabung:
         label: 'tanggal bergabung'
-        mode: date
+        type: date
+        format: d-mm-yy 
         required: true
     no_wa:
         label: 'no whatsapp'

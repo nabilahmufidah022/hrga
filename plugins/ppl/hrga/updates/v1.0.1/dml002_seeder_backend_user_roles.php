@@ -3,11 +3,11 @@
 use Winter\Storm\Database\Updates\Seeder;
 use Backend\Models\UserRole;
 
-class DMl002SeederBackendUserRoles extends Seeder
+class Dml002SeederBackendUserRoles extends Seeder
 {
     public function run()
     {
-        $cek = UserRole::find(2);
+        $cek = UserRole::find(4);
         if($cek){
             \Log::info('do migration:' . __FILE__);
             \Log::info('migration log:' . __FILE__, ["Record UserRole 2 exists"]);

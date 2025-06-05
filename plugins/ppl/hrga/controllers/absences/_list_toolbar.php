@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('ppl/hrga/absences/create') ?>"
         class="btn btn-primary wn-icon-plus">
-        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.absence.label')])); ?>
+        <?= e(trans('backend::lang.form.create_title', ['name' => trans('Form Absensi')])); ?>
     </a>
 
     <!-- <button

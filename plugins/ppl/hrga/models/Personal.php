@@ -123,6 +123,21 @@ class Personal extends Model
         // return $Divisi_id;
     }
 
+    public function getKodeJabatanAttribute($value)
+    {
+        // $divisi = DB::table('merapat_divisi')->join()->where('divisi_id', $id);
+        $JabatanData = MoJabatan::where('id','=', $this->jabatan_id)->first();
+        // dd($JabatanData);
+        $nama_jabatan = $JabatanData->nama_jabatan;
+
+        $dataJabatan = $nama_jabatan;
+
+        return $dataJabatan;
+        // $Divisi_id = MoDivisi::selectRaw("*, concat(kode_divisi,' - ', nama_divisi) as divisi")->where($this->divisi_id, '=', 'id');
+        // // dd($Divisi_id);
+        // return $Divisi_id;
+    }
+
     // public function getKodeJabatanAttribute($value)
     // {
     //     // $divisi = DB::table('merapat_divisi')->join()->where('divisi_id', $id);
