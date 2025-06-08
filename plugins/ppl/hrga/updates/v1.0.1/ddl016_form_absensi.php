@@ -19,7 +19,6 @@ class Ddl016FormAbsensi extends Migration
                 $table->string('bukti_timestamp')->nullable();
                 $table->string('bukti_kehadiran')->nullable();
                 $table->timestamps();
-
                 $table->foreign('user_id')
                       ->references('id')
                       ->on('backend_users')
@@ -51,10 +50,5 @@ class Ddl016FormAbsensi extends Migration
             
             \Log::info('Updated absensi table columns');
         }
-    }
-
-    public function down()
-    {
-        Schema::dropIfExists('absensi');
     }
 }

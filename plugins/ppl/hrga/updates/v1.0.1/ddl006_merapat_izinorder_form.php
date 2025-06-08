@@ -26,6 +26,7 @@ class Ddl006MerapatIzinorderForm extends Migration
             $table->string('jenis_izin')->index()->nullable();
             $table->string('file_pendukung')->index()->nullable();
             $table->integer('flag_status')->index()->nullable();
+            $table->string('alasan_tolak')->index()->nullable();
             $table->timestamps();
         });
 

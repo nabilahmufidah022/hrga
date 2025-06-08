@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('ppl/hrga/leaves/create') ?>"
         class="btn btn-primary wn-icon-plus">
-        <?= e(trans('backend::lang.form.create_title', ['name' => trans('ppl.hrga::lang.models.leave.label')])); ?>
+        <?= e(trans('backend::lang.form.create_title', ['name' => trans('Form Pengajuan Izin')])); ?>
     </a>
 
     <button

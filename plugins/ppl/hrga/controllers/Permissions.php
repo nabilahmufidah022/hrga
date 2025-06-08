@@ -147,13 +147,13 @@ class Permissions extends Controller
             $messages = $validation->messages();
             throw new ValidationException($validation);
         }
-        $detail = Sick::find($data['sick_id']);
+        $detail = Permission::find($data['sick_id']);
         $detail->alasan_tolak = $data['alasan'];
         $detail->flag_status = 5;
         $detail->save();
 
-        Flash::success('Pengajuan Sakit Ditolak!');
-        return Redirect::to('/mybackend/ppl/hrga/Permission');
+        Flash::success('Pengajuan Izin Ditolak!');
+        return Redirect::to('/mybackend/ppl/hrga/Permissions');
     }
 
 }

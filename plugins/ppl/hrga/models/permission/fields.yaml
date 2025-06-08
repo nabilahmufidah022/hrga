@@ -39,7 +39,6 @@ fields:
             Keuangan & Akuntansi	:	Keuangan & Akuntansi
             Divisi SDM & Umum	:	Divisi SDM & Umum
             Manajemen Risiko	:	Manajemen Risiko
-
     tanggal_awal:
         span: left
         label: Tanggal Awal Izin

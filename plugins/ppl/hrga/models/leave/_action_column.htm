@@ -1,6 +1,17 @@
-<!-- <?php 
-$link = sprintf('%s/%s', $record->domain, $record->code); ?> -->
+<?php
+    $flagstatus = $record->flag_status; 
+    $user_role = $this->user->role_id;
+    $tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
 
+<?php if( $flagstatus == '4' && $user_role == '4'):?>
 <a href="<?= Backend::url('ppl/hrga/leaves/update/'. $record->id) ?>">
-    <button class="btn wn-icon-pencil btn-sm" style="background-color: #33aa1c; color: #ffffff;"><?php echo trans('ppl.locale::lang.button.edit_button');?></button>
+    <button
+        class="btn wn-icon-circle-check btn-sm"
+        style="background-color: #0d6efd; color: #ffffff"
+    >
+        Setujui
+    </button>
 </a>
+
+<?php endif; ?>
+

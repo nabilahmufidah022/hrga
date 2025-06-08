@@ -3,12 +3,21 @@
 # ===================================
 
 fields:
-    id:
-        label: 'ppl.hrga::lang.models.general.id'
-        disabled: true
-    nama:
-        span: left
-        label: Nama
+    nama_peminjam@create:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
+    nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/leave/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    nama_peminjam@update:
+        label: ''
+        path: $/ppl/hrga/models/leave/_preview_nama_pengaju.htm
+        type: partial
+        span: full
     no_wa:
         span: right
         label: No Whatsapp
@@ -21,15 +30,17 @@ fields:
         required: true
     tanggal_awal:
         span: left
-        label: Tanggal Awal Izin
+        label: Tanggal Awal Cuti
         type: datepicker
         mode: date
+        minDate: tomorrow
         format: d-m-Y
     tanggal_akhir:
         span: right
-        label: Tanggal Akhir Izin
+        label: Tanggal Akhir Cuti
         type: datepicker
         mode: date
+        minDate: tomorrow
         format: d-m-Y
     jumlah_rencana_cuti:
         span: left
@@ -41,13 +52,9 @@ fields:
             field: tanggal_awal
             condition: value[*]
         dependsOn: [tanggal_awal, tanggal_akhir]
-    keterangan_cuti:
-        label: Keterangan Cuti
-        type: Backend\FormWidgets\RichEditor
-        size: large
     jenis_cuti:
         span: left
-        label: Jenis Izin
+        label: Jenis Cuti
         type: dropdown
         options:
             Tahunan : Tahunan
@@ -55,12 +62,14 @@ fields:
             Melahirkan : Melahirkan
         placeholder: 'pilih jenis cuti'
     lampiran_dokumen:
+        span: right
         label: Lampiran Dokumen
         type: fileupload
-        mode: image
-        span: full
-        fileTypes: jpg, jpeg, png, pdf
-        imageHeight: 472
-        imageWidth: 709
+        mode: file
+        required: true
+    keterangan_cuti:
+        label: Keterangan Cuti
+        type: Backend\FormWidgets\RichEditor
+        size: large
   
     

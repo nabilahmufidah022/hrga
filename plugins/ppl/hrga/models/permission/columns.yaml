@@ -3,7 +3,7 @@
 # ===================================
 
 columns:
-    aaction:
+    action:
         label: "ppl.locale::lang.models.home.peminjamanruang.field.action"
         type: partial
         clickable: false

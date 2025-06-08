@@ -5,6 +5,7 @@ namespace Ppl\Hrga\Models;
 use Winter\Storm\Database\Model;
 use Ppl\Hrga\Models\Division as MoDivisi;
 use carbon\Carbon;
+use Backend\Models\User as BackendUser;
 
 /**
  * leave Model
@@ -70,7 +71,12 @@ class Leave extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+      'nama' => [
+            BackendUser::class,
+            'key' => 'user_id'
+        ],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

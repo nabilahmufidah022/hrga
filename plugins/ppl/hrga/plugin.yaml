@@ -5,7 +5,10 @@ permissions:
         label: 'Form Absensi' 
     ppl.hrga.pengajuan.izin:
         tab: 'Form Pengajuan Izin'
-        label: 'Form Pengajuan Izin'   
+        label: 'Form Pengajuan Izin'  
+    ppl.hrga.pengajuan.cuti:
+        tab: 'Form Pengajuan Cuti'
+        label: 'Form Pengajuan Cuti'  
     ppl.hrga.pengajuan.sakit:
         tab: 'Form Pengajuan Sakit'
         label: 'Form Pengajuan Sakit'   
@@ -89,7 +92,7 @@ navigation:
                 url: ppl/hrga/leaves
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-cuti.svg
                 permissions:
-                    - ppl.hrga.peminjaman.beranda
+                    - ppl.hrga.pengajuan.cuti
                 attributes:
                     group: "ppl.locale::lang.models.form-pengajuan.group"
                     description: "ppl.locale::lang.models.form-pengajuan.desc"

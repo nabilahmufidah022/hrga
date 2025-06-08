@@ -17,7 +17,6 @@ class Ddl015FormPengajuanCuti extends Migration
             $table->increments('id');
             $table->integer('user_id')->index()->nullable();
             $table->integer('divisi_id')->index()->nullable(); 
-            $table->string('nama')->index()->nullable(); 
             $table->integer('no_wa')->index()->nullable(); 
             $table->dateTime('tanggal_awal')->index()->nullable(); 
             $table->dateTime('tanggal_akhir')->index()->nullable();
@@ -25,8 +24,8 @@ class Ddl015FormPengajuanCuti extends Migration
             $table->string('jenis_cuti')->index()->nullable();
             $table->string('keterangan_cuti')->index()->nullable();
             $table->string('lampiran_dokumen')->index()->nullable();
-            $table->string('status')->index()->nullable();
-            $table->string('reason')->index()->nullable();
+            $table->string('alasan_tolak')->index()->nullable();
+            $table->integer('flag_status')->index()->nullable();
             $table->timestamps();
         });
 
