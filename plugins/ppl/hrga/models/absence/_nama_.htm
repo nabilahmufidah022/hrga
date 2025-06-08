@@ -1,106 +1,90 @@
 <div
-    class="form-group form-group-preview text-field"
-    data-field-name="nama"
-    id="Form-field-Userroomorder-nama-group"
+    style="
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    "
 >
-    <label for="Form-field-Userroomorder-nama">Nama</label>
-</div>
-<?php
-    $flagstatus = $record->flag_status; 
-    $user_role = $this->user->role_id;
+    <!-- semua konten kamu masuk sini -->
+    <div
+        class="form-group form-group-preview text-field"
+        data-field-name="nama"
+        id="Form-field-Userroomorder-nama-group"
+    >
+        <label for="Form-field-Userroomorder-nama">Nama</label>
+    </div>
+    <?php
+        $flagstatus = $record->flag_status; $user_role = $this->user->role_id;
     $tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
 
-<?php if( $flagstatus == '4' && $user_role == '4'):?>
-<a href="<?= Backend::url('ppl/hrga/deviceorders/update/'. $record->id) ?>">
-    <button
-        class="btn wn-icon-circle-check btn-sm"
-        style="background-color: #0d6efd; color: #ffffff"
+    <?php if( $flagstatus == '4' && $user_role == '4'):?>
+    <a href="<?= Backend::url('ppl/hrga/absence/update/'. $record->id) ?>">
+        <button
+            class="btn wn-icon-circle-check btn-sm"
+            style="background-color: #0d6efd; color: #ffffff"
+        >
+            Setujui
+        </button>
+    </a>
+
+    <?php elseif($flagstatus == '1' && $user_role == '4') :?>
+    <a
+        data-toggle="modal"
+        href="#content-confirmation"
+        class="btn btn-sm wn-icon-circle-check"
+        style="margin-top: 10px; background-color: #9cca3e; color: white"
+        >Selesai</a
     >
-        Setujui
-    </button>
-</a>
 
-<?php elseif($flagstatus == '1' && $user_role == '4') :?>
-<a
-    data-toggle="modal"
-    href="#content-confirmation"
-    class="btn btn-sm wn-icon-circle-check"
-    style="margin-top: 10px; background-color: #9cca3e; color: white"
-    >Selesai</a
->
-
-<div
-    class="control-popup modal fade"
-    id="content-confirmation"
-    tabindex="-1"
-    role="dialog"
->
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-hidden="true"
+    <div
+        class="control-popup modal fade"
+        id="content-confirmation"
+        tabindex="-1"
+        role="dialog"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true"
+                    >
+                        &times;
+                    </button>
+                    <h4 class="modal-title" style="text-align: center">
+                        Apakah anda yakin Perangkat Sudah Dikembalikan?
+                    </h4>
+                </div>
+                <div
+                    class="modal-footer"
+                    style="margin-top: 10px; text-align: center"
                 >
-                    &times;
-                </button>
-                <h4 class="modal-title" style="text-align: center">
-                    Apakah anda yakin Perangkat Sudah Dikembalikan?
-                </h4>
-            </div>
-            <div
-                class="modal-footer"
-                style="margin-top: 10px; text-align: center"
-            >
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-dismiss="modal"
-                    data-request="onSelesai"
-                    data-request-data="deviceorder_id:<?= $record->id ?>"
-                    data-attach-loading
-                >
-                    Iya
-                </button>
-                <button
-                    type="button"
-                    class="btn btn-default"
-                    aria-hidden="true"
-                    style="background-color: red; color: white"
-                    data-dismiss="modal"
-                >
-                    Tidak
-                </button>
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal"
+                        data-request="onSelesai"
+                        data-request-data="absence_id:<?= $record->id ?>"
+                        data-attach-loading
+                    >
+                        Iya
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-default"
+                        aria-hidden="true"
+                        style="background-color: red; color: white"
+                        data-dismiss="modal"
+                    >
+                        Tidak
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
+    <?php endif; ?>
 </div>
-
-<?php endif; ?>
-
-<!-- <div class="control-popup modal fade" id="content-confirmation" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form>
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Masukkan Alasan Penolakan Permohonan Desain!</h4>
-            </div>
-            <div class="modal-body">
-                <label for="">Alasan Penolakan Permohonan</label><br>
-                <textarea name="alasan" style="width:-webkit-fill-available; height:150px;"></textarea> 
-            </div>
-            <div class="modal-footer" style="margin-top:10px;">
-                <button type="button" class="btn btn-default" aria-hidden="true" style="background-color:red; color:white;" data-dismiss="modal">Batal</button>
-                <button type="button" class="btn btn-primary" 
-                 data-dismiss="modal"
-                 data-request="onSimpanTolak" 
-                 data-request-data="deviceorder_id:<?= $record->id ?>"
-                 data-attach-loading>Simpan</button>
-            </div>
-            </form>
-        </div>
-    </div>
-</div> -->

@@ -3,7 +3,7 @@
 $tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
 
 <?php if( $flagstatus == '4' && $user_role == '4'):?>
-<a href="<?= Backend::url('ppl/hrga/deviceorders/update/'. $record->id) ?>">
+<a href="<?= Backend::url('ppl/hrga/absence/update/'. $record->id) ?>">
     <button
         class="btn wn-icon-circle-check btn-sm"
         style="background-color: #0d6efd; color: #ffffff"
@@ -51,7 +51,7 @@ $tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
                     class="btn btn-primary"
                     data-dismiss="modal"
                     data-request="onSelesai"
-                    data-request-data="deviceorder_id:<?= $record->id ?>"
+                    data-request-data="absence_id:<?= $record->id ?>"
                     data-attach-loading
                 >
                     Iya

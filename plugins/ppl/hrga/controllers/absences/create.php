@@ -9,11 +9,12 @@
 
     <?= Form::open(['class' => 'layout']) ?>
 
+       <div style="padding: 10px 50px; margin: 0px 0;">
         <div class="layout-row">
             <?= $this->formRender() ?>
         </div>
-
-        <div class="form-buttons">
+    </div>
+        <div class="form-buttons" style="padding: 0 50px;">
             <div class="loading-indicator-container">
                 <button
                     type="button"

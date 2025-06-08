@@ -23,7 +23,9 @@ columns:
         type: datetime
         format: "Y-m-d"
     status_kehadiran:
-        label: "Status Kehadiran"
+        label: Status Kehadiran
+        type: text
+        escape: false
 
     bukti_kehadiran:
         label: "Bukti Kehadiran"

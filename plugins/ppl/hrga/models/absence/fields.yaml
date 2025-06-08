@@ -23,6 +23,8 @@ fields:
         options: getStatusKehadiranOptions
         span: right
         required: true
+        path: ~/plugins/ppl/hrga/models/absence/_status_column.htm
+
     bukti_timestamp:
         label: Bukti Timestamp
         type: fileupload

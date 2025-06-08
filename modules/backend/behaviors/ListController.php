@@ -565,9 +565,27 @@ class ListController extends ControllerBehavior
      * @param  string|null $definition List definition (optional)
      * @return string|void HTML view
      */
-    public function listOverrideColumnValue($record, $columnName, $definition = null)
-    {
+   public function listOverrideColumnValue($record, $columnName, $definition = null)
+{
+    if ($columnName === 'status_kehadiran') {
+        $colors = [
+            'hadir' => 'background-color:#007bff; color:white;',    // biru
+            'sakit' => 'background-color:#ffc107; color:black;',    // kuning
+            'izin' => 'background-color:#28a745; color:white;',     // hijau
+            'cuti' => 'background-color:#28a745; color:white;',     // hijau
+            'tidak hadir' => 'background-color:#dc3545; color:white;', // merah
+        ];
+
+        $value = $record->status_kehadiran;
+        $style = $colors[$value] ?? 'background-color:#6c757d; color:white;'; // default abu
+
+        return "<span style='padding:4px 10px; border-radius:4px; {$style}'>" . ucfirst($value) . "</span>";
     }
+
+    // Untuk kolom lain, biarkan default
+    return null;
+}
+
 
     /**
      * Replace the entire table header contents (<th>...</th>) with custom HTML

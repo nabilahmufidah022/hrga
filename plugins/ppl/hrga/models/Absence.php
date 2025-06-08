@@ -228,6 +228,6 @@ class Absence extends Model
 
     protected function logImportError($row, $message)
     {
-        \Log::error(sprintf('Row %d failed to import: %s', $row, $message));
+        Log::error(sprintf('Row %d failed to import: %s', $row, $message));
     }
 }
