@@ -2,7 +2,10 @@ permissions:
 # MIW Roles 
     ppl.hrga.absensi.formabsensi:
         tab: 'Form Absensi'
-        label: 'Form Absensi' 
+        label: 'Form Absensi'
+    ppl.hrga.absensi.biodatadiri:
+        tab: 'Form Biodata Diri'
+        label: 'Form biodata Diri'  
     ppl.hrga.pengajuan.izin:
         tab: 'Form Pengajuan Izin'
         label: 'Form Pengajuan Izin'  
@@ -74,7 +77,7 @@ navigation:
                 url: ppl/hrga/personals
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-biodata-diri.svg
                 permissions:
-                    - ppl.hrga.peminjaman.beranda
+                    - ppl.hrga.absensi.biodatadiri
                 attributes:
                     group: "ppl.locale::lang.models.biodata-diri.group"
                     description: "ppl.locale::lang.models.dashboard.dashboards.desc"

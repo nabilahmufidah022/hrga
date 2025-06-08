@@ -52,6 +52,21 @@ class Permissions extends Controller
         $this->asExtension('ListController')->index();     
     }
 
+    public function listExtendQuery($query) {
+        $user = $this->user;
+
+        if ($user->role_id == 4) {
+            // Admin HRGA bisa lihat semua data dengan status 4 atau 1 juga
+            $query->where(function ($q) use ($user) {
+                $q->where('backend_user_id', $user->id)
+                ->orWhere('flag_status', 4);
+            });
+        } else {
+            // User biasa hanya lihat datanya sendiri
+            $query->where('backend_user_id', $user->id);
+        }
+    }
+
     public function preview($id, $context='preview'){
         $id_sakit = Permission::find($id);
         $this->vars["nama_pengaju"] = BackendUser::find($id_sakit->backend_user_id);
@@ -126,6 +141,9 @@ class Permissions extends Controller
     public function formAfterSave($model) {
         $model->flag_status = 1;
         $model->save();
+
+        Flash::success('Permohonan Izin Berhasil Disetujui!!');
+        return Redirect::to('/mybackend/ppl/hrga/Sicks');
     }
 
     public function onSimpanTolak($model){

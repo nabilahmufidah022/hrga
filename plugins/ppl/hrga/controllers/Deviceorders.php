@@ -39,6 +39,22 @@ class Deviceorders extends Controller
         BackendMenu::setContext('Ppl.Hrga', 'homes', 'deviceorders');
     }
 
+    public function listExtendQuery($query) {
+        $user = $this->user;
+
+        if ($user->role_id == 4) {
+            // Admin HRGA bisa lihat semua data dengan status 4 atau 1 juga
+            $query->where(function ($q) use ($user) {
+                $q->where('backend_user_id', $user->id)
+                ->orWhere('flag_status', 4)
+                ->orWhere('flag_status', 1);
+            });
+        } else {
+            // User biasa hanya lihat datanya sendiri
+            $query->where('backend_user_id', $user->id);
+        }
+    }
+
     public function index()
     {
         $tgl_now = Carbon::now();

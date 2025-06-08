@@ -39,6 +39,21 @@ class Sicks extends Controller
         BackendMenu::setContext('Ppl.Hrga', 'homes', 'sicks');
     }
 
+    public function listExtendQuery($query) {
+        $user = $this->user;
+
+        if ($user->role_id == 4) {
+            // Admin HRGA bisa lihat semua data dengan status 4 atau 1 juga
+            $query->where(function ($q) use ($user) {
+                $q->where('user_id', $user->id)
+                ->orWhere('flag_status', 4);
+            });
+        } else {
+            // User biasa hanya lihat datanya sendiri
+            $query->where('user_id', $user->id);
+        }
+    }
+
     public function index()
     {
         $tgl_now = Carbon::now();
@@ -126,6 +141,9 @@ class Sicks extends Controller
     public function formAfterSave($model) {
         $model->flag_status = 1;
         $model->save();
+
+        Flash::success('Permohonan Sakit Berhasil Disetujui!!');
+        return Redirect::to('/mybackend/ppl/hrga/Sicks');
     }
 
     public function onSimpanTolak($model){

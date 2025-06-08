@@ -87,7 +87,7 @@ return [
             '1' => 'Menunggu Persetujuan',
             '2' => 'Ditolak',
             '3' => 'Disetujui',
-            '4' => 'Menunggu Pemeriksaan',
+            '4' => 'Selesai Dipinjam',
             '5' => 'Menunggu Persetujuan Kadiv',
             '6' => 'Menunggu Persetujuan Revisi',
             '7' => 'Selesai',

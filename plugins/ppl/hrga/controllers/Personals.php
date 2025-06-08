@@ -22,7 +22,7 @@ class Personals extends Controller
      */
     protected $partialsDir = 'ppl/hrga/partials/'; 
     protected $requiredPermissions = [
-        'ppl.hrga.personals.manage_all',
+        'ppl.hrga.absensi.biodatadiri',
     ];
 
     public function __construct()
