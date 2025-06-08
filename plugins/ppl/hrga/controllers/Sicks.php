@@ -63,7 +63,7 @@ class Sicks extends Controller
         $this->asExtension('FormController')->preview($id, $context);
     }
 
-    public function onOrder() {
+    public function formBeforeCreate($model) {
         $data = input('Sick');
         if($data['tanggal_akhir'] < $data['tanggal_awal']){
             $rules=[
@@ -84,7 +84,7 @@ class Sicks extends Controller
             }
         }
 
-        $rules = [
+         $rules = [
             'divisi_id'         => 'Required',
             'no_wa'             => 'Required|numeric',
             'tanggal_awal'      => 'Required',
@@ -106,30 +106,17 @@ class Sicks extends Controller
             $messages = $validation->messages();
             throw new ValidationException($validation);
         }
-        
-        $data1 = input();
 
-        //perhitungan jumlah_hari
         $tanggal_awal = Carbon::parse($data['tanggal_awal']);
         $tanggal_akhir = Carbon::parse($data['tanggal_akhir']);
-
-        // Hitung jumlah hari (termasuk tanggal awal dan akhir)
         $jumlah_hari = $tanggal_awal->diffInDays($tanggal_akhir) + 1;
-        // dd($jumlah_hari);
-        
-        // dd($data1);
+        $model->jumlah_hari = $jumlah_hari;
+    }
 
-        $Sick = new Sick;
-        // dd($Roomorder);
-        $Sick->user_id = $this->user->id;
-        $Sick->divisi_id = $data['divisi_id'];
-        $Sick->no_wa = $data['no_wa'];
-        $Sick->tanggal_awal = $data['tanggal_awal'];
-        $Sick->tanggal_akhir = $data['tanggal_akhir'];
-        $Sick->keterangan_sakit = $data['keterangan_sakit'];
-        $Sick->jumlah_hari = $jumlah_hari;
-        $Sick->flag_status = 4;
-        $Sick->save(); 
+    public function formAfterCreate($model) {
+        $model->user_id = $this->user->id;
+        $model->flag_status = 4;
+        $model->save();
 
         Flash::success('Berhasil Mengajukan Permohonan Sakit!!');
         return Redirect::to('/mybackend/ppl/hrga/Sicks');
@@ -139,6 +126,34 @@ class Sicks extends Controller
     public function formAfterSave($model) {
         $model->flag_status = 1;
         $model->save();
+    }
+
+    public function onSimpanTolak($model){
+        $data = input();
+
+        $rules = [
+            'alasan' => 'Required'
+        ];
+
+        $customMessages = [
+            'required' => 'Alasan Penolakan Wajib Diupload',
+        ];
+
+        $validation = Validator::make(
+            $data, $rules, $customMessages
+        );
+
+        if($validation->fails()) {
+            $messages = $validation->messages();
+            throw new ValidationException($validation);
+        }
+        $detail = Sick::find($data['sick_id']);
+        $detail->alasan_tolak = $data['alasan'];
+        $detail->flag_status = 5;
+        $detail->save();
+
+        Flash::success('Pengajuan Sakit Ditolak!');
+        return Redirect::to('/mybackend/ppl/hrga/Sicks');
     }
 
     

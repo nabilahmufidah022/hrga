@@ -1,6 +1,17 @@
-<!-- <?php 
-$link = sprintf('%s/%s', $record->domain, $record->code); ?> -->
+<?php
+    $flagstatus = $record->flag_status; 
+    $user_role = $this->user->role_id;
+?>
 
-<a href="<?= Backend::url('ppl/hrga/permission/update/'. $record->id) ?>">
-    <button class="btn wn-icon-pencil btn-sm" style="background-color: #0F2678; color: #ffffff;"><?php echo trans('ppl.locale::lang.button.edit_button');?></button>
+<?php if( $flagstatus == '4' && $user_role == '4'):?>
+<a href="<?= Backend::url('ppl/hrga/permissions/update/'. $record->id) ?>">
+    <button
+        class="btn wn-icon-circle-check btn-sm"
+        style="background-color: #0d6efd; color: #ffffff"
+    >
+        Setujui
+    </button>
 </a>
+
+<?php endif; ?>
+

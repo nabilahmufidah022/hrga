@@ -102,6 +102,7 @@ return [
             '3' => 'Sedang Dipakai',
             '4' => 'Selesai dengan catatan',
             '5' => 'Batal',
+            '6' => 'Batal'
         ]
     ],
 

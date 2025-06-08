@@ -148,14 +148,11 @@ class Deviceorders extends Controller
         }
         $detail = Deviceorder::find($data['deviceorder_id']);
         // $detail->alasan_tolak = $data['alasan'];
-        $detail->flag_status = 6    ;
+        $detail->flag_status = 5;
         $detail->save();
 
-        // dd($MoHistory);
-        $MoHistory->save();
-
         Flash::success('Pengajuan Peminjaman Perangkat Ditolak!');
-        return Redirect::to('/manage/jamsyar/modesain/Deviceorders');
+        return Redirect::to('/mybackend/ppl/hrga/Deviceorders');
     }
 
     public function onSelesai(){

@@ -12,7 +12,7 @@ modelClass: Ppl\Hrga\Models\Permission
 title: 'ppl.hrga::lang.models.permission.label_plural'
 
 # Link URL for each record
-recordUrl: ppl/hrga/permissions/update/:id
+recordUrl: ppl/hrga/permissions/preview/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

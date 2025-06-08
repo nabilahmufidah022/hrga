@@ -48,7 +48,7 @@
                     <button type="button" class="btn btn-primary" 
                     data-dismiss="modal"
                     data-request="onSimpanTolak" 
-                    data-request-data="deviceorder_id:<?= $formModel->id ?>"
+                    data-request-data="sick_id:<?= $formModel->id ?>"
                     data-attach-loading>Simpan</button>
                 </div>
                 </form>

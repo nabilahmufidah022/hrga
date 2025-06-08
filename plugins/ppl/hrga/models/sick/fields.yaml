@@ -53,13 +53,11 @@ fields:
             field: tanggal_awal
             condition: value[*]
         dependsOn: [tanggal_awal, tanggal_akhir]
-    surat_dokter_path:
+    surat_dokter:
         label: 'Surat Dokter'
-        span: right
-        disabled: false
         type: fileupload
         mode: file
-        required: true
+        fileTypes: pdf
     keterangan_sakit:
         label: 'Keterangan Sakit'
         disabled: false

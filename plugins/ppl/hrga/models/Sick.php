@@ -88,7 +88,7 @@ class Sick extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-        'surat_dokter_path' => 'System\Models\File'
+        'surat_dokter' => 'System\Models\File'
     ];
     public $attachMany = [];
 

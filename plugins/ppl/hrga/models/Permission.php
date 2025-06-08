@@ -6,6 +6,7 @@ namespace Ppl\Hrga\Models;
 use Carbon\Carbon;
 use Winter\Storm\Database\Model;
 use Ppl\Hrga\Models\Division as MoDivisi;
+use Backend\Models\User as BackendUser;
 
 /**
  * permission Model
@@ -81,15 +82,20 @@ class Permission extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'nama' => [
+            BackendUser::class,
+            'key' => 'backend_user_id'
+        ],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [
+    public $attachOne = [
         'file_pendukung' => \System\Models\File::class,
     ];
+    public $attachMany = [];
     
     // public function getKodeDivisiAttribute($value)
     // {

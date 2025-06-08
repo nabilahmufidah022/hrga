@@ -17,7 +17,6 @@ class Ddl006MerapatIzinorderForm extends Migration
             $table->increments('id');
             $table->integer('backend_user_id')->index()->nullable();
             $table->integer('izinlist_id')->index()->nullable(); 
-            $table->string('nama')->index()->nullable(); 
             $table->string('no_wa')->index()->nullable(); 
             $table->string('divisi_id')->index()->nullable(); 
             $table->dateTime('tanggal_awal')->index()->nullable(); 
@@ -26,9 +25,7 @@ class Ddl006MerapatIzinorderForm extends Migration
             $table->string('keterangan_izin')->index()->nullable();
             $table->string('jenis_izin')->index()->nullable();
             $table->string('file_pendukung')->index()->nullable();
-            $table->integer('flag_notif1')->index()->nullable();
-            $table->integer('flag_notif2')->index()->nullable();
-            $table->integer('flag_notif_adm')->index()->nullable();
+            $table->integer('flag_status')->index()->nullable();
             $table->timestamps();
         });
 

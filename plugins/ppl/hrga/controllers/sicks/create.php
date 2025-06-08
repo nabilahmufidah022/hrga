@@ -17,7 +17,7 @@
             <div class="loading-indicator-container">
                  <button
                     type="button"
-                    data-request="onOrder"
+                    data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="<?= e(trans('backend::lang.form.creating_name', ['name' => trans('ppl.hrga::lang.models.deviceorder.label')])); ?>"

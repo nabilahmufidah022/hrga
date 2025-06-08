@@ -1,6 +1,7 @@
 <?php
-    $flagstatus = $record->flag_status; $user_role = $this->user->role_id;
-$tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
+    $flagstatus = $record->flag_status; 
+    $user_role = $this->user->role_id;
+    $tanggalmulai = $tgl_now->diffInMinutes($record->tanggal_awal,false); ?>
 
 <?php if( $flagstatus == '4' && $user_role == '4'):?>
 <a href="<?= Backend::url('ppl/hrga/deviceorders/update/'. $record->id) ?>">

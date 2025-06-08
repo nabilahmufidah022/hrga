@@ -7,26 +7,10 @@ $flagstatus = $record->flag_status;
                     <span class="wn-icon-circle" style="color: #fc9632;">
                         <?php echo trans('ppl.locale::lang.lists.flagstatus_all.1');?>
                     </span>
-<?php elseif($flagstatus == '6') : ?>      
-                    <span class="wn-icon-circle" style="color: #C43200;">
+<?php elseif($flagstatus == '5') : ?>      
+                    <span class="wn-icon-circle" style="color: red;">
                         <?php echo trans('ppl.locale::lang.lists.flagstatus_all.2');?>
                     </span>
-<!-- <?php elseif($flagstatus == '3') : ?>      
-                    <span class="wn-icon-circle" style="color: #FFB3A7;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.3');?>
-                    </span>
-<?php elseif($flagstatus == '4') : ?>      
-                    <span class="wn-icon-circle" style="color: #FC7C7F;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.4');?>
-                    </span>
-<?php elseif($flagstatus == '5') : ?>      
-                    <span class="wn-icon-circle" style="color: #FC4B80;">
-                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.5');?>
-                    </span>
-<?php elseif($flagstatus == '6') :?>
-                    <span class="wn-icon-circle" style="color: #512CF3;">
-                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.6');?>
-                    </span> -->
 <?php elseif($flagstatus == '2') :?>
                     <span class="wn-icon-circle" style="color: #41E6A0;">
                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.4');?>
@@ -47,4 +31,9 @@ $flagstatus = $record->flag_status;
                     <span class="wn-icon-circle" style="color: #FED73A;">
                        <?php echo trans('ppl.locale::lang.lists.flagstatus_all.11');?>
                     </span>
+<?php elseif($flagstatus == '6') :?>
+                    <span class="wn-icon-circle" style="color: #512CF3;">
+                       <?php echo trans('ppl.locale::lang.lists.flagstatus_all.6');?>
 <?php endif ;?>
+
+
