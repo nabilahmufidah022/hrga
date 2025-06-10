@@ -29,7 +29,7 @@ fields:
         label: Bukti Timestamp
         type: fileupload
         mode: image
-        imageWidth: 200
-        imageHeight: 200
         span: full
         required: true
+        imageWidth: flexible
+        imageHeight: 200
