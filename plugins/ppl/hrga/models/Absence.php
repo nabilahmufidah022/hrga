@@ -29,12 +29,35 @@ class Absence extends Model
     ];
 
     public $rules = [
-        'user_id' => 'required',
-        'unit_kerja' => 'required',
-        'waktu_absen' => 'required|date',
-        'status_kehadiran' => 'required',
-        'bukti_timestamp' => 'required|image|mimes:jpeg,png,jpg|max:2048'
-    ];
+    'user_id' => 'required',
+    'unit_kerja' => 'required',
+    'waktu_absen' => 'required|date',
+    'status_kehadiran' => 'required',
+    // bukti_timestamp dihapus dari rules default
+];
+
+public function beforeValidate()
+{
+    if (!$this->user_id && BackendAuth::check()) {
+        $this->user_id = BackendAuth::getUser()->id;
+    }
+
+    // Dynamic validation untuk bukti_timestamp
+    if (!$this->exists) {
+        // Record baru - wajib upload bukti_timestamp
+        $this->rules['bukti_timestamp'] = 'required|image|mimes:jpeg,png,jpg|max:2048';
+    } else {
+        // Record existing - tidak wajib kecuali user upload file baru
+        if (request()->hasFile('Absence[bukti_timestamp]') || input('Absence.bukti_timestamp')) {
+            $this->rules['bukti_timestamp'] = 'nullable|image|mimes:jpeg,png,jpg|max:2048';
+        }
+        // Jika tidak ada file baru, tidak ada validasi untuk bukti_timestamp
+    }
+
+    if (input('bukti_timestamp')) {
+        $this->bukti_timestamp = input('bukti_timestamp');
+    }
+}
 
     public $customMessages = [
         'user_id.required' => 'Nama wajib diisi',
@@ -121,17 +144,7 @@ class Absence extends Model
         return [$user->id => $user->full_name];
     }
 
-    public function beforeValidate()
-    {
-        if (!$this->user_id && BackendAuth::check()) {
-            $this->user_id = BackendAuth::getUser()->id;
-        }
-
-        if (input('bukti_timestamp')) {
-            $this->bukti_timestamp = input('bukti_timestamp');
-        }
-    }
-
+   
     public function beforeCreate()
     {
         $user = BackendAuth::getUser();
