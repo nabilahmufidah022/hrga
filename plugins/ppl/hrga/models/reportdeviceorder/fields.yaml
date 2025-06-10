@@ -3,17 +3,7 @@
 # ===================================
 
 fields:
-    nama_peminjam@create:
-        label: ''
-        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
-        type: partial
-        span: full
     nama_peminjam@preview:
-        label: ''
-        path: $/ppl/hrga/models/deviceorder/_preview_nama_peminjam.htm
-        type: partial
-        span: full
-    nama_peminjam@update:
         label: ''
         path: $/ppl/hrga/models/deviceorder/_preview_nama_peminjam.htm
         type: partial
@@ -44,7 +34,7 @@ fields:
         ignoreTimezone: true
         required: true
     device_id:
-        label: 'Perangkat'
+        label: 'ppl.locale::lang.models.home.peminjamanruang.form.unit_kerja'
         span: left
         type: dropdown
         placeholder: 'Pilih Perangkat'

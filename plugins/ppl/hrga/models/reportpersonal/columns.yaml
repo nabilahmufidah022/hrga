@@ -1,0 +1,32 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama:
+        label: 'nama'
+        searchable: true
+    divisi_id:
+        label: 'Unit Kerja'
+        valueFrom: kode_divisi
+        clickable: false
+        searchable: false
+        sortable: false
+    jabatan_id:
+        label: 'Posisi Jabatan'
+        valueFrom: kode_jabatan
+        clickable: false
+        searchable: false
+        sortable: false
+    nomor_idcard:
+        label: 'nomor idcard'
+        required: true
+    tanggal_bergabung:
+        label: 'tanggal bergabung'
+        type: date
+        format: d-mm-yy 
+        required: true
+    no_wa:
+        label: 'no whatsapp'
+        required: true
+

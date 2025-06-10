@@ -1,0 +1,13 @@
+columns:
+    nama:
+        label: "Nama"
+    unit_kerja:
+        label: "Unit Kerja"
+    waktu_absen:
+        label: "Tanggal Absensi"
+        type: datetime
+        format: "Y-m-d"
+    status_kehadiran:
+        label: Status Kehadiran
+        type: text
+        escape: false

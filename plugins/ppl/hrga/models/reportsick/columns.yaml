@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama_peminjam:
+        label: 'Nama'
+        relation: nama
+        select: concat(first_name, ' ', last_name)
+        searchable: true
+    tanggal_awal:
+        label: 'Tanggal Awal'
+        searchable: true
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'Tanggal Akhir'
+        searchable: true
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
+    jumlah_hari:
+        label: 'Jumlah Hari'

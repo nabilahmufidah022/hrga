@@ -1,13 +1,13 @@
 v1.0.0:
-    - "First version of Merapat"
+    - 'First version of Merapat'
 v1.0.1:
-    - "Create Meetingroomlists Table"
+    - 'Create Meetingroomlists Table'
     - v1.0.1/ddl001_meetingroomlists.php
-    - "Create Divisi Table"
+    - 'Create Divisi Table'
     - v1.0.1/ddl002_divisi.php
-    - "Create Kepala Bagian Table"
+    - 'Create Kepala Bagian Table'
     - v1.0.1/ddl003_kepala_bagian.php
-    - "Create Form Room Order Table"
+    - 'Create Form Room Order Table'
     - v1.0.1/ddl004_merapat_roomorder_form.php
     - 'Create Status Table'
     - v1.0.1/ddl005_merapat_status.php
@@ -15,37 +15,37 @@ v1.0.1:
     - v1.0.1/ddl006_merapat_izinorder_form.php
     - 'Create Datadiri Table'
     - v1.0.1/ddl007_datadiri.php
-    - "Create Position Table"
+    - 'Create Position Table'
     - v1.0.1/ddl008_position.php
-    - "Create List Perangkat Table"
+    - 'Create List Perangkat Table'
     - v1.0.1/ddl009_list_perangkat.php
-    - "Create All Status Table"
+    - 'Create All Status Table'
     - v1.0.1/ddl010_all_status.php
-    - "Create Device Form Table"
+    - 'Create Device Form Table'
     - v1.0.1/ddl011_device_form.php
-    - "Create Form Pengajuan Sakit Table"
+    - 'Create Form Pengajuan Sakit Table'
     - v1.0.1/ddl013_form_pengajuan_sakit.php
-    - "Create List Pengajuan Sakit Table"
+    - 'Create List Pengajuan Sakit Table'
     - v1.0.1/ddl014_list_pengajuansakit.php
-    - "Create Form Pengajuan Cuti Table"
+    - 'Create Form Pengajuan Cuti Table'
     - v1.0.1/ddl015_form_pengajuan_cuti.php
-    - "Create Form Absensi"
+    - 'Create Form Absensi'
     - v1.0.1/ddl016_form_absensi.php
-    - "Create Seeder Status"
+    - 'Create Seeder Status'
     - v1.0.1/dml001_seeder_status.php
-    - "Create Seeder User Role"
+    - 'Create Seeder User Role'
     - v1.0.1/dml002_seeder_backend_user_roles.php
-    - "Create Seeder Meeting Room List"
+    - 'Create Seeder Meeting Room List'
     - v1.0.1/dml003_seeder_room_meeting.php
-    - "Create Seeder Division"
+    - 'Create Seeder Division'
     - v1.0.1/dml004_seeder_division.php
-    - "Update backend_brand_settings fixes notif badge"
+    - 'Update backend_brand_settings fixes notif badge'
     - v1.0.1/dml005_update_backend_brand_settings.php
-    - "Create Seeder Datadiri"
+    - 'Create Seeder Datadiri'
     - v1.0.1/dml007_seeder_datadiri.php
-    - "Create Seeder Position"
+    - 'Create Seeder Position'
     - v1.0.1/dml008_seeder_Position.php
-    - "Create Seeder List Perangkat"
+    - 'Create Seeder List Perangkat'
     - v1.0.1/dml009_seeder_list_perangkat.php
-    - "Create Seeder All Status"
+    - 'Create Seeder All Status'
     - v1.0.1/dml010_seeder_all_status.php

@@ -1,0 +1,55 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/sick/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    no_wa:
+        label: 'Nomor_Whatsapp'
+        disabled: false
+        span: right
+        required: true
+    divisi_id:
+        label: 'Unit Kerja'
+        span: left
+        type: dropdown
+        placeholder: 'Pilih Unit Kerja'
+        required: true
+    tanggal_awal:
+        label: 'Tanggal Awal'
+        disabled: false
+        type: datepicker
+        mode: date
+        span: left
+        required: true
+    tanggal_akhir:
+        label: 'Tanggal Akhir'
+        disabled: false
+        type: datepicker
+        mode: date
+        span: right
+        required: true
+    jumlah_hari:
+        label: 'Jumlah Sakit'
+        span: left
+        type: number
+        disabled: true
+        trigger:
+            action: reload
+            field: tanggal_awal
+            condition: value[*]
+        dependsOn: [tanggal_awal, tanggal_akhir]
+    surat_dokter:
+        label: 'Surat Dokter'
+        type: fileupload
+        mode: file
+        fileTypes: pdf
+    keterangan_sakit:
+        label: 'Keterangan Sakit'
+        disabled: false
+        type: textarea
+        required: true

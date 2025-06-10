@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.reportdeviceorder.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/reportdeviceorder/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Deviceorder
+
+# Default redirect location
+defaultRedirect: ppl/hrga/reportdeviceorders
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/reportdeviceorders/update/:id
+    redirectClose: ppl/hrga/reportdeviceorders
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/reportdeviceorders
+    redirectClose: ppl/hrga/reportdeviceorders
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

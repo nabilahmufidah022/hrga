@@ -26,18 +26,3 @@ columns:
         label: Status Kehadiran
         type: text
         escape: false
-
-    bukti_kehadiran:
-        label: "Bukti Kehadiran"
-
-    created_at:
-        label: "Created at"
-        type: datetime
-
-        invisible: true
-
-    updated_at:
-        label: "Update at"
-        type: datetime
-
-        invisible: true

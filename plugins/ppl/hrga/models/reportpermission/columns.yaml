@@ -1,0 +1,23 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama_peminjam:
+        label: 'Nama'
+        relation: nama
+        select: concat(first_name, ' ', last_name)
+        searchable: true
+    jumlah_rencana_izin:
+        label: Jumlah Rencana Izin
+        searchable: true
+    tanggal_awal:
+        label: Tanggal Awal Izin
+        type: date 
+        format: d-mm-yy
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: Tanggal Akhir Izin
+        type: date 
+        format: d-mm-yy
+        ignoreTimezone: true

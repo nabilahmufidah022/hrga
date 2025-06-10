@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'ppl.hrga::lang.models.reportsick.label'
+
+# Model Form Field configuration
+form: $/ppl/hrga/models/reportsick/fields.yaml
+
+# Model Class name
+modelClass: Ppl\Hrga\Models\Sick
+
+# Default redirect location
+defaultRedirect: ppl/hrga/reportsicks
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: ppl/hrga/reportsicks/update/:id
+    redirectClose: ppl/hrga/reportsicks
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: ppl/hrga/reportsicks
+    redirectClose: ppl/hrga/reportsicks
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

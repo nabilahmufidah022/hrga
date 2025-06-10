@@ -31,21 +31,38 @@ permissions:
         tab: 'ppl.locale::lang.permissions.listruangrapat.title'
         label: 'ppl.locale::lang.permissions.listruangrapat.title'
     ppl.hrga.peminjaman.listizin:
-        tab: 'ppl.locale::lang.permissions.listizin.title'
-        label: 'ppl.locale::lang.permissions.listizin.title'
+        tab: 'List Izin'
+        label: 'List izin'
     ppl.hrga.peminjaman.divisi:
         tab: 'ppl.locale::lang.permissions.divisi.title'
         label: 'ppl.locale::lang.permissions.divisi.title'
-    ppl.hrga.peminjaman.laporan:
-        tab: 'ppl.locale::lang.permissions.laporan.title'
-        label: 'ppl.locale::lang.permissions.laporan.title'
     ppl.hrga.peminjaman.peminjamanruangan:
         tab: 'ppl.locale::lang.permissions.peminjamanruangan.title'
         label: 'ppl.locale::lang.permissions.peminjamanruangan.title'
     ppl.hrga.peminjaman.ruangrapat:
         tab: 'ppl.locale::lang.permissions.ruangrapat.title'
         label: 'ppl.locale::lang.permissions.ruangrapat.title'
-    
+    ppl.hrga.peminjaman.laporanruangan:
+        tab: 'ppl.locale::lang.permissions.laporan_ruangan.title'
+        label: 'ppl.locale::lang.permissions.laporan_ruangan.title'
+    ppl.hrga.peminjaman.laporanabsensi:
+        tab: 'Laporan Absensi'
+        label: 'Laporan Absensi'
+    ppl.hrga.peminjaman.laporandatadiri:
+        tab: 'Laporan Biodata Diri'
+        label: 'Laporan Biodata Diri'
+    ppl.hrga.peminjaman.laporanizin:
+        tab: 'Laporan Pengajuan Izin'
+        label: 'Laporan Pengajuan Izin'
+    ppl.hrga.peminjaman.laporancuti:
+        tab: 'Laporan Pengajuan Cuti'
+        label: 'Laporan Pengajuan Cuti'
+    ppl.hrga.peminjaman.laporansakit:
+        tab: 'Laporan Pengajuan Sakit'
+        label: 'Laporan Pengajuan Sakit'
+    ppl.hrga.peminjaman.laporanperangkat:
+        tab: 'Laporan Pengajuan Perangkat'
+        label: 'Laporan Pengajuan Perangkat'
 
 plugin:
     name: "ppl.locale::lang.plugin.hrga.name"
@@ -116,7 +133,34 @@ navigation:
                     - ppl.hrga.pengajuan.perangkat
                 attributes:
                     group: "ppl.locale::lang.models.form-pengajuan.group"
-                    description: "ppl.locale::lang.models.form-pengajuan.desc"
+                    description: "ppl.locale::lang.models.form-pengajuan.desc"            
+            homes:
+                label: "ppl.locale::lang.models.home.homes.label"
+                url: ppl/hrga/homes
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-home.svg
+                permissions:
+                    - ppl.hrga.peminjaman.home
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.homes.desc"
+            userroomorders:
+                label: "ppl.locale::lang.models.home.peminjamanruang.label"
+                url: ppl/hrga/userroomorders
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
+                permissions:
+                    - ppl.hrga.peminjaman.  
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.peminjamanruang.desc"
+            meetingrooms:
+                label: "ppl.locale::lang.models.home.meetingroom.label"
+                url: ppl/hrga/meetingrooms
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-ruang-rapat.svg
+                permissions:
+                    - ppl.hrga.peminjaman.ruangrapat
+                attributes:
+                    group: "ppl.locale::lang.models.home.group"
+                    description: "ppl.locale::lang.models.home.meetingroom.desc"
             dashboards:
                 label: "ppl.locale::lang.models.dashboard.dashboards.label"
                 url: ppl/hrga/dashboards
@@ -167,38 +211,64 @@ navigation:
                 url: ppl/hrga/reports
                 iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
                 permissions:
-                    - ppl.hrga.peminjaman.laporan
+                    - ppl.hrga.peminjaman.laporanruangan
                 attributes:
-                    group: "ppl.locale::lang.models.dashboard.group"
-                    description: "ppl.locale::lang.models.dashboard.laporan.desc"               
-            homes:
-                label: "ppl.locale::lang.models.home.homes.label"
-                url: ppl/hrga/homes
-                iconSvg: /plugins/ppl/hrga/assets/images/icon-home.svg
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.dashboard.laporan.desc" 
+            reportabsences:
+                label: "ppl.locale::lang.models.report.laporan_absensi.label"
+                url: ppl/hrga/reportabsences
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
                 permissions:
-                    - ppl.hrga.peminjaman.home
+                    - ppl.hrga.peminjaman.laporanabsensi
                 attributes:
-                    group: "ppl.locale::lang.models.home.group"
-                    description: "ppl.locale::lang.models.home.homes.desc"
-            userroomorders:
-                label: "ppl.locale::lang.models.home.peminjamanruang.label"
-                url: ppl/hrga/userroomorders
-                iconSvg: /plugins/ppl/hrga/assets/images/icon-peminjaman-ruang.svg
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_absensi.desc"
+            reportpersonals:
+                label: "ppl.locale::lang.models.report.laporan_biodata_diri.label"
+                url: ppl/hrga/reportpersonals
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
                 permissions:
-                    - ppl.hrga.peminjaman.  
+                    - ppl.hrga.peminjaman.laporandatadiri
                 attributes:
-                    group: "ppl.locale::lang.models.home.group"
-                    description: "ppl.locale::lang.models.home.peminjamanruang.desc"
-            meetingrooms:
-                label: "ppl.locale::lang.models.home.meetingroom.label"
-                url: ppl/hrga/meetingrooms
-                iconSvg: /plugins/ppl/hrga/assets/images/icon-ruang-rapat.svg
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_biodata_diri.desc" 
+            reportpermissions:
+                label: "ppl.locale::lang.models.report.laporan_izin.label"
+                url: ppl/hrga/reportpermissions
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
                 permissions:
-                    - ppl.hrga.peminjaman.ruangrapat
+                    - ppl.hrga.peminjaman.laporanizin
                 attributes:
-                    group: "ppl.locale::lang.models.home.group"
-                    description: "ppl.locale::lang.models.home.meetingroom.desc"
-    
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_izin.desc"  
+            reportleaves:
+                label: "ppl.locale::lang.models.report.laporan_cuti.label"
+                url: ppl/hrga/reportleaves
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+                permissions:
+                    - ppl.hrga.peminjaman.laporancuti
+                attributes:
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_cuti.desc"   
+            reportsicks:
+                label: "ppl.locale::lang.models.report.laporan_sakit.label"
+                url: ppl/hrga/reportsicks
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+                permissions:
+                    - ppl.hrga.peminjaman.laporansakit
+                attributes:
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_sakit.desc"    
+            reportdeviceorders:
+                label: "ppl.locale::lang.models.report.laporan_perangkat.label"
+                url: ppl/hrga/reportdeviceorders
+                iconSvg: /plugins/ppl/hrga/assets/images/icon-laporan.svg
+                permissions:
+                    - ppl.hrga.peminjaman.laporanperangkat
+                attributes:
+                    group: "ppl.locale::lang.models.report.group"
+                    description: "ppl.locale::lang.models.report.laporan_perangkat.desc"                                                
 
 
 

@@ -1,0 +1,89 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    nama_peminjam@create:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
+    nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/Permission/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    nama_peminjam@update:
+        label: ''
+        path: $/ppl/hrga/models/Permission/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    no_wa:
+        span: right
+        label: No Whatsapp
+        type: number
+    divisi_id:
+        span: left
+        label: Divisi
+        type: dropdown
+        options:
+            SEVP Bisnis	:	SEVP Bisnis
+            Pemasaran	:	Pemasaran
+            Klaim & Subrogasi	:	Klaim & Subrogasi
+            Satuan Pengawas Internal	:	Satuan Pengawas Internal
+            Sekretaris Perusahaan	:	Sekretaris Perusahaan
+            Coorporate Transformation, Renstra & Kepatuhan	:	Coorporate Transformation, Renstra & Kepatuhan
+            Teknik Penjaminan	:	Teknik Penjaminan
+            Penunjang Bisnis	:	Penunjang Bisnis
+            Koordinator TI	:	Koordinator TI
+            Keuangan & Akuntansi	:	Keuangan & Akuntansi
+            Divisi SDM & Umum	:	Divisi SDM & Umum
+            Manajemen Risiko	:	Manajemen Risiko
+    tanggal_awal:
+        span: left
+        label: Tanggal Awal Izin
+        type: datepicker
+        mode: date
+        minDate: today
+        ignoreTimezone: true
+    tanggal_akhir:
+        span: right
+        label: Tanggal Akhir Izin
+        type: datepicker
+        mode: date
+        minDate: today
+        ignoreTimezone: true
+        required: true
+    jumlah_rencana_izin:
+        span: left
+        label: Jumlah Rencana Izin
+        type: number
+        disabled: true
+        trigger:
+            action: reload
+            field: tanggal_awal
+            condition: value[*]
+        dependsOn: [tanggal_awal, tanggal_akhir]
+    jenis_izin:
+        span: left  
+        label: Jenis Izin
+        type: dropdown
+        options:
+            Dinas_Luar : Dinas Luar
+            Wisuda : Wisuda
+            Pernikahan : Pernikahan
+            Ibadah : Ibadah
+            Bencana : Bencana
+        placeholder: 'pilih jenis izin'
+    file_pendukung:
+        span: right
+        label: 'Surat Izin'
+        type: fileupload
+        mode: file
+        required: true
+    keterangan_izin:
+        label: Keterangan Izin
+        type: Backend\FormWidgets\RichEditor
+        size: large
+    
+

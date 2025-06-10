@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    nama_peminjam:
+        label: 'Nama Peminjam'
+        relation: nama_peminjam
+        select: concat(first_name, ' ', last_name)
+        searchable: true
+    unit kerja:
+        label: 'Unit Kerja'
+        valueFrom: kode_divisi
+        clickable: false
+        searchable: false
+        sortable: false
+    tanggal_awal:
+        label: 'Tanggal Peminjaman Awal'
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true
+    tanggal_akhir:
+        label: 'Tanggal Peminjaman Akhir'
+        type: date 
+        format: d-mm-yy 
+        ignoreTimezone: true

@@ -100,5 +100,29 @@ return [
             'label' => 'Sick List',
             'label_plural' => 'Sick Lists',
         ],
+        'reportabsence' => [
+            'label' => 'Reportabsence',
+            'label_plural' => 'Reportabsences',
+        ],
+        'reportpersonal' => [
+            'label' => 'Reportpersonal',
+            'label_plural' => 'Reportpersonals',
+        ],
+        'reportpermission' => [
+            'label' => 'Reportpermission',
+            'label_plural' => 'Reportpermissions',
+        ],
+        'reportleafe' => [
+            'label' => 'Reportleafe',
+            'label_plural' => 'Reportleaves',
+        ],
+        'reportsick' => [
+            'label' => 'Reportsick',
+            'label_plural' => 'Reportsicks',
+        ],
+        'reportdeviceorder' => [
+            'label' => 'Reportdeviceorder',
+            'label_plural' => 'Reportdeviceorders',
+        ],
     ],
 ];

@@ -28,8 +28,8 @@ return [
         'divisi' => [
             'title' => 'Divisi',
         ],
-        'laporan' => [
-            'title' => 'Laporan',
+        'laporan_ruangan' => [
+            'title' => 'Laporan Ruang Rapat',
         ],
         'peminjamanruangan' => [
             'title' => 'Peminjaman Ruangan',
@@ -308,8 +308,8 @@ return [
                 ],
             ],
             'laporan' =>[
-                'label' => 'laporan',
-                'label_plural' => 'laporan',
+                'label' => 'Laporan Peminjaman Ruang Rapat',
+                'label_plural' => 'Laporan Peminjaman Ruang Rapat',
                 'desc'=>'',
                 'form'=>[
                     'nama'=>'Nama Divisi',
@@ -330,7 +330,34 @@ return [
                     'btn_export' => 'Export'
                 ]
             ],
-            'group' => 'Peminjaman Ruangan'
+            'group' => 'Master Data'
         ],
+        'report'=> [
+            'laporan_absensi' =>[
+                'label' => 'Laporan Absensi',
+                'desc' =>''
+            ],
+            'laporan_biodata_diri' =>[
+                'label' => 'Laporan Biodata Diri',
+                'desc' =>''
+            ],
+            'laporan_izin' =>[
+                'label' => 'Laporan Pengajuan Izin',
+                'desc' =>''
+            ],
+            'laporan_cuti' =>[
+                'label' => 'Laporan Pengajuan Cuti',
+                'desc' =>''
+            ],
+            'laporan_sakit' =>[
+                'label' => 'Laporan Pengajuan Sakit',
+                'desc' =>''
+            ],
+            'laporan_perangkat' =>[
+                'label' => 'Laporan Pengajuan Perangkat',
+                'desc' =>''
+            ],
+            'group' => 'Laporan'
+        ]
     ]
 ];

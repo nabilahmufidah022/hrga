@@ -28,8 +28,8 @@ return [
         'divisi' => [
             'title' => 'Divisi',
         ],
-        'laporan' => [
-            'title' => 'Laporan',
+        'laporan_ruangan' => [
+            'title' => 'Laporan Ruang Rapat',
         ],
         'peminjamanruangan' => [
             'title' => 'Peminjaman Ruangan',
@@ -320,8 +320,8 @@ return [
                 ],
             ],
             'laporan' =>[
-                'label' => 'Laporan',
-                'label_plural' => 'Laporan',
+                'label' => 'Laporan Peminjaman Ruang Rapat',
+                'label_plural' => 'Laporan Peminjaman Ruang Rapat',
                 'detail' => 'Detail Peminjaman Ruang Rapat',
                 'desc'=>'',
                 'form'=>[
@@ -343,58 +343,34 @@ return [
                     'btn_export' => 'Export'
                 ]
             ],
-            'group' => 'Peminjaman Ruangan'
+            'group' => 'Master Data'
         ],
-
-
-
-
-
-
-
-
-
-
-        // 'halamanpeminjaman' => [
-        //     'label' => 'Halaman Peminjaman',
-        //     'label_plural' => 'Halaman Peminjaman',
-        // ],
-        // 'listruangrapat' => [
-        //     'label' => 'List Ruang Rapat',
-        //     'label_plural' => 'Ruang Rapat',
-        //     'update'=> 'Form Ruang Rapat',
-        //     'ruang_rapat' => 'Ruang Rapat',
-        //     'nama' => "Nama Ruangan",
-        //     'kapasitas' => "Kapasitas",
-        //     'fasilitas' => "Fasilitas",
-        //     'aksi' => "Aksi",
-        //     'foto_ruang' => 'Foto Ruang Rapat',
-        //     'btn_tmbh' =>"Tambah Ruang Rapat"
-        // ],
-        // 'divisi' =>[
-        //     'label' => 'Divisi',
-        //     'label_plural' => 'Divisi',
-        //     'update' => 'Form Divisi'
-        //     // 'nama_divisi' => 'Nama Divisi',
-        // ],
-        // 'kepalabagian' =>[
-        //     'label' => 'Kepala Bagian',
-        //     'label_plural' => 'Kepala Bagian',
-        //     'update' => 'Form Kepala Bagian'
-        // ],
-        // 'laporan' =>[
-        //     'label' => 'laporan',
-        //     'label_plural' => 'laporan',
-        // ],
-        // 'peminjamanruang'=>[
-        //     'label' => 'Peminjaman Ruang',
-        //     'label_plural' => 'Peminjaman Ruang',
-        //     'btn-pinjamruang' => 'Pinjam Ruang Rapat',
-        //     'form_peminjaman' => 'Form Peminjaman Ruang Rapat'
-        // ],
-        // 'meetingroom'=>[
-        //     'label' => 'Ruang Rapat',
-        //     'label_plural' => 'Ruang Rapat',
-        // ]
+        'report'=> [
+            'laporan_absensi' =>[
+                'label' => 'Laporan Peminjaman Ruang Rapat',
+                'desc' =>''
+            ],
+            'laporan_biodata_diri' =>[
+                'label' => 'Laporan Biodata Diri',
+                'desc' =>''
+            ],
+            'laporan_izin' =>[
+                'label' => 'Laporan Pengajuan Izin',
+                'desc' =>''
+            ],
+            'laporan_cuti' =>[
+                'label' => 'Laporan Pengajuan Cuti',
+                'desc' =>''
+            ],
+            'laporan_sakit' =>[
+                'label' => 'Laporan Pengajuan Sakit',
+                'desc' =>''
+            ],
+            'laporan_perangkat' =>[
+                'label' => 'Laporan Pengajuan Perangkat',
+                'desc' =>''
+            ],
+            'group' => 'Laporan'
+        ]
     ]
 ];

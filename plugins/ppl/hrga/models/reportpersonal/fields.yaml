@@ -1,0 +1,39 @@
+    # ===================================
+    #  Form Field Definitions
+    # ===================================
+
+fields:
+    nama:
+        label: 'Nama'
+        required: true
+    divisi_id:
+        span: left
+        label: 'Divisi'
+        type: dropdown
+        placeholder: 'Pilih Unit Kerja'
+        required: true
+    jabatan_id:
+        span: right
+        label: 'Jabatan'
+        type: dropdown
+        placeholder: 'Pilih Jabatan'
+        required: true
+    nomor_idcard:
+        label: 'Nomor Id Card'
+        required: true
+    tanggal_bergabung:
+        label: 'Tanggal Bergabung'
+        type: datepicker
+        mode: date
+        required: true
+    no_wa:
+        label: 'Nomor Whatsapps'
+        required: true
+    staff_pics:
+        label: 'Staff Gambar'
+        type: fileupload
+        mode: image
+        span: full
+        fileTypes: jpg, jpeg, png
+        imageHeight: 472
+        imageWidth: 709   
