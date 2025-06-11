@@ -3,7 +3,17 @@
 # ===================================
 
 fields:
+    nama_peminjam@create:
+        label: ''
+        path: $/ppl/hrga/models/deviceorder/_nama_peminjam.htm
+        type: partial
+        span: full
     nama_peminjam@preview:
+        label: ''
+        path: $/ppl/hrga/models/leave/_preview_nama_pengaju.htm
+        type: partial
+        span: full
+    nama_peminjam@update:
         label: ''
         path: $/ppl/hrga/models/leave/_preview_nama_pengaju.htm
         type: partial

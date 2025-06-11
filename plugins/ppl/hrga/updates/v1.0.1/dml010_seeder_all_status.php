@@ -8,7 +8,7 @@ class Dml010SeederAllStatus extends Seeder
 {   
     public function run()
     {
-        $cek = Allstatus::find(5);
+        $cek = Allstatus::find(7);
         if($cek){
             \Log::info('do migration:' . __FILE__);
             \Log::info('migration log:' . __FILE__, ["record Meetingroomlist 5 exists"]);
@@ -35,6 +35,14 @@ class Dml010SeederAllStatus extends Seeder
             [
             'id'                   => 5,
             'nama_status'          => 'Ditolak'
+            ],
+            [
+            'id'                   => 6,
+            'nama_status'          => 'Menunggu Persetujuan Atasan'
+            ],
+            [
+            'id'                   => 7,
+            'nama_status'          => 'Menunggu Persetujuan HR'
             ],
         ]);
     }

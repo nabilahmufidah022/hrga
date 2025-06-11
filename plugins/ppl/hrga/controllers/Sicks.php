@@ -46,9 +46,15 @@ class Sicks extends Controller
             // Admin HRGA bisa lihat semua data dengan status 4 atau 1 juga
             $query->where(function ($q) use ($user) {
                 $q->where('user_id', $user->id)
-                ->orWhere('flag_status', 4);
+                ->orWhere('flag_status', 7);
             });
-        } else {
+        }elseif ($user->role_id == 5) {
+            // Admin HRGA bisa lihat semua data dengan status 4 atau 1 juga
+            $query->where(function ($q) use ($user) {
+                $q->where('user_id', $user->id)
+                ->orWhere('flag_status', 6);
+            });
+        }else {
             // User biasa hanya lihat datanya sendiri
             $query->where('user_id', $user->id);
         }
@@ -130,7 +136,7 @@ class Sicks extends Controller
 
     public function formAfterCreate($model) {
         $model->user_id = $this->user->id;
-        $model->flag_status = 4;
+        $model->flag_status = 6;
         $model->save();
 
         Flash::success('Berhasil Mengajukan Permohonan Sakit!!');
@@ -139,8 +145,15 @@ class Sicks extends Controller
     }
 
     public function formAfterSave($model) {
-        $model->flag_status = 1;
-        $model->save();
+        $user = $this->user;
+
+        if ($user->role_id == 4) {
+            $model->flag_status = 1;
+            $model->save();
+        }else{
+            $model->flag_status = 7;
+            $model->save();
+        }
 
         Flash::success('Permohonan Sakit Berhasil Disetujui!!');
         return Redirect::to('/mybackend/ppl/hrga/Sicks');

@@ -34,20 +34,3 @@ columns:
         type: date 
         format: d-mm-yy
         ignoreTimezone: true
-    status:
-        label: "Status"
-        type: text
-    reason:
-        label: "Alasan Pembatalan"
-        type: text
-    created_at:
-        label: 'ppl.hrga::lang.models.general.created_at'
-        type: datetime
-        searchable: true
-        sortable: true
-        invisible: true
-    updated_at:
-        label: 'ppl.hrga::lang.models.general.updated_at'
-        type: datetime
-        searchable: true
-        sortable: true

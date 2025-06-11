@@ -3,7 +3,17 @@
     $user_role = $this->user->role_id;
 ?>
 
-<?php if( $flagstatus == '4' && $user_role == '4'):?>
+<?php if( $flagstatus == '7' && $user_role == '4'):?>
+<a href="<?= Backend::url('ppl/hrga/permissions/update/'. $record->id) ?>">
+    <button
+        class="btn wn-icon-circle-check btn-sm"
+        style="background-color: #0d6efd; color: #ffffff"
+    >
+        Setujui
+    </button>
+</a>
+
+<?php elseif( $flagstatus == '6' && $user_role == '5'):?>
 <a href="<?= Backend::url('ppl/hrga/permissions/update/'. $record->id) ?>">
     <button
         class="btn wn-icon-circle-check btn-sm"
